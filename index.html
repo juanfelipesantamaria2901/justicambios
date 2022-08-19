@@ -26,7 +26,17 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-
+<style>
+    a{
+        color: white;
+    }
+    a:hover {
+        color: #ffd586;
+    }
+    li:hover{
+        color: #ffd586;
+    }
+</style>
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -36,11 +46,10 @@
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__search">
-            <i class="fa fa-search search-switch"></i>
-        </div>
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+            <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
+                <a href="./index.html"><h3 style="color: #eb9d0d;"><b>JustiCambios</b></h3></a>
+            </div>
         </div>
         <nav class="offcanvas__menu mobile-menu">
             <ul>
@@ -60,17 +69,17 @@
         </nav>
         <div id="mobile-menu-wrap"></div>
         <ul class="offcanvas__widget">
-            <li><i class="fa fa-map-marker"></i> 96 Ernser Vista Suite 437, NY, US</li>
-            <li><i class="fa fa-phone"></i> (123) 456-78-910</li>
-            <li><i class="fa fa-envelope"></i> Info@colorlib.com</li>
+            <li><i class="fa fa-map-marker" style="color: orange;"></i> <a href="https://goo.gl/maps/54oxCfsSD4YqgS8BA"  style="color: black;">Centro Comercial Acuarela, Cali Colombia</a></li>
+            <li><i class="fa fa-phone" style="color: orange;"></i><a href="https://wa.me/message/VLHTLIVCPAPEJ1" style="color: black;">+(57) 310 655 2292</a></li>
+            <li><i class="fa fa-envelope" style="color: orange;"></i>echeverryc08@gmail.com</li>
         </ul>
-        <div class="offcanvas__language">
+        <div class="offcanvas__language" style="background-color: #f7ae28;">
             <img src="img/Flag_of_Colombia.svg.png" alt="">
             <span>Español</span>
             <i class="fa fa-angle-down"></i>
-            <ul>
-                <li><a href="#">English</a></li>
-                <li><a href="#">Español</a></li>
+            <ul style="border-radius: 8px;">
+                <li style="border-radius: 8px;"><a href="#">English</a></li>
+                <li style="border-radius: 8px;"><a href="#">Español</a></li>
             </ul>
         </div>
     </div>
@@ -83,9 +92,9 @@
                 <div class="row">
                     <div class="col-lg-9">
                         <ul class="header__top__widget">
-                            <li><i class="fa fa-map-marker" style="color: orange;"></i> 96 Ernser Vista Suite 437, NY, US</li>
-                            <li><i class="fa fa-phone"  style="color: orange;"></i> (123) 456-78-910</li>
-                            <li><i class="fa fa-envelope"  style="color: orange;"></i> Info@gemail.com</li>
+                            <li><i class="fa fa-map-marker" style="color: orange;"></i><a href="https://goo.gl/maps/54oxCfsSD4YqgS8BA">Centro Comercial Acuarela, Cali Colombia</a></li>
+                            <li><i class="fa fa-phone"  style="color: orange;"></i><a href="https://wa.me/message/VLHTLIVCPAPEJ1" > +(57) 310 655 2292</a></li>
+                            <li><i class="fa fa-envelope"  style="color: orange;"></i>echeverryc08@gmail.com</li>
                         </ul>
                     </div>
                     <div class="col-lg-3" >
@@ -104,8 +113,13 @@
         </div>
         <div class="container">
             <div class="row" style="margin: 0%;">
-                <div class="col-lg-3" >
-                    <div class="header__logo" style="margin :0%">
+                <div class="col-lg-1" >
+                    <div class="header__logo" style=" width: 100px; height: 100px;">
+                        <a href="./index.html" style="margin-bottom: 15px;"><img style="width: 50px; height: 90px;"  src="img/Logo2.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2" >
+                    <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
                         <a href="./index.html"><h3 style="color: #eb9d0d;"><b>JustiCambios</b></h3></a>
                     </div>
                 </div>
@@ -151,44 +165,69 @@
                         <a href="#" style="background-color: orange; border-radius: 8px;" class="primary-btn">Empezar</a>
                         <a href="#" style="background-color: #031d5e; border-radius: 8px;" class="primary-btn howit-btn">Como Funciona</a>
                     </div>
+                </div> 
+                <div class="col-lg-6 offset-lg-1 col-md-6">
+                    <div class="card-body" style="background-color: #efbe64; border-radius: 8px;">
+                    <form action="#" class="call__form">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Cuantó deseas enviar"  style="border-radius: 5px;">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Cantidad de dinero ($):"  style="border-radius: 5px;">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Nombré:"  style="border-radius: 5px;">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Correo:"  style="border-radius: 5px;">
+                            </div>
+                            <div class="col-lg-6" style="border-radius: 5px;" >
+                                <select style="border-radius: 5px;" >
+                                    <option value="" style="border-radius: 5px;">País desde donde se envía</option>
+                                    <option value="" style="border-radius: 5px;">Colombia</option>
+                                    <option value="" style="border-radius: 5px;">Venezuela</option>
+                                    <option value="" style="border-radius: 5px;">Argentina</option>
+                                    <option value="" style="border-radius: 5px;" >Mexico</option>
+                                    <option value="" style="border-radius: 5px;">EEUU</option>
+                                    <option value="" style="border-radius: 5px;">Peru</option>
+                                    <option value="" style="border-radius: 5px;">Chile</option>
+                                    <option value=" " style="border-radius: 5px;">España</option>
+                                    <option value="" style="border-radius: 5px;">Rep. Dominicana</option>
+                                    <option value="" style="border-radius: 5px;">Panama</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Se envia:"  style="border-radius: 5px;">
+                            </div>
+                        </div>
+                        <button type="submit" class="site-btn" style="background-color: #031d5e; border-radius: 8px;">Enviar</button>
+                    </form>
                 </div>
-                <div class="col-lg-5 offset-lg-2">
-                    <div class="hero__form" style="border-radius: 8px;">
-                        <h3>Cuantó deseas enviar</h3>
-                        <form action="#">
-                            <div class="input-list">
-                                <div class="input-list-item">
-                                    <p>Cantidad de dinero ($):</p>
-                                    <input type="text"   placeholder="Escribe..." style="border-radius: 5px;">
-                                </div>
-                                <div class="input-list-item">
-                                    <p>País desde donde se envía</p>
-                                    <input type="text"  placeholder="Escribe..." style="border-radius: 5px;">
-                                </div>
-                            </div>
-                            <div class="input-full-width">
-                                <p>Se recibe en venezuala:</p>
-                                <input type="text" style="border-radius: 5px;">
-                            </div>
-                            <div class="input-list last">
-                                <div class="input-list-item">
-                                    <p>Nombré:</p>
-                                    <input type="text"  placeholder="Escribe..." style="border-radius: 5px;">
-                                </div>
-                                <div class="input-list-item">
-                                    <p>Correo:</p>
-                                    <input type="text"  placeholder="Escribe..." style="border-radius: 5px;">
-                                </div>
-                            </div>
-                            <button type="submit"  style="background-color: orange; border-radius: 8px;" class="site-btn">Envía  Ahora!</button>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Hero Section End -->
+<script>
 
+var myHeaders = new Headers();
+myHeaders.append("apikey", "0SdtGYumsdP7xXQKCEWU7p5BdZYkwPBv");
+
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow',
+  headers: myHeaders
+};
+
+fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF%2CCOP%2CDOP%2CEUR%2C%20PAB%2CUSD&base=USD", requestOptions)
+  .then(response => response.text())  
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/productos-servicio.js"></script>
+<script src="js/lista-productos-controlador.js"></script>
     <!-- Home About Begin -->
     <section class="home-about spad">
         <div class="container">
@@ -221,57 +260,53 @@
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1" style="border-radius: 8px;">
-                    <table class="table table-hover table-bordered table-lg table-responsive-lg" style="border-radius: 8px;">
+                    <table id='tbl-productos' class="table table-hover table-bordered table-lg table-responsive-lg" style="border-radius: 8px;  background-color: #d58b00;">
                         <thead>
                             <tr>
                                 <th scope="col" style="background-color: #d58b00; color: white;   text-align: center;;">Divisa</th>
-                                <th scope="col" style="background-color: #d58b00; color: white;   text-align: center;">Cat.</th>
-                                <th scope="col" style="background-color: #d58b00; color: white;   text-align: center;">COP</th>
-                                <th scope="col" style="background-color: #d58b00; color: white;   text-align: center;">VEF</th>
+                                <th scope="col" style="background-color: #d58b00; color: white;   text-align: center;">Tasa Cambio desde USD</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row" style="background-color: #d58b00; color: white;   text-align: center;">USD</th>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">1</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">4,230</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">591,710</td>
+                                <td style="background-color: #d58b00; color: white;   text-align: center;">USD</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">1.00</td>
                             </tr>
                             <tr>
-                                <th scope="row" style="background-color: #d58b00; color: white;   text-align: center;">EUR</th>
-                                <td style="color:back ; background-color: #e5cda0;  text-align: center;">1</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">4,367</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">610,817</td>
+                                <td  style="background-color: #d58b00; color: white;   text-align: center;">COP</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">4396.67</td>
                             </tr>
                             <tr>
-                                <th scope="row" style="background-color: #d58b00; color: white;   text-align: center;">GBP</th>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">1</td>
-                                <td style="color:back ; background-color: #e5cda0;  text-align: center;">5,160</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">721,791</td>
+                                <td style="background-color: #d58b00; color: white;   text-align: center;">CLP</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">929.70</td>
                             </tr>
                             <tr>
-                                <th scope="row" style="background-color: #d58b00; color: white;   text-align: center;;">CAD</th>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">1</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">3,315</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">463,677</td>
+                                <td style="background-color: #d58b00; color: white;   text-align: center;">PEN</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">3.83</td>
                             </tr>
                             <tr>
-                                <th scope="row" style="background-color: #d58b00; color: white;   text-align: center;">AUD</th>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">1</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">3,006</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">420,475</td>
+                                <td style="background-color: #d58b00; color: white;   text-align: center;">VEF</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">608.620,51</td>
                             </tr>
                             <tr>
-                                <th scope="row" style="background-color: #d58b00; color: white;   text-align: center;">JPY</th>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">1</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">31</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">4,449</td>
+                                <td style="background-color: #d58b00; color: white;   text-align: center;">MXN</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">20.14</td>
                             </tr>
                             <tr>
-                                <th scope="row" style="background-color: #d58b00; color: white;   text-align: center;">CHF</th>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">1</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">4,492</td>
-                                <td style="color:back ; background-color: #e5cda0;   text-align: center;">628,367</td>
+                                <td style="background-color: #d58b00; color: white;   text-align: center;">DOP</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">53.89</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #d58b00; color: white;   text-align: center;">EUR</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">0.991</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #d58b00; color: white;   text-align: center;">PAB</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">0.99</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #d58b00; color: white;   text-align: center;">ARS</td>
+                                <td style="background-color: #efbe64; color: black;   text-align: center;">135.80</td>
                             </tr>
                         </tbody>
                     </table>
@@ -452,7 +487,8 @@
                     <div class="counter__item">
                         <img src="img/counter/counter-1.png" alt="">
                         <div class="counter__number">
-                            <h2 class="counter-add">22100</h2>
+                            <h2 class="counter-add">30000</h2>
+                            <span>+</span>
                         </div>
                         <p>Envios Exitosos</p>
                     </div>
@@ -471,20 +507,20 @@
                     <div class="counter__item">
                         <img src="img/counter/counter-3.png" alt="">
                         <div class="counter__number">
-                            <h2 class="counter-add">90</h2>
+                            <h2 class="counter-add">10</h2>
                             <span>+</span>
                         </div>
-                        <p>Aliados estrategicos</p>
+                        <p>Diferentes para enviar dinero</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6">
                     <div class="counter__item">
                         <img src="img/counter/counter-4.png" alt="">
                         <div class="counter__number">
-                            <h2 class="counter-add">70</h2>
+                            <h2 class="counter-add">4</h2>
                             <span>+</span>
                         </div>
-                        <p>Certificaciones</p>
+                        <p>Años de expericencia</p>
                     </div>
                 </div>
             </div>
@@ -611,14 +647,8 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="contact__widget__item">
-                                <h4>New York Office</h4>
-                                <p>917 Atlantic Lane, Strongsville, NY, United State</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="contact__widget__item">
-                                <h4>New Jersey Office</h4>
-                                <p>1 Walnut Court, East Orange, NJ, United State</p>
+                                <h4>Oficina Cali, Valle del Cauca</h4>
+                                <p>Centro Comercial Acuarela, Cali Colombia</p>
                             </div>
                         </div>
                     </div>
@@ -626,7 +656,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="contact__widget__phone">
                         <span>Contactanos Ahora!</span>
-                        <h2 style="color: orange;">(+12) 345-678-910</h2>
+                        <h2 style="color: orange;">+(57) 310 655 2292</h2>
                     </div>
                 </div>
             </div>
@@ -663,10 +693,8 @@
                         <h5>Socials</h5>
                         <div class="footer__widget footer__widget--social">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i> Skype</a></li>
+                                <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1"><i class="fa fa-whatsapp"></i> Whatsapp</a></li>
+                                <li><a href="https://instagram.com/justicambios?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram"></i> Instagram</a></li>
                             </ul>
                         </div>
                     </div>
@@ -676,9 +704,7 @@
                         <h5>Horas Abiero</h5>
                         <p>Trabajamos todos los días de la semana, por favor contáctenos para cualquier consulta.</p>
                         <ul>
-                            <li>Lunes - Domingo: 7:00 am - 9:00 pm</li>
-                            <li>Festivos : 10:00 am - 6:00 pm</li>
-                            <li>Eventos : 11:00 am - 6:00 pm</li>
+                            <li>Lunes - Sabado: 9:00 am - 6:00 pm</li>
                         </ul>
                     </div>
                 </div>
