@@ -36,7 +36,156 @@
     li:hover{
         color: #ffd586;
     }
+    a {
+	text-decoration: none;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	padding: 40px 0;
+}
+
+.selectbox {
+	width: 50%;
+	margin: auto;
+	position: relative;
+}
+
+.select {
+	background: #fff;
+	width: 100%;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
+	border-radius: 10px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: .2s ease all;
+	margin-bottom: 30px;
+	padding: 30px;
+	position: relative;
+	z-index: 200;
+	border: 2px solid transparent;
+}
+
+.select.active,
+.select:hover {
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+	border: 2px solid #213f8f;
+}
+
+.select.active:before {
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	border-top: 15px solid #213f8f;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid transparent;
+	position: absolute;
+	bottom: -30px;
+	left: calc(50% - 15px);
+}
+
+.select i {
+	font-size: 30px;
+	margin-left: 30px;
+	color: #213f8f;
+}
+
+.titulo {
+	margin-bottom: 10px;
+	color: #000;
+	font-weight: 600;
+	font-size: 30px;
+}
+
+.descripcion {
+	font-size: 18px;
+	color: #434343;
+}
+
+.opciones {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,.16);
+	max-height: 400px;
+	overflow: auto;
+	z-index: 100;
+	width: 100%;
+	display: none;
+}
+
+.opciones.active {
+	display: block;
+	animation: fadeIn .3s forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		transform: translateY(-200px) scale(.5);
+	}
+	to {
+		transform: translateY(0) scale(1);
+	}
+}
+
+.contenido-opcion {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	transition: .2s ease all;
+}
+
+.opciones .contenido-opcion {
+	padding: 30px;
+}
+
+.contenido-opcion img {
+	width: 60px;
+	height: 60px;
+	margin-right: 30px;
+}
+
+.opciones .contenido-opcion:hover {
+	background: #213F8F;
+}
+
+.opciones .contenido-opcion:hover .titulo,
+.opciones .contenido-opcion:hover .descripcion {
+	color: #fff;
+}
+
+@media screen and (max-width: 800px){
+	.selectbox {
+		width: 100%;
+	}
+}
 </style>
+<script>
+    const select = document.querySelector('#select');
+const opciones = document.querySelector('#opciones');
+const contenidoSelect = document.querySelector('#select .contenido-select');
+const hiddenInput = document.querySelector('#inputSelect');
+
+document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
+	opcion.addEventListener('click', (e) => {
+		e.preventDefault();
+		contenidoSelect.innerHTML = e.currentTarget.innerHTML;
+		select.classList.toggle('active');
+		opciones.classList.toggle('active');
+		hiddenInput.value = e.currentTarget.querySelector('.titulo').innerText;
+	});
+});
+
+select.addEventListener('click', () => {
+	select.classList.toggle('active');
+	opciones.classList.toggle('active');
+});
+</script>
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -85,7 +234,7 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
-    <header class="header">
+    <header class="header"  style="background-color: #031d5e; color: white;">
         <div class="header__top"  style="background-color: #031d5e;">
             <div class="container">
                 <div class="row">
@@ -93,11 +242,11 @@
                         <ul class="header__top__widget">
                             <li><i class="fa fa-map-marker" style="color: orange;"></i><a href="https://goo.gl/maps/54oxCfsSD4YqgS8BA">Centro Comercial Acuarela, Cali Colombia</a></li>
                             <li><i class="fa fa-phone"  style="color: orange;"></i><a href="https://wa.me/message/VLHTLIVCPAPEJ1" > +(57) 310 655 2292</a></li>
-                            <li><i class="fa fa-envelope"  style="color: orange;"></i>echeverryc08@gmail.com</li>
+                            <li><i class="fa fa-envelope"  style="color: orange;"></i>contacto@juaticambios.com</li>
                         </ul>
                     </div>
                     <div class="col-lg-3" >
-                        <div class="header__top__language" style="background-color: #f7ae28;">
+                        <div class="header__top__language" style="background-color: #f7ae28; border-radius: 8px;">
                             <img src="img/Flag_of_Colombia.svg.png" alt="" >
                             <span>Español</span>
                             <i class="fa fa-angle-down"></i>
@@ -110,37 +259,37 @@
                 </div>
             </div>
         </div>
-        <div class="container"  id="Fondo1" style="background-color: transparent;">
+        <div class="container"  id="Fondo1"  style="background-color: #031d5e;">
             <div class="row" style="margin: 0%;">
                 <div class="col-lg-1" >
                     <div class="header__logo" style=" width: 100px; height: 100px;">
-                        <a href="./index.html" style="margin-bottom: 15px;"><img style="width: 50px; height: 50px;"  src="img/Logo3.png" alt=""></a>
+                        <a href="./index.html" style="margin-bottom: 15px;"><img style="width: 50px; height: 50px; background-color: transparent;"  src="img/Logo3.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-2" >
                     <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
-                        <a href="./index.html"><h3 style="color: #eb9d0d;"><b>JustiCambios</b></h3></a>
+                        <a href="./index.html"><h3 style="color: white;"><b>JustiCambios</b></h3></a>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <div class="header__nav">
                         <nav class="header__menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Inicio</a></li>
-                                <li><a href="./about.html">Sobre</a></li>
-                                <li><a href="./services.html">Servicios</a></li>
-                                <li><a href="#">Paginas</a>
+                                <li class="active"  style="color: white;"><a href="./index.html"  style="color: white;">Inicio</a></li>
+                                <li  style="color: white;"><a href="./about.html"  style="color: white;">Sobre</a></li>
+                                <li  style="color: white;"><a href="./services.html"  style="color: white;">Servicios</a></li>
+                                <li  style="color: white;"><a href="#"  style="color: white;">Paginas</a>
                                     <ul class="dropdown" style="border-radius: 8px;">
                                         <li><a href="./services.html">Características</a></li>
                                         <li><a href="./services-details.html">Detalles de servicios</a></li>
                                         <li><a href="./blog-details.html">Detalles de Blog</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./contact.html">Contactó </a></li>
+                                <li  style="color: white;"><a href="./contact.html"  style="color: white;">Contactó </a></li>
                             </ul>
                         </nav>
                         <div class="header__search">
-                            <i class="fa fa-search search-switch"></i>
+                            <i class="fa fa-search search-switch"  style="color: white;"></i>
                         </div>
                     </div>
                 </div>
@@ -184,11 +333,11 @@
                                 <select style="border-radius: 5px;" >
                                     <option value="" style="border-radius: 5px;">País desde donde se envía</option>
                                     <option value="" style="border-radius: 5px;">Colombia</option>
-                                    <option value="" style="border-radius: 5px;">Venezuela</option>
+                                   <option value="" style="border-radius: 5px;">Venezuela</option>
                                     <option value="" style="border-radius: 5px;">Argentina</option>
-                                    <option value="" style="border-radius: 5px;" >Mexico</option>
+                                    <option value="" style="border-radius: 5px;">Mexico</option>
                                     <option value="" style="border-radius: 5px;">EEUU</option>
-                                    <option value="" style="border-radius: 5px;">Peru</option>
+                                   <option value="" style="border-radius: 5px;">Peru</option>
                                     <option value="" style="border-radius: 5px;">Chile</option>
                                     <option value=" " style="border-radius: 5px;">España</option>
                                     <option value="" style="border-radius: 5px;">Rep. Dominicana</option>
@@ -199,7 +348,7 @@
                                 <input type="text" placeholder="Se envia:"  style="border-radius: 5px;">
                             </div>
                         </div>
-                        <button type="submit" class="site-btn" style="background-color: #031d5e; border-radius: 8px;">Enviar</button>
+                        <button type="submit" class="site-btn" style="background-color: #031d5e; border-radius: 8px;">Enviar Solicitud</button>
                     </form>
                 </div>
                 </div>
@@ -227,30 +376,30 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
 <script src="js/productos-servicio.js"></script>
 <script src="js/lista-productos-controlador.js"></script>
     <!-- Home About Begin -->
-    <section class="home-about spad">
+    <section class="home-about spad"  style="background-color: #031d5e; color: white;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="home__about__text">
                         <div class="section-title">
-                            <h2  >Envía dinero desde cualquier lugar</h2>
-                            <p >- JustiCambios ofrece el mejor servicio de envío de dinero, sin importar dónde te encuentres. 
+                            <h2  style="color:white" >Envía dinero desde cualquier lugar</h2>
+                            <p  style="color:white">- JustiCambios ofrece el mejor servicio de envío de dinero, sin importar dónde te encuentres. 
                                 Sea en Colombia, o en cualquier parte del mundoo</p>
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="home__about__item">
-                                    <h4 >Sobré  Nosotoros</h4>
-                                    <p  >-Somos una empresa de transferencia de dinero a otros países y nos caracterizamos por
+                                    <h4  style="color:white">Sobré  Nosotoros</h4>
+                                    <p   style="color:white">-Somos una empresa de transferencia de dinero a otros países y nos caracterizamos por
                                          ofrecerle a nuestros clientes cuatro pilares fundamentales como lo son; 
                                          disponibilidad, accesibilidad, confianza y oportunidad.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="home__about__item">
-                                    <h4 >Nuestra Misión </h4>
-                                    <p  >-Ofrecer a nuestros clientes una experiencia satisfactoria al momento de hacer envíos a otros países, 
-                                        además de ofrecer gran accesibilidad al aceptar envíos desde 20.000 COP.</p>
+                                    <h4  style="color:white">Nuestra Misión </h4>
+                                    <p   style="color:white">-Ofrecer a nuestros clientes una experiencia satisfactoria al momento de hacer envíos a otros países, 
+                                        además de ofrecer gran accesibilidad al aceptar envíos desde 50.000 COP.</p>
                                 </div>
                             </div>
                         </div>
@@ -336,13 +485,13 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
         <!--Whastapp Button End-->
 
     <!-- Loan Services Section Begin -->
-    <section class="loan-services spad">
+    <section class="loan-services spad" style="background-color: #031d5e; color: white;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Descrube todo lo que te ofrecemos</h2>
-                        <p>Descubre todo lo que tenemos para ti, y lo beneficios que puedes obtener </p>
+                        <h2 style="color :white;">Descrube todo lo que te ofrecemos</h2>
+                        <p style="color:white"> Descubre todo lo que tenemos para ti, y lo beneficios que puedes obtener </p>
                     </div>
                 </div>
             </div>
@@ -359,7 +508,7 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
                 <div class="loan__services__item set-bg"  data-setbg="img/photo_2022-08-11_18-57-15.jpg">
                     <div class="loan__services__item__text">
                         <h4 style="color: black;"><span style="color: #ff8000;">02.</span>Necesitas Solo</h4>
-                        <p style="color: black;"> <b>20.000 COP para enviar dinero a quien quieres</b></p>
+                        <p style="color: black;"> <b>50.000 COP para enviar dinero a quien quieres</b></p>
                          <a  style="color: black;"href="#">Descubre Más</a>
                     </div>
                 </div>
@@ -390,44 +539,44 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
     <!-- Loan Services Section End -->
 
     <!-- Choose Section Begin -->
-    <section class="choose spad">
+    <section class="choose spad" style="background-color: #031d5e; color: white;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Por que nos prefieren?</h2>
+                        <h2 style="color:white">Por que nos prefieren?</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="choose__item" style="border-radius: 8px;">
+                    <div class="choose__item" style="border-radius: 8px ;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-2.png" alt="">
-                        <h5>Accesibilidad</h5>
-                        <p>Envios desde 20.000 COP</p>
+                        <h5 style="color:white">Accesibilidad</h5>
+                        <p style="color:white">Envios desde 20.000 COP</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="choose__item" style="border-radius: 8px;">
+                    <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-1.png" alt="">
-                        <h5>Disponibilidad</h5>
-                        <p>Lunes a Domingo 7am a 9pm col.</p>
+                        <h5 style="color:white">Disponibilidad</h5>
+                        <p style="color:white">Lunes a Domingo 7am a 9pm col.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="choose__item" style="border-radius: 8px;">
+                    <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-3.png" alt="">
-                        <h5>Confianza</h5>
-                        <p>Legalidad y Aliados</p>
+                        <h5 style="color:white">Confianza</h5>
+                        <p style="color:white">Legalidad y Aliados</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="choose__item" style="border-radius: 8px;">
+                    <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-4.png" alt="">
-                        <h5>Oportunidad</h5>
-                        <p>En 2 horas el dinero</p>
+                        <h5 style="color:white">Oportunidad</h5>
+                        <p style="color:white">En 2 horas el dinero</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
@@ -449,69 +598,69 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
             </div>
         </div>
     </div>
-    <div class="testimonial__carousel">
+    <div class="testimonial__carousel" style="background-color: #031d5e; color: white;">
         <div class="container">
             <div class="row">
                 <div class="testimonial__slider owl-carousel">
                     <div class="col-lg-4">
-                        <div class="testimonial__item" style="border-radius: 8px;">
-                            <img src="img/COLAB 1.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;">
-                            <h5>Juan Camilo Osorio Moncaleano</h5>
+                        <div class="testimonial__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
+                            <img src="img/COLAB 1.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px; background-color: #0c0c0c5a;">
+                            <h5 style="color:white">Juan Camilo Osorio Moncaleano</h5>
                             <span style="color: orange;">Usuario</span>
-                            <p>Gracias JustiCambios por el excelente servicio que me ofrecen cuando los necesito, 100% recomendado</p>
+                            <p style="color:white">Gracias JustiCambios por el excelente servicio que me ofrecen cuando los necesito, 100% recomendado</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="testimonial__item" style="border-radius: 8px;">
-                            <img src="img/COLAB 2.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;">
-                            <h5>Berlis Rosana Torres Perozo</h5>
+                        <div class="testimonial__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
+                            <img src="img/COLAB 2.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px; background-color: #0c0c0c5a;">
+                            <h5 style="color:white">Berlis Rosana Torres Perozo</h5>
                             <span style="color: orange;">Usuario</span>
-                            <p>Vivo una experiencia con JustiCambios, de hace más de un año,
+                            <p style="color:white">Vivo una experiencia con JustiCambios, de hace más de un año,
                                  haciendo mis envíos y recibiendo dinero con un excelente servicio</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="testimonial__item" style="border-radius: 8px;">
-                            <img src="img/COLAB 4.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;">
-                            <h5>Carlos Alfredo Barrios Rouvier</h5>
+                        <div class="testimonial__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
+                            <img src="img/COLAB 4.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;  background-color: #0c0c0c5a;">
+                            <h5 style="color:white">Carlos Alfredo Barrios Rouvier</h5>
                             <span style="color: orange;">Usuario</span>
-                            <p>JustiCambios, me ha ofrecido la mejor experiencia en transferencias,
+                            <p style="color:white">JustiCambios, me ha ofrecido la mejor experiencia en transferencias,
                                  es el número uno aquí y en todo el mundo</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="testimonial__item" style="border-radius: 8px;">
-                            <img src="img/COLAB 5.jpg" alt=""  style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;">
-                            <h5>Sandra Finol</h5>
+                        <div class="testimonial__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
+                            <img src="img/COLAB 5.jpg" alt=""  style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;  background-color: #0c0c0c5a;">
+                            <h5 style="color:white">Sandra Finol</h5>
                             <span style="color: orange;">Usuario</span>
-                            <p>Tengo tiempo haciendo mis envíos a través de JustiCambios y estoy muy satisfecha! 
+                            <p style="color:white">Tengo tiempo haciendo mis envíos a través de JustiCambios y estoy muy satisfecha! 
                                 Tienen la mejor tasa del mercado y a mi familia les llega súper rápido el dinero</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="testimonial__item" style="border-radius: 8px;">
-                            <img src="img/COLAB 3.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;  ">
-                            <h5>Jeisbel Marina Lugo Santiago</h5>
+                        <div class="testimonial__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
+                            <img src="img/COLAB 3.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;  background-color: #0c0c0c5a;  ">
+                            <h5 style="color:white">Jeisbel Marina Lugo Santiago</h5>
                             <span style="color: orange;">Usuario</span>
-                            <p>Feliz y complacida siempre con su amable atención, que además de ser confiables, 
+                            <p style="color:white">Feliz y complacida siempre con su amable atención, que además de ser confiables, 
                                 es muy rápida al momento de consignar en el país deseado</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="testimonial__item" style="border-radius: 8px;">
-                            <img src="img/COLAB 6.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;">
-                            <h5>Daniel Romero</h5>
+                        <div class="testimonial__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
+                            <img src="img/COLAB 6.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;  background-color: #0c0c0c5a;">
+                            <h5 style="color:white">Daniel Romero</h5>
                             <span style="color: orange;">Usuario</span>
-                            <p>Gracias a JustiCambio por su responsabilidad, rapidez y
+                            <p style="color:white">Gracias a JustiCambio por su responsabilidad, rapidez y
                                  su buena atención, 100% recomendado</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="testimonial__item" style="border-radius: 8px;">
-                            <img src="img/COLAB 7.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;">
-                            <h5>Yosseland</h5>
+                        <div class="testimonial__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
+                            <img src="img/COLAB 7.jpg" alt="" style="width: 100px; height: 160px; border-radius: 15px; text-align: center; font-size: 30px;  background-color: #0c0c0c5a;">
+                            <h5 style="color:white">Yosseland</h5>
                             <span style="color: orange;">Usuario</span>
-                            <p>Gracias JustiCambios, ustedes son la mejor opción para enviar
+                            <p style="color:white">Gracias JustiCambios, ustedes son la mejor opción para enviar
                                  remesas a Venezuela y otros países. Estoy agradecida por su servicio,
                                  son 100% responsables. Los recomiendo por su responsabilidad y eficacia.</p>
                         </div>
@@ -523,7 +672,7 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
     <!-- Testimonial Section End -->
 
     <!-- Counter Begin -->
-    <div class="counter spad">
+    <div class="counter spad" style="background-color: #031d5e; color: white;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6">
