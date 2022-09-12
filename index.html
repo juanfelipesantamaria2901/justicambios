@@ -194,7 +194,7 @@ select.addEventListener('click', () => {
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
+    <div class="offcanvas-menu-wrapper" style="background-color: #031d5e; color: white;">
         <div class="offcanvas__logo">
             <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
                 <a href="./index.html"><h3 style="color: #eb9d0d;"><b>JustiCambios</b></h3></a>
@@ -202,26 +202,19 @@ select.addEventListener('click', () => {
         </div>
         <nav class="offcanvas__menu mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Inicio</a></li>
-                <li><a href="./about.html">Sobré</a></li>
-                <li><a href="./services.html">Servicios</a></li>
-                <li><a href="#">Paginas</a>
-                    <ul class="dropdown">
-                        <li><a href="./services.html">caracteristicas</a></li>
-                        <li><a href="./services-details.html">Detalles de servicios</a></li>
-                        <li><a href="./blog-details.html">Detalles de Blog</a></li>
-                    </ul>
-                </li>
-                <li><a href="./contact.html">Contacto</a></li>
+                <li class="active"><a href="./index.html"  style="color: white;">Inicio</a></li>
+                <li><a href="./about.html"  style="color: white;">Sobre</a></li>
+                <li><a href="./services.html"  style="color: white;">Servicios</a></li>
+                <li><a href="./contact.html"  style="color: white;">Contacto</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <ul class="offcanvas__widget">
-            <li><i class="fa fa-map-marker" style="color: orange;"></i> <a href="https://goo.gl/maps/54oxCfsSD4YqgS8BA"  style="color: black;">Centro Comercial Acuarela, Cali Colombia</a></li>
-            <li><i class="fa fa-phone" style="color: orange;"></i><a href="https://wa.me/message/VLHTLIVCPAPEJ1" style="color: black;">+(57) 310 655 2292</a></li>
-            <li><i class="fa fa-envelope" style="color: orange;"></i>echeverryc08@gmail.com</li>
+            <li><i class="fa fa-map-marker" style="color: orange;"></i> <a href="https://goo.gl/maps/54oxCfsSD4YqgS8BA">Centro Comercial Acuarela, Cali Colombia</a></li>
+            <li><i class="fa fa-phone" style="color: orange;"></i><a href="https://wa.me/message/VLHTLIVCPAPEJ1" >+(57) 310 655 2292</a></li>
+            <li style="color:white"><i class="fa fa-envelope" style="color: orange;"></i>echeverryc08@gmail.com</li>
         </ul>
-        <div class="offcanvas__language" style="background-color: #b28405">
+        <div class="offcanvas__language" style="background-color: #b28405; border-radius: 8px;">
             <img src="img/Flag_of_Colombia.svg.png" alt="">
             <span>Español</span>
             <i class="fa fa-angle-down"></i>
@@ -278,14 +271,7 @@ select.addEventListener('click', () => {
                                 <li class="active"  style="color: white;"><a href="./index.html"  style="color: white;">Inicio</a></li>
                                 <li  style="color: white;"><a href="./about.html"  style="color: white;">Sobre</a></li>
                                 <li  style="color: white;"><a href="./services.html"  style="color: white;">Servicios</a></li>
-                                <li  style="color: white;"><a href="#"  style="color: white;">Paginas</a>
-                                    <ul class="dropdown" style="border-radius: 8px;">
-                                        <li><a href="./services.html">Características</a></li>
-                                        <li><a href="./services-details.html">Detalles de servicios</a></li>
-                                        <li><a href="./blog-details.html">Detalles de Blog</a></li>
-                                    </ul>
-                                </li>
-                                <li  style="color: white;"><a href="./contact.html"  style="color: white;">Contactó </a></li>
+                                <li  style="color: white;"><a href="./contact.html"  style="color: white;">Contacto</a></li>
                             </ul>
                         </nav>
                         <div class="header__search">
@@ -317,11 +303,41 @@ select.addEventListener('click', () => {
                     <div class="card-body" style=" background-color: #0c0c0c5a; border-radius: 8px;">
                     <form action="#" class="call__form">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Cuantó deseas enviar"  style="border-radius: 5px;">
+                            <div class="col-lg-6" style="border-radius: 5px;" >
+                                <select style="border-radius: 5px;"  id="Desde">
+                                    <option value="" style="border-radius: 5px;">País desde donde se envía</option>
+                                    <option value="Colombia" style="border-radius: 5px;">Colombia</option>
+                                   <option value="Venezuela" style="border-radius: 5px;">Venezuela</option>
+                                    <option value="Argentina" style="border-radius: 5px;">Argentina</option>
+                                    <option value="Mexico" style="border-radius: 5px;">Mexico</option>
+                                    <option value="EEUU" style="border-radius: 5px;">EEUU</option>
+                                   <option value="Peru" style="border-radius: 5px;">Peru</option>
+                                    <option value="Chile" style="border-radius: 5px;">Chile</option>
+                                    <option value="España" style="border-radius: 5px;">España</option>
+                                    <option value="Rep. Dominicana" style="border-radius: 5px;">Rep. Dominicana</option>
+                                    <option value="Panama" style="border-radius: 5px;">Panama</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6" style="border-radius: 5px;" >
+                                <select style="border-radius: 5px;" id="Donde" >
+                                    <option value="" style="border-radius: 5px;">País a donde se envía</option>
+                                    <option value="Colombia" style="border-radius: 5px;">Colombia</option>
+                                   <option value="Venezuela" style="border-radius: 5px;">Venezuela</option>
+                                    <option value="Argentina" style="border-radius: 5px;">Argentina</option>
+                                    <option value="Mexico" style="border-radius: 5px;">Mexico</option>
+                                    <option value="EEUU" style="border-radius: 5px;">EEUU</option>
+                                   <option value="Peru" style="border-radius: 5px;">Peru</option>
+                                    <option value="Chile" style="border-radius: 5px;">Chile</option>
+                                    <option value="España" style="border-radius: 5px;">España</option>
+                                    <option value="Rep. Dominicana" style="border-radius: 5px;">Rep. Dominicana</option>
+                                    <option value="Panama" style="border-radius: 5px;">Panama</option>
+                                </select>
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Cantidad de dinero ($):"  style="border-radius: 5px;">
+                                <input type="text" placeholder="Cuantó deseas enviar"  style="border-radius: 5px;" id="Dinero">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Se Resive"  style="border-radius: 5px;" id="Resive">
                             </div>
                             <div class="col-lg-6">
                                 <input type="text" placeholder="Nombré:"  style="border-radius: 5px;">
@@ -329,23 +345,11 @@ select.addEventListener('click', () => {
                             <div class="col-lg-6">
                                 <input type="text" placeholder="Correo:"  style="border-radius: 5px;">
                             </div>
-                            <div class="col-lg-6" style="border-radius: 5px;" >
-                                <select style="border-radius: 5px;" >
-                                    <option value="" style="border-radius: 5px;">País desde donde se envía</option>
-                                    <option value="" style="border-radius: 5px;">Colombia</option>
-                                   <option value="" style="border-radius: 5px;">Venezuela</option>
-                                    <option value="" style="border-radius: 5px;">Argentina</option>
-                                    <option value="" style="border-radius: 5px;">Mexico</option>
-                                    <option value="" style="border-radius: 5px;">EEUU</option>
-                                   <option value="" style="border-radius: 5px;">Peru</option>
-                                    <option value="" style="border-radius: 5px;">Chile</option>
-                                    <option value=" " style="border-radius: 5px;">España</option>
-                                    <option value="" style="border-radius: 5px;">Rep. Dominicana</option>
-                                    <option value="" style="border-radius: 5px;">Panama</option>
-                                </select>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="Telefono:"  style="border-radius: 5px;">
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="Se envia:"  style="border-radius: 5px;">
+                                <input type="text" disabled placeholder="Tasa:"  style="border-radius: 5px; background-color: #fff;" id="Tasa">
                             </div>
                         </div>
                         <button type="submit" class="site-btn" style="background-color: #031d5e; border-radius: 8px;">Enviar Solicitud</button>
@@ -356,8 +360,31 @@ select.addEventListener('click', () => {
         </div>
     </section>
     <!-- Hero Section End -->
-<script>
 
+    <script>
+         let Desde = document.getElementById("Desde")
+         let Dinero = parseint(document.getElementById("Dinero"))
+         let Donde = document.getElementById("Donde")
+         var tasa = 0
+         var compra = 0
+         var venta = 0
+         var compra1 = 0
+         var venta1 = 0
+         var Resive = document.getElementById("Resive") 
+       (function (){
+            If(Desde === "Colombia" && Donde === "Venezuela")
+         {
+            compra =  4275.00
+            venta =  4210.00 
+            venta1 =  8.10 
+            compra1 =  8.30 
+            Resive = toString(Dinero/venta1) 
+         }
+        })();
+    </script>
+
+    <!--API Divisas-->
+<script>
 var myHeaders = new Headers();
 myHeaders.append("apikey", "0SdtGYumsdP7xXQKCEWU7p5BdZYkwPBv");
 
@@ -375,6 +402,8 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="js/productos-servicio.js"></script>
 <script src="js/lista-productos-controlador.js"></script>
+    <!--API Divisas-->
+
     <!-- Home About Begin -->
     <section class="home-about spad"  style="background-color: #031d5e; color: white;">
         <div class="container">
@@ -544,7 +573,7 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2 style="color:white">Por que nos prefieren?</h2>
+                        <h2 style="color:white">¿Por qué nos prefieren?</h2>
                     </div>
                 </div>
             </div>
@@ -727,11 +756,11 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
                 <div class="col-lg-5 col-md-6">
                     <div class="call__text">
                         <div class="section-title">
-                            <h2>Contactanos</h2>
+                            <h2>Contáctanos</h2>
                             <p>Selecciona el servicio sobre el cual deseas conocer mas y nosotros te contactaremos por 
                                 medio de correo elecctronico o celular.</p>
                         </div>
-                        <a href="#">Contactanos</a>
+                        <a href="#">Contáctanos</a>
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 col-md-6">
@@ -779,7 +808,7 @@ fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="contact__widget__phone">
-                    <span>Contactanos Ahora!</span>
+                    <span>Contáctanos Ahora!</span>
                     <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1"></i> <h2  style="color:orange">+(57) 310 655 2292</h2></a></li>
                 </div>
             </div>
