@@ -189,6 +189,13 @@ header{
         -o-background-size: cover;
         background-size: 100% cover;
 }
+.col-lg-5{
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 80%;
+        background-color: #2525255a; border-radius: 8px;
+}
 @media screen and (max-width: 574px) {
     header{
         background-image: url(img/Mesa-de-trabajo-5-copia.png); background-repeat: no-repeat; 
@@ -197,7 +204,16 @@ header{
         -o-background-size: cover;
         background-size: cover;
     }
-
+    .col-lg-5{
+        background-color: #6d6d6d5a; border-radius: 8px;
+        margin: 12px;
+}
+}
+@media screen and (max-width: 990px) {
+    .col-lg-5{
+        background-color: #6d6d6d5a; border-radius: 8px;
+        margin: 12px;
+}
 }
 section:data-setbg{
     -webkit-background-size: cover;
@@ -208,6 +224,8 @@ section:data-setbg{
 .primary-btn{
     margin: 2px;
 }
+
+
 
 
 </style>
@@ -349,7 +367,7 @@ section:data-setbg{
     <section class="hero set-bg" data-setbg="img/happy-woman-holding-debit-credit-card-using-pc-2022-02-15-18-49-33-utc.jpg" >
         <div class="container">
             <div class="row">
-                <div class="col-lg-5" style="color: #ffffff; background-color: #2525255a; border-radius: 8px; background-size: cover;">
+                <div class="col-lg-5" style="color: #ffffff; ">
                     <div class="hero__text">
                         <h2 style="color: #ffffff; "><b>Envía dinero de la mejor manera</b></h2>
                         <p style="color: #ffffff;"><b>Registrate para acceder a nuestro servicios</b></p>
