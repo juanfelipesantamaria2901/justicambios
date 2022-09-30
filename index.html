@@ -384,41 +384,39 @@ section:data-setbg{
                                 <div class="col-lg-6" style="border-radius: 5px;">
                                     <select style="border-radius: 5px;" id="Desde">
                                         <option value="" style="border-radius: 5px;">País desde donde se envía</option>
-                                        <option value="Colombia" style="border-radius: 5px;">Colombia</option>
-                                        <option value="Venezuela" style="border-radius: 5px;">Venezuela</option>
-                                        <option value="Argentina" style="border-radius: 5px;">Argentina</option>
-                                        <option value="Mexico" style="border-radius: 5px;">México</option>
-                                        <option value="EEUU" style="border-radius: 5px;">EEUU</option>
-                                        <option value="Peru" style="border-radius: 5px;">Peru</option>
-                                        <option value="Chile" style="border-radius: 5px;">Chile</option>
-                                        <option value="España" style="border-radius: 5px;">España</option>
-                                        <option value="Rep. Dominicana" style="border-radius: 5px;">Rep. Dominicana
-                                        </option>
-                                        <option value="Panama" style="border-radius: 5px;">Panama</option>
+                                        <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
+                                        <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
+                                        <option value="ARS" style="border-radius: 5px;" onchange="cambio(this.value);">Argentina</option>
+                                        <option value="MXN" style="border-radius: 5px;" onchange="cambio(this.value);">México</option>
+                                        <option value="USD" style="border-radius: 5px;" onchange="cambio(this.value);">EEUU</option>
+                                        <option value="PEN" style="border-radius: 5px;" onchange="cambio(this.value);">Peru</option>
+                                        <option value="CLP" style="border-radius: 5px;" onchange="cambio(this.value);">Chile</option>
+                                        <option value="EUR" style="border-radius: 5px;" onchange="cambio(this.value);">España</option>
+                                        <option value="PAB" style="border-radius: 5px;" onchange="cambio(this.value);">Panama</option>
+                                        <option value="DOP" style="border-radius: 5px;" onchange="cambio(this.value);">Rep. Dominicana</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-6" style="border-radius: 5px;">
                                     <select style="border-radius: 5px;" id="Donde">
                                         <option value="" style="border-radius: 5px;">País a donde se envía</option>
-                                        <option value="Colombia" style="border-radius: 5px;">Colombia</option>
-                                        <option value="Venezuela" style="border-radius: 5px;">Venezuela</option>
-                                        <option value="Argentina" style="border-radius: 5px;">Argentina</option>
-                                        <option value="Mexico" style="border-radius: 5px;">México</option>
-                                        <option value="EEUU" style="border-radius: 5px;">EEUU</option>
-                                        <option value="Peru" style="border-radius: 5px;">Peru</option>
-                                        <option value="Chile" style="border-radius: 5px;">Chile</option>
-                                        <option value="España" style="border-radius: 5px;">España</option>
-                                        <option value="Rep. Dominicana" style="border-radius: 5px;">Rep. Dominicana
-                                        </option>
-                                        <option value="Panama" style="border-radius: 5px;">Panama</option>
+                                        <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
+                                        <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
+                                        <option value="ARS" style="border-radius: 5px;" onchange="cambio(this.value);">Argentina</option>
+                                        <option value="MXN" style="border-radius: 5px;" onchange="cambio(this.value);">México</option>
+                                        <option value="USD" style="border-radius: 5px;" onchange="cambio(this.value);">EEUU</option>
+                                        <option value="PEN" style="border-radius: 5px;" onchange="cambio(this.value);">Peru</option>
+                                        <option value="CLP" style="border-radius: 5px;" onchange="cambio(this.value);">Chile</option>
+                                        <option value="EUR" style="border-radius: 5px;" onchange="cambio(this.value);">España</option>
+                                        <option value="PAB" style="border-radius: 5px;" onchange="cambio(this.value);">Panama</option>
+                                        <option value="DOP" style="border-radius: 5px;" onchange="cambio(this.value);">Rep. Dominicana</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-6">
                                     <input type="text" placeholder="Cuánto deseas enviar:" style="border-radius: 5px;"
-                                        id="Dinero">
+                                        id="dinero">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" disabled placeholder="Se recibira en el destino:" style="border-radius: 5px;" id="Resive">
+                                    <input type="text"style="border-radius: 5px; background-color: white;" id="cuanto"></input>
                                 </div>
                                 <div class="col-lg-6">
                                     <input type="text" placeholder="Nombre:" style="border-radius: 5px;">
@@ -443,36 +441,18 @@ section:data-setbg{
         </div>
     </section>
     <!-- Hero Section End -->
-
-    <script>
-        let Desde = document.getElementById("Desde.value")
-        let Dinero = parseint(document.getElementById("Dinero.value"))
-        let Donde = document.getElementById("Donde.value")
-        var tasa = 0
-        var compra = 0
-        var venta = 0
-        var compra1 = 0
-        var venta1 = 0
-        var Resive = document.getElementById("Resive")
-            (function () {
-                If(Desde === "Colombia" && Donde === "Venezuela")
-                {
-                    compra = 4275.00
-                    venta = 4210.00
-                    venta1 = 8.10
-                    compra1 = 8.30
-                    Resive = toString(Dinero / venta1)
-                }
-                if(Desde === "Venezuela" && Donde === "Colombia"){
-                    
-                }
-            })();
-    </script>
-
+    
     <!--API Divisas-->
     <script>
+        var Valor1 = document.getElementById("Desde")
+        var Valor2 = document.getElementById("Donde")
+        var Valor3 = document.getElementById("dinero")
+        function cambio(Valor1,Valor2,Valor3){
+        var Master= Valor1
+        var Resive = Valor2
+        var envio = parseInt(Valor3)
         var myHeaders = new Headers();
-        myHeaders.append("apikey", "0SdtGYumsdP7xXQKCEWU7p5BdZYkwPBv");
+        myHeaders.append("apikey", "4yx1rg8uQ11mhqJcncB2L1vaaair40oY");
 
         var requestOptions = {
             method: 'GET',
@@ -480,10 +460,12 @@ section:data-setbg{
             headers: myHeaders
         };
 
-        fetch("https://api.apilayer.com/fixer/latest?symbols=MXN%2CCLP%2CARS%2CPEN%2CVEF%2CCOP%2CDOP%2CEUR%2C%20PAB%2CUSD&base=USD", requestOptions)
+        fetch(`fetch("https://api.apilayer.com/fixer/convert?to=${Resive}&from=${Master}&amount=${envio}`, requestOptions)
             .then(response => response.text())
+            .then(result => document.getElementById("cuanto").innerHTML)
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
+    }
     </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/productos-servicio.js"></script>
