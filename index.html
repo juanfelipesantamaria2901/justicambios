@@ -382,7 +382,7 @@ section:data-setbg{
                         <form action="#" class="call__form">
                             <div class="row">
                                 <div class="col-lg-6" style="border-radius: 5px;">
-                                    <select style="border-radius: 5px;" id="Desde">
+                                    <select style="border-radius: 5px;" id="Desde" name="Desde">
                                         <option value="" style="border-radius: 5px;">País desde donde se envía</option>
                                         <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
                                         <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
@@ -397,7 +397,7 @@ section:data-setbg{
                                     </select>
                                 </div>
                                 <div class="col-lg-6" style="border-radius: 5px;">
-                                    <select style="border-radius: 5px;" id="Donde">
+                                    <select style="border-radius: 5px;" id="Donde" name="Donde">
                                         <option value="" style="border-radius: 5px;">País a donde se envía</option>
                                         <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
                                         <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
@@ -444,9 +444,21 @@ section:data-setbg{
     
     <!--API Divisas-->
     <script>
-        var Valor1 = document.getElementById("Desde")
-        var Valor2 = document.getElementById("Donde")
+const input = document.querySelector('input');
+const log = document.getElementById('log');
+
+input.addEventListener('change', updateValue);
+
+function updateValue(e) {
+  log.textContent = e.target.value;
+}
+
+        var Valor1 = document.querySelector('.Desde');
+        var Valor2 = document.querySelector('.Donde');
         var Valor3 = document.getElementById("dinero")
+        Valor3.addEventListener('change',cambio)
+        Valor1.addEventListener('change',cambio)
+        Valor2.addEventListener('change',cambio)
         function cambio(Valor1,Valor2,Valor3){
         var Master= Valor1
         var Resive = Valor2
