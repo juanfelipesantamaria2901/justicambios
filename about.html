@@ -178,11 +178,18 @@ a:hover, a:focus {
     background-size: 100% 2px;
 }
 header{
-    background-image: url(img/proxy-image2.jpg); background-repeat: no-repeat;         
+    background-image: url(img/BANNER-NUEVO-JUSTICAMBIOS-2.gif); background-repeat: no-repeat;         
          -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: 100% cover;
+}
+.col-lg-5{
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 80%;
+        background-color: #2525255a; border-radius: 8px;
 }
 @media screen and (max-width: 574px) {
     header{
@@ -192,7 +199,16 @@ header{
         -o-background-size: cover;
         background-size: cover;
     }
-
+    .col-lg-5{
+        background-color: #6d6d6d5a; border-radius: 8px;
+        margin: 12px;
+}
+}
+@media screen and (max-width: 990px) {
+    .col-lg-5{
+        background-color: #6d6d6d5a; border-radius: 8px;
+        margin: 12px;
+}
 }
 section:data-setbg{
     -webkit-background-size: cover;
@@ -203,6 +219,13 @@ section:data-setbg{
 .primary-btn{
     margin: 2px;
 }
+.choose__item:hover{
+    background-color: #ffa2006e  !important;
+}
+
+
+
+
 </style>
 
 <body>
@@ -247,20 +270,23 @@ section:data-setbg{
 
 
     <!-- Header Section Begin -->
-    <header class="header" >
-        <div class="header__top"  style="background-color: #031d5e;">
+    <header class="header">
+        <div class="header__top" style="background-color: #031d5e;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9">
                         <ul class="header__top__widget">
-                            <li><i class="fa fa-map-marker" style="color: orange;"></i><a href="https://goo.gl/maps/54oxCfsSD4YqgS8BA">Centro Comercial Acuarela, Cali Colombia</a></li>
-                            <li><i class="fa fa-phone"  style="color: orange;"></i><a href="https://wa.me/message/VLHTLIVCPAPEJ1" > +(57) 310 655 2292</a></li>
-                            <li><i class="fa fa-envelope"  style="color: orange;"></i>contacto@juaticambios.com</li>
+                            <li><i class="fa fa-map-marker" style="color: orange;"></i><a
+                                    href="https://goo.gl/maps/54oxCfsSD4YqgS8BA">Centro Comercial Acuarela, Cali
+                                    Colombia</a></li>
+                            <li><i class="fa fa-phone" style="color: orange;"></i><a
+                                    href="https://wa.me/message/VLHTLIVCPAPEJ1"> +(57) 310 655 2292</a></li>
+                            <li><i class="fa fa-envelope" style="color: orange;"></i>contacto@juaticambios.com</li>
                         </ul>
                     </div>
-                    <div class="col-lg-3" >
-                        <div class="header__top__language" style="background-color: #f7ae28; border-radius: 8px;">
-                            <img src="img/Flag_of_Colombia.svg.png" alt="" >
+                    <div class="col-lg-3">
+                        <div class="header__top__language" style="background-color: #b28405 ; border-radius: 8px;">
+                            <img src="img/Flag_of_Colombia.svg.png" alt="">
                             <span>Español</span>
                             <i class="fa fa-angle-down"></i>
                             <ul style="border-radius: 8px;">
@@ -272,37 +298,39 @@ section:data-setbg{
                 </div>
             </div>
         </div>
-        <div class="container"  id="Fondo1"  style=" background: transparent;">
+        <div class="container"  style=" background: transparent;">
             <div class="row" style="margin: 0%;">
-                <div class="col-lg-1" >
+                <div class="col-lg-1">
                     <div class="header__logo" style=" width: 100px; height: 100px;">
-                        <a href="./index.html" style="margin-bottom: 15px;"><img style="width: 50px; height: 50px; background-color: transparent;"  
-                            src="img/Logo4.png" alt=""></a>
+                        <a href="./index.html" style="margin-bottom: 15px;"><img
+                                style="width: 50px; height: 50px; background-color: transparent;" src="img/Logo4.png"
+                                alt="JustiCambios"></a>
                     </div>
                 </div>
-                <div class="col-lg-2" >
+                <div class="col-lg-2">
                     <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
                         <a href="./index.html">
                             <h3 style="color: white; background-color: #2525255a; border-radius: 8px; background-size: 150px auto;"><b>JustiCambios</b></h3></a>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <div class="header__nav">
                         <nav class="header__menu">
                             <ul>
-                                <li   style="color: white;"><a href="./index.html"  style="color: white;">Inicio</a></li>
-                                <li  class="active" style="color: white;"><a href="./about.html" style="color: white; ">¿Quienes Somos?</a></li>
-                                <li  style="color: white;"><a href="./services.html"  style="color: white;">Servicios</a></li>
-                                <li  style="color: white;"><a href="./contact.html"  style="color: white;">Contacto</a></li>
+                                <li  style="color: white;"><a href="./index.html"
+                                        style="color: white;">Inicio</a></li>
+                                <li class="active" style="color: white;"><a href="./about.html" style="color: white; ">¿Quienes Somos?</a></li>
+                                <li style="color: white;"><a href="./services.html" style="color: white;">Servicios</a>
+                                </li>
+                                <li style="color: white;"><a href="./contact.html" style="color: white;">Contacto</a>
+                                </li>
                             </ul>
                         </nav>
-                        <div class="header__search">
-                            <i class="fa fa-search search-switch"  style="color: white;"></i>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="canvas__open" style="color: white;">
+            <div class="canvas__open" style="color:white">
                 <span class="fa fa-bars"></span>
             </div>
         </div>
@@ -341,8 +369,8 @@ section:data-setbg{
                     </div>
                     <div class="col-lg-6 offset-lg-1">
                         <div class="about__text">
-                            <h2 style="color: white">Bienvenido a JustiCambios.</h2>
-                            <p class="first_para" style="color: white">JustiCambios es una empresa de envío de dinero a otros países como; 
+                            <h2 style="color:white; text-align: justify;">Bienvenido a JustiCambios.</h2>
+                            <p class="first_para" style="color:white; text-align: justify;">JustiCambios es una empresa de envío de dinero a otros países como; 
                                 México, Chile, Argentina, Perú, Venezuela, España, República Dominicana, Panamá, USA y Colombia, con las tasas 
                                 y comisiones más bajas dentro del mercado, además de ofrecer un tiempo de envío oportuno. Se reciben envíos desde 50.000 COP.
                             </p>
@@ -354,24 +382,24 @@ section:data-setbg{
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="about__item">
-                        <h4 style="color: white">Nuestra Visión</h4>
-                        <p style="color: white">Cambiar el modelo de transacciones habitual para la compra venta de divisas, 
+                        <h4 style="color:white; text-align: justify;">Nuestra Visión</h4>
+                        <p style="color:white; text-align: justify;">Cambiar el modelo de transacciones habitual para la compra venta de divisas, 
                             para llegar a todo publico, ofreciendo la mayor seguridad del mercado</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="about__item">
-                        <h4  style="color: white">Nuestra Misión</h4>
-                        <p style="color: white">Ofrecer a nuestros clientes una experiencia satisfactoria al 
+                        <h4  style="color:white; text-align: justify;">Nuestra Misión</h4>
+                        <p style="color:white; text-align: justify;">Ofrecer a nuestros clientes una experiencia satisfactoria al 
                             momento de hacer envíos a otros países, además de ofrecer gran accesibilidad
                              al aceptar envíos desde 50.000 COP.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="about__item">
-                        <h4 style="color: white"> Nuestro Oferta</h4>
-                        <p style="color: white">Un modelo de transacciones diferente al usual, más rápido, más seguro, 
-                            tus transsacciones estaran cifradas gracias a la tecnoliga blockchain, y llegarán a su destino en un máximo de 2 horas</p>
+                        <h4 style="color:white; text-align: justify;"> Nuestro Oferta</h4>
+                        <p style="color:white; text-align: justify;">Un modelo de tus transacciones diferente al usual, más rápido, más seguro, 
+                            tus transsacciones estarán cifradas gracias a la tecnología blockchain, y llegarán a su destino en un máximo de 2 horas</p>
                     </div>
                 </div>
             </div>
@@ -380,7 +408,8 @@ section:data-setbg{
     <!-- About End -->
 
     
-     <!-- Choose Section Begin -->
+   
+    <!-- Choose Section Begin -->
     <section class="choose spad" style="background-color: #031d5e; color: white;">
         <div class="container">
             <div class="row">
@@ -391,34 +420,33 @@ section:data-setbg{
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="choose__item" style="border-radius: 8px ;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-2.png" alt="">
                         <h5 style="color:white">Accesibilidad</h5>
-                        <p style="color:white">Envíos desde 50.000 COP</p>
+                        <p style="color:white">Envios desde 50.000 COP</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-1.png" alt="">
                         <h5 style="color:white">Disponibilidad</h5>
                         <p style="color:white">Lunes a Domingo 7am a 9pm col.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-3.png" alt="">
                         <h5 style="color:white">Confianza</h5>
                         <p style="color:white">Legalidad y Aliados</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-4.png" alt="">
                         <h5 style="color:white">Oportunidad</h5>
-                        <p style="color:white">En 2 horas el dinero</p>
+                        <p style="color:white">En 2 horas tienes el dinero en 
+                            tus manos</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
@@ -457,8 +485,11 @@ section:data-setbg{
                     <div class="call__text">
                         <div class="section-title">
                             <h2>Contáctanos</h2>
-                            <p>Queremos conocerte y saber cómo te podemos ayudar,contáctanos a través de este
-                                formulario y nuestro asesores se comunicarán contigo lo más pronto posible.</p>
+                            <p>Comunícate con nosotros, 
+                                completa este formulario y 
+                                nuestros asesores se 
+                                comunicarán contigo en un 
+                                instante.</p>
                         </div>
                         <a href="#">Contáctanos</a>
                     </div>
@@ -492,30 +523,6 @@ section:data-setbg{
     </section>
     <!-- Call Section End -->
 
- <!-- Contact Begin -->
- <div class="contact-widget set-bg" data-setbg="img/contact-widget.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="contact__widget__item">
-                            <h4>Oficina Cali, Valle del Cauca</h4>
-                            <p>Centro Comercial Acuarela, Cali Colombia</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="contact__widget__phone">
-                    <span>Contáctanos Ahora!</span>
-                    <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1"></i> <h2  style="color:orange">+(57) 310 655 2292</h2></a></li>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Contact End -->
 
 <!-- Footer Section Begin -->
 <footer class="footer" style="background-color: #031d5e;">
