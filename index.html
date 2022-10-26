@@ -382,12 +382,13 @@ section:data-setbg{
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 col-md-6">
-                    <div class="card-body" style=" background-color: #0c0c0c5a; border-radius: 8px;">
-                        <form action="#" class="call__form">
-                            <div class="row">
+                    <div class="card" style=" background-color: #0c0c0c5a; border-radius: 8px;">
+                        <div class="card-body">
+                        <form action="#" class="form-group">
+                            <div class="form-row">
                                 <div class="col-lg-6" style="border-radius: 5px;">
-                                    <select style="border-radius: 5px;" class="desde" id="Desde" name="Desde">
-                                        <option value="" style="border-radius: 5px;">País desde donde se envía</option>
+                                    <select style="border-radius: 5px; width: 100%;" class="desde" id="Desde" name="Desde">
+                                        <option value="" style="border-radius: 5px;">Elige el país de ubicación actual</option>
                                         <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
                                         <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
                                         <option value="ARS" style="border-radius: 5px;" onchange="cambio(this.value);">Argentina</option>
@@ -402,7 +403,7 @@ section:data-setbg{
                                 </div>
                                 <div class="col-lg-6" style="border-radius: 5px;">
                                     <select style="border-radius: 5px;"  class="donde" id="Donde" name="Donde">
-                                        <option value="" style="border-radius: 5px;">País a donde se envía</option>
+                                        <option value="" style="border-radius: 5px;">País destino</option>
                                         <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
                                         <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
                                         <option value="ARS" style="border-radius: 5px;" onchange="cambio(this.value);">Argentina</option>
@@ -415,30 +416,33 @@ section:data-setbg{
                                         <option value="DOP" style="border-radius: 5px;" onchange="cambio(this.value);">Rep. Dominicana</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Cuánto deseas enviar:" style="border-radius: 5px;"
+                            </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto deseas enviar</b></label>
+                                    <input  class="form-control" type="number" placeholder="Cuánto deseas enviar:" style="border-radius: 5px;"
                                         id="dinero">
                                 </div>
-                                <div class="col-lg-6">
-                                    <input type="text"style="border-radius: 5px; background-color: white;" id="cuanto"></input>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto resive en esta moneda</b></label>
+                                    <input  class="form-control" type="number" disabled placeholder="Resive:" style="border-radius: 5px; background-color: white;" id="cuanto"></input>
                                 </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Nombre:" style="border-radius: 5px;">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Nombre:</b></label>
+                                    <input  class="form-control" type="text" placeholder="Nombre:" style="border-radius: 5px;">
                                 </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Correo:" style="border-radius: 5px;">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Teléfono:" style="border-radius: 5px;">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" disabled placeholder="Tasa:"
-                                        style="border-radius: 5px; background-color: #fff;" id="Tasa">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Correo Elecctronico</b></label>
+                                    <input type="email" class="form-control"  placeholder="Correo:"  id="exampleInputEmail1" style="border-radius: 5px;">
+                                  </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Telefono:</b></label>
+                                    <input  class="form-control" type="tel" placeholder="Teléfono:" style="border-radius: 5px;">
                                 </div>
                             </div>
                             <a type="submit" class="site-btn" href="https://wa.me/message/VLHTLIVCPAPEJ1"
                                 style="background-color: #031d5e; border-radius: 8px;">Hacer Solicitud</a>
                         </form>
+                    </div>
                     </div>
                 </div>
             </div>
