@@ -7,7 +7,7 @@
     <meta name="keywords" content="Loanday, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="img/Logo4.png" />
+    <link rel="icon" href="img/Logoprincipal.png" />
     <title>JustiCambios</title>
 
     <!-- Google Font -->
@@ -333,7 +333,7 @@ section:data-setbg{
                 <div class="col-lg-1">
                     <div class="header__logo" style=" width: 100px; height: 100px;">
                         <a href="./index.html" style="margin-bottom: 15px;"><img
-                                style="width: 50px; height: 50px; background-color: transparent;" src="img/Logo4.png"
+                                style="width: 50px; height: 50px; background-color: transparent;" src="img/Logoprincipal.png"
                                 alt="JustiCambios"></a>
                     </div>
                 </div>
@@ -374,7 +374,7 @@ section:data-setbg{
                 <div class="col-lg-5" style="color: #ffffff; ">
                     <div class="hero__text">
                         <h2 style="color: #ffffff; "><b>Envía dinero de la mejor manera</b></h2>
-                        <p style="color: #ffffff;"><b>Registrate para acceder a nuestro servicios</b></p>
+                        <p style="color: #ffffff;"><b>Regístrate para acceder a nuestros servicios</b></p>
                         <a href="#" style="background-color: #b28405; border-radius: 8px;"
                             class="primary-btn">Empezar</a>
                         <a href="#" style="background-color: #031d5e; border-radius: 8px;"
@@ -387,7 +387,7 @@ section:data-setbg{
                         <form action="#" class="form-group">
                             <div class="form-row">
                                 <div class="col-lg-6" style="border-radius: 5px;">
-                                    <select style="border-radius: 5px; width: 100%;" class="desde" id="Desde" name="Desde">
+                                    <select style="border-radius: 5px; width: 100%;" class="desde" id="desde" name="desde">
                                         <option value="" style="border-radius: 5px;">Elige el país de ubicación actual</option>
                                         <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
                                         <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
@@ -402,7 +402,7 @@ section:data-setbg{
                                     </select>
                                 </div>
                                 <div class="col-lg-6" style="border-radius: 5px;">
-                                    <select style="border-radius: 5px;"  class="donde" id="Donde" name="Donde">
+                                    <select style="border-radius: 5px;"  class="donde" id="donde" name="donde">
                                         <option value="" style="border-radius: 5px;">País destino</option>
                                         <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
                                         <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
@@ -418,12 +418,13 @@ section:data-setbg{
                                 </div>
                             </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto deseas enviar</b></label>
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto dinero deseas enviar</b></label>
                                     <input  class="form-control" type="number" placeholder="Cuánto deseas enviar:" style="border-radius: 5px;"
                                         id="dinero">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto resive en esta moneda</b></label>
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto dinero recibe en esta moneda
+                                        </b></label>
                                     <input  class="form-control" type="number" disabled placeholder="Resive:" style="border-radius: 5px; background-color: white;" id="cuanto"></input>
                                 </div>
                                 <div class="mb-3">
@@ -440,7 +441,7 @@ section:data-setbg{
                                 </div>
                             </div>
                             <a type="submit" class="site-btn" href="https://wa.me/message/VLHTLIVCPAPEJ1"
-                                style="background-color: #031d5e; border-radius: 8px;">Hacer Solicitud</a>
+                                style="background-color: #031d5e; border-radius: 8px; text-align: center;">Hacer Solicitud</a>
                         </form>
                     </div>
                     </div>
@@ -453,9 +454,9 @@ section:data-setbg{
     <!--API Divisas-->
     <script>
         
-        var Valor1 = document.querySelector('.desde');
-        var Valor2 = document.querySelector('.donde');
-        var Valor3 = document.getElementById("dinero");
+        var Valor1 = document.querySelector('#desde');
+        var Valor2 = document.querySelector('#donde');
+        var Valor3 = document.querySelector("#dinero");
         Valor3.addEventListener('change',cambio)
         Valor1.addEventListener('change',cambio)
         Valor2.addEventListener('change',cambio)
@@ -491,10 +492,11 @@ section:data-setbg{
                 <div class="col-lg-12 col-md-12">
                         <div class="home__about__text">
                             <div class="section-title">
-                            <h2 style="color:white; text-align: justify;">Envía dinero desde cualquier lugar</h2>
-                            <h5 style="color:white; text-align: justify;">JustiCambios ofrece el mejor servicio de envío de dinero, 
-                                sin importar dónde te encuentres.
-                                Sea en Colombia, o en cualquier parte del mundoo</h5>
+                            <h2 style="color:white; text-align: justify;">Envía dinero desde cualquier lugar del mundo</h2>
+                            <h5 style="color:white; text-align: justify;">JustiCambios ofrece el mejor servicio de envío de dinero, sin
+                                importar en que parte del mundo te encuentres, a su vez
+                                puedes realizar el trámite desde cualquier dispositivo móvil
+                                </h5>
                         </div>        
                 </div>
             </div>
@@ -511,25 +513,40 @@ section:data-setbg{
                                         • Confianza <br>
                                         • Oportunidad<br>
                                     </p><br>
-                                    <p style="color:white; text-align: justify;">
-                                        JustiCambios es una empresa de envío de dinero a otros países como: <br>
-                                        Mexico, Chile, Argentina, Perú, Venezuela, España, República Dominicana, Panamá,
-                                        USA y Colombia, con las tasas
-                                        y comisiones más bajas dentro del mercado, además de ofrecer un tiempo de envío
-                                        oportuno. <br> <br><b><h5 style="color:white">!Se reciben envíos desde 50.000 COP¡</h5></b>
+                                    <div style="color:white; text-align: justify;">
+                                        JustiCambios es una empresa de envío de dinero a otros países como:<br>
+                                        <div style= "padding: 15px; float: left; width: 50%; text-align: justify;" >
+                                            • México<br>
+                                            • Chile<br>
+                                            • Argentina<br>
+                                            • Perú<br>
+                                            • Venezuela<br>
+                                    </div>
+                                        <div style= "padding: 15px; float: right; width: 50%; text-align: justify;">
+                                            • España<br>
+                                            • República_Dominicana<br>
+                                            • Panamá<br>
+                                            • USA<br>
+                                            • Colombia<br>
+                                        </div>
+                                        <br>
+                                        <div style="color:white; text-align: justify;">
+                                            Contamos con las tasas y comisiones más bajas dentro del mercado, que ofrece un tiempo de envío oportuno. 
+                                            <br> <br><b><h5 style="color:white">!Se reciben envíos desde $50.000 COP.¡</h5></b>
+                                        </div>
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="home__about__item">
-                                    <h4 style="color:white; text-align: justify;">Nuestra Misión </h4>
-                                    <p style="color:white; text-align: justify;">Ofrecer a nuestros clientes una experiencia satisfactoria al
-                                        momento de hacer envíos a otros países,
-                                        además de ofrecer gran accesibilidad al aceptar envíos desde 50.000 COP.</p>
-                                </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="home__about__item">
+                                <h4 style="color:white; text-align: justify;">Nuestra Misión </h4>
+                                <p style="color:white; text-align: justify;">Ofrecer a nuestros clientes una experiencia satisfactoria al
+                                    momento de hacer envíos a otros países,
+                                    además de ofrecer gran accesibilidad al aceptar envíos desde 50.000 COP.</p>
                             </div>
                         </div>
-                        <a href="" class="primary-btn" style="background-color: #b28405; border-radius: 8px;">Descrubre
+                        <a href="" class="primary-btn" style="background-color: #b28405; border-radius: 8px; text-align: center;">Descrubre
                             Más</a>
                     </div>
                 </div>
@@ -663,14 +680,16 @@ section:data-setbg{
                     <div class="choose__item" style="border-radius: 8px ;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-2.png" alt="">
                         <h5 style="color:white">Accesibilidad</h5>
-                        <p style="color:white">Envios desde 50.000 COP</p>
+                        <p style="color:white">Envíos desde $50.000 COP</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-1.png" alt="">
                         <h5 style="color:white">Disponibilidad</h5>
-                        <p style="color:white">Lunes a Domingo 7am a 9pm col.</p>
+                        <p style="color:white">Disponibilidad Lunes a Domingo de 7:00 am a 9:00 pm, hora 
+                            Colombia. 
+                            </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -848,11 +867,13 @@ section:data-setbg{
                     <div class="call__text">
                         <div class="section-title">
                             <h2>Contáctanos</h2>
-                            <p>Comunícate con nosotros, 
-                                completa este formulario y 
-                                nuestros asesores se 
-                                comunicarán contigo en un 
-                                instante.</p>
+                            <p>Queremos conocerte y saber
+                                cómo te podemos ayudar.
+                                Diligencia este formulario, y
+                                nuestros asesores se
+                                comunicarán contigo en un
+                                instante.
+                                </p>
                         </div>
                         <a href="#">Contáctanos</a>
                     </div>
@@ -917,7 +938,7 @@ section:data-setbg{
                 <div class="footer__about">
                     <div class="footer__logo">
                         <a href="./index.html"><img style="width: 85px; height: 85px; margin: 0%;"
-                            src="img/Logo4.png" alt=""></a>
+                            src="img/Logoprincipal.png" alt=""></a>
                     </div>
                 </div>
             </div>
