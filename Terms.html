@@ -7,11 +7,16 @@
     <meta name="keywords" content="Loanday, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="img/Logo4.png" />
+    <link rel="icon" href="img/Logoprincipal.png" />
     <title>JustiCambios</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -219,14 +224,42 @@ section:data-setbg{
 .primary-btn{
     margin: 2px;
 }
+.testimonial__item:hover{
+    background-color: #ffa2006e  !important;
+}
 .choose__item:hover{
+        background-color: #ffa2006e  !important;
+}
+.services__item__text:hover{
+     background-color: #ffa2006e;
+}
+.services__item:hover{
     background-color: #ffa2006e  !important;
 }
 
 
-
-
 </style>
+<script>
+    const select = document.querySelector('#select');
+    const opciones = document.querySelector('#opciones');
+    const contenidoSelect = document.querySelector('#select .contenido-select');
+    const hiddenInput = document.querySelector('#inputSelect');
+
+    document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
+        opcion.addEventListener('click', (e) => {
+            e.preventDefault();
+            contenidoSelect.innerHTML = e.currentTarget.innerHTML;
+            select.classList.toggle('active');
+            opciones.classList.toggle('active');
+            hiddenInput.value = e.currentTarget.querySelector('.titulo').innerText;
+        });
+    });
+
+    select.addEventListener('click', () => {
+        select.classList.toggle('active');
+        opciones.classList.toggle('active');
+    });
+</script>
 
 <body>
     <!-- Page Preloder -->
@@ -234,40 +267,43 @@ section:data-setbg{
         <div class="loader"></div>
     </div>
 
-<!-- Offcanvas Menu Begin -->
-<div class="offcanvas-menu-overlay"></div>
-<div class="offcanvas-menu-wrapper" style="background-color: #031d5e; color: white;">
-    <div class="offcanvas__logo">
-        <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
-            <a href="./index.html"><h3 style="color: #eb9d0d;"><b>JustiCambios</b></h3></a>
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper" style="background-color: #031d5e; color: white;">
+        <div class="offcanvas__logo">
+            <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
+                <a href="./index.html">
+                    <h3 style="color: #eb9d0d;"><b>JustiCambios</b></h3>
+                </a>
+            </div>
+        </div>
+        <nav class="offcanvas__menu mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html" style="color: white;">Inicio</a></li>
+                <li><a href="./about.html"  style="color: white;">¿Quines Somos?</a></li>
+                <li><a href="./services.html" style="color: white;">Servicios</a></li>
+                <li><a href="./contact.html" style="color: white;">Contacto</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <ul class="offcanvas__widget">
+            <li><i class="fa fa-map-marker" style="color: orange;"></i> <a
+                    href="https://goo.gl/maps/54oxCfsSD4YqgS8BA">Centro Comercial Acuarela, Cali Colombia</a></li>
+            <li><i class="fa fa-phone" style="color: orange;"></i><a href="https://wa.me/message/VLHTLIVCPAPEJ1">+(57)
+                    310 655 2292</a></li>
+            <li style="color:white"><i class="fa fa-envelope" style="color: orange;"></i>contacto@juaticambios.com</li>
+        </ul>
+        <div class="offcanvas__language" style="background-color: #ffa2006e; border-radius: 8px;">
+            <img src="img/Flag_of_Colombia.svg.png" alt="">
+            <span>Español</span>
+            <i class="fa fa-angle-down"></i>
+            <ul style="border-radius: 8px;">
+                <li style="border-radius: 8px;"><a href="#">English</a></li>
+                <li style="border-radius: 8px;"><a href="#">Español</a></li>
+            </ul>
         </div>
     </div>
-    <nav class="offcanvas__menu mobile-menu">
-        <ul>
-            <li ><a href="./index.html"  style="color: white;">Inicio</a></li>
-            <li class="active"><a href="./about.html"  style="color: white;">¿Quines Somos?</a></li>
-            <li><a href="./services.html"  style="color: white;">Servicios</a></li>
-            <li><a href="./contact.html"  style="color: white;">Contacto</a></li>
-        </ul>
-    </nav>
-    <div id="mobile-menu-wrap"></div>
-    <ul class="offcanvas__widget">
-        <li><i class="fa fa-map-marker" style="color: orange;"></i> <a href="https://goo.gl/maps/54oxCfsSD4YqgS8BA">Centro Comercial Acuarela, Cali Colombia</a></li>
-        <li><i class="fa fa-phone" style="color: orange;"></i><a href="https://wa.me/message/VLHTLIVCPAPEJ1" >+(57) 310 655 2292</a></li>
-        <li style="color:white"><i class="fa fa-envelope" style="color: orange;"></i>contacto@juaticambios.com</li>
-    </ul>
-    <div class="offcanvas__language" style="background-color: #b28405; border-radius: 8px;">
-        <img src="img/Flag_of_Colombia.svg.png" alt="">
-        <span>Español</span>
-        <i class="fa fa-angle-down"></i>
-        <ul style="border-radius: 8px;">
-            <li style="border-radius: 8px;"><a href="#">English</a></li>
-            <li style="border-radius: 8px;"><a href="#">Español</a></li>
-        </ul>
-    </div>
-</div>
-<!-- Offcanvas Menu End -->
-
+    <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
     <header class="header">
@@ -276,7 +312,7 @@ section:data-setbg{
                 <div class="col-lg-1">
                     <div class="header__logo" style=" width: 100px; height: 100px;">
                         <a href="./index.html" style="margin-bottom: 15px;"><img
-                                style="width: 50px; height: 50px; background-color: transparent;" src="img/Logo4.png"
+                                style="width: 50px; height: 50px; background-color: transparent;" src="img/Logoprincipal.png"
                                 alt="JustiCambios"></a>
                     </div>
                 </div>
@@ -293,12 +329,12 @@ section:data-setbg{
                             <ul style="margin-left: 15px;">
                                 <li  style="color: white;"><a href="./index.html"
                                         style="color: white;">Inicio</a></li>
-                                <li  class="active" style="color: white;"><a href="./about.html" style="color: white; ">¿Quienes Somos?</a></li>
+                                <li   style="color: white;"><a href="./about.html" style="color: white; ">¿Quienes Somos?</a></li>
                                 <li   style="color: white;"><a href="./services.html" style="color: white;">Servicios</a>
                                 </li>
                                 <li  style="color: white;"><a href="./contact.html" style="color: white;">Contacto</a>
                                 </li>
-                                <li style="color: white;"><a href="./Terms.html" style="color: white;">Terminos</a>
+                                <li  class="active" style="color: white;"><a href="./Terms.html" style="color: white;">Terminos</a>
                                 </li>
                             </ul>
                         </nav>
@@ -312,128 +348,79 @@ section:data-setbg{
     </header>
     <!-- Header Section End -->
 
-    <!-- Breadcrumb Section Begin -->
-    <div class="breadcrumb-option set-bg" data-setbg="img/call-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Sobre Nosotros</h2>
-                        <div class="breadcrumb__links">
-                            <a href="./index.html">Inicio</a>
-                            <span>Sobre</span>
+        <!-- About Section Begin -->
+        <section class="about spad" style="background-color: #031d5e; color: white;">
+            <div class="container">
+                <h3 style="text-align: center; color:white; margin:5px;"><b>POLITICAS DE SEGURIDAD:</b></h3>
+                <div class="testimonial__slider owl-carousel">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                            <div class="services__item__img">
+                                <img src="img/Mesa-de-trabajo-3.png" alt="">
+                            </div>
+                            <div class="services__item__text" >
+                                <h4 style="color:white"><span style="color: orange;">01.</span>Para los referidos:</h4>
+                                <p style="color:white; text-align: justify;margin: 10px;">Debe indicar nombre y apellido para registrar su contacto 
+                                    e indicar la persona que lo recomendo, indicando nombre y apellido de la misma y el numero telefonico.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                            <div class="services__item__img">
+                                <img src="img/Mesa-de-trabajo-3.png" alt="">
+                            </div>
+                            <div class="services__item__text" >
+                                <h4 style="color:white"><span style="color: orange;">02.</span>Obligatorio:</h4>
+                                <p style="color:white; text-align: justify;margin: 10px;"> Es obligatorio al momento de procesar su pago colocar con boligrafo azul 
+                                    "Transferencia con justicambios, no compro ningun tipo de producto por RRSS"
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                            <div class="services__item__img">
+                                <img src="img/Mesa-de-trabajo-3.png" alt="">
+                            </div>
+                            <div class="services__item__text" >
+                                <h4 style="color:white"><span style="color: orange;">03.</span>Cliente nuevo:</h4>
+                                <p style="color:white; text-align: justify;margin: 10px;">Enviar foto con buena resolucion de cedula o
+                                     pasaporte de la persona que esta realizando el giro para verificar su identidad.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6" >
+                        <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                            <div class="services__item__img">
+                                <img src="img/Mesa-de-trabajo-3-copia.png" alt="">
+                            </div>
+                            <div class="services__item__text" >
+                                <h4  style="color:white"><span style="color: orange;">04.</span>Envios mayores a 100$ :</h4>
+                                <p  style="color:white; text-align: justify;margin: 10px;">Si el envio es mayor a 100$ debe enviar selfie con el recibo de envio en caso de ser 
+                                    deposito en efectivo,  si es transferencia un selfie con el documento de identidad del titular bancario.
+                                    hora Colombia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6" >
+                        <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                            <div class="services__item__img">
+                                <img src="img/Mesa-de-trabajo-1-copia.png" alt="">
+                            </div>
+                            <div class="services__item__text">
+                                <h4  style="color:white"><span style="color: orange;">05.</span>Confirmar:</h4>
+                                <p  style="color:white; text-align: justify;margin: 10px;">confirma que la transaccion ha sido exitosa para finalizar el proceso.
+                                    </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Breadcrumb Section End -->
-
-    <!-- About Section Begin -->
-    <section class="about spad" style="background-color: #031d5e; color: white;">
-        <div class="container">
-            <div class="about__content">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="about__img" style="border-radius: 8px;">
-                            <img  style="border-radius: 8px;" src="img/Mesa-de-trabajo-1-copia 2.png" alt="">
-                            <a href="https://www.youtube.com/watch?v=ZRFPY8itfDY"
-                                class="play-btn video-popup"><img src="img/about/video-play.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 offset-lg-1">
-                        <div class="about__text">
-                            <h2 style="color:white; text-align: justify;">Bienvenido a JustiCambios.</h2>
-                            <p class="first_para" style="color:white; text-align: justify;">JustiCambios es una empresa de envío de dinero a 
-                                otros países cómo: México, Chile, Argentina, Perú, Venezuela, España, República Dominicana,
-                                 Panamá, USA y Colombia, con las tasa y comisiones más bajas dentro del mercado, 
-                                 además de ofrecer un tiempo de envío oportuno. Se reciben envíos desde $10 USD.
-                            </p>
-                            <a href="#" class="primary-btn" style="background-color: orange; border-radius: 8px;">Contáctanos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="about__item">
-                        <h4 style="color:white; text-align: justify;">Nuestra Visión</h4>
-                        <p style="color:white; text-align: justify;">Cambiar el modelo de transacciones habitual para la compra venta de divisas, 
-                            para llegar a todo público, ofreciendo la mayor seguridad del mercado</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="about__item">
-                        <h4  style="color:white; text-align: justify;">Nuestra Misión</h4>
-                        <p style="color:white; text-align: justify;">Ofrecer a nuestros clientes una experiencia satisfactoria al 
-                            momento de hacer envíos a otros países, además de ofrecer gran accesibilidad
-                             al aceptar envíos desde $10 USD.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="about__item">
-                        <h4 style="color:white; text-align: justify;"> Nuestra Oferta</h4>
-                        <p style="color:white; text-align: justify;">Un modelo de tus transacciones diferente al usual, más rápido, más seguro, 
-                            tus transsacciones estarán cifradas gracias a la tecnología blockchain, y llegarán a su destino en un máximo de 2 horas</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About End -->
-
-    
-   
-    <!-- Choose Section Begin -->
-    <section class="choose spad" style="background-color: #031d5e; color: white;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2 style="color:white">¿Por qué nos prefieren?</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="choose__item" style="border-radius: 8px ;  background-color: #0c0c0c5a;">
-                        <img src="img/choose/choose-2.png" alt="">
-                        <h5 style="color:white">Accesibilidad</h5>
-                        <p style="color:white">Envíos desde $10 USD</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
-                        <img src="img/choose/choose-1.png" alt="">
-                        <h5 style="color:white">Disponibilidad</h5>
-                        <p style="color:white">Disponibilidad Lunes a Domingo de 7:00 am a 9:00 pm, hora 
-                            Colombia. 
-                            </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
-                        <img src="img/choose/choose-3.png" alt="">
-                        <h5 style="color:white">Confianza</h5>
-                        <p style="color:white">Legalidad y Aliados</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
-                        <img src="img/choose/choose-4.png" alt="">
-                        <h5 style="color:white">Oportunidad</h5>
-                        <p style="color:white">En 2 horas tienes el dinero en 
-                            tus manos</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Choose Section End -->
-
+        </section>
+        <!-- About End -->
      <!--Whastapp Button Begin-->
      <a class="btn-wsp" href="https://wa.me/message/VLHTLIVCPAPEJ1"  target="_blank" >
         <i class="fa fa-whatsapp"></i>
@@ -454,6 +441,7 @@ section:data-setbg{
          }
      </style>
          <!--Whastapp Button End-->
+
 <!-- Call Section Begin -->
 <section class="call spad set-bg" data-setbg="img/call-bg.jpg">
     <div class="container" style="align-items:center;">
@@ -581,18 +569,18 @@ section:data-setbg{
             </form>
         </div>
     </div>
-    <!-- Search End -->
-
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Search End -->    
+    
+        <!-- Js Plugins -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.nicescroll.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
-
 </html>
