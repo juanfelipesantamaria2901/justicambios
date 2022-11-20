@@ -171,96 +171,91 @@
             width: 100%;
         }
     }
+
     a {
-    text-decoration: none;
-    background-image: linear-gradient(#213f8f,#eb9d0d );
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-}
-a:hover, a:focus {
-    background-size: 100% 2px;
-}
-header{
-    background-image: url(img/BANNER-NUEVO-JUSTICAMBIOS-2.gif); background-repeat: no-repeat;         
-         -webkit-background-size: cover;
+        text-decoration: none;
+        background-image: linear-gradient(#213f8f, #eb9d0d);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+    }
+
+    a:hover,
+    a:focus {
+        background-size: 100% 2px;
+    }
+
+    header {
+        background-image: url(img/BANNER-NUEVO-JUSTICAMBIOS-2.gif);
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: 100% cover;
-}
-.col-lg-5{
-    -webkit-background-size: cover;
+    }
+
+    .col-lg-5 {
+        -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: 80%;
-        background-color: #2525255a; border-radius: 8px;
-}
-@media screen and (max-width: 574px) {
-    header{
-        background-image: url(img/Mesa-de-trabajo-5-copia.png); background-repeat: no-repeat; 
+        background-color: #2525255a;
+        border-radius: 8px;
+    }
+
+    @media screen and (max-width: 574px) {
+        header {
+            background-image: url(img/Mesa-de-trabajo-5-copia.png);
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .col-lg-5 {
+            background-color: #6d6d6d5a;
+            border-radius: 8px;
+            margin: 12px;
+        }
+    }
+
+    @media screen and (max-width: 990px) {
+        .col-lg-5 {
+            background-color: #6d6d6d5a;
+            border-radius: 8px;
+            margin: 12px;
+        }
+    }
+
+    section:data-setbg {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
     }
-    .col-lg-5{
-        background-color: #6d6d6d5a; border-radius: 8px;
-        margin: 12px;
-}
-}
-@media screen and (max-width: 990px) {
-    .col-lg-5{
-        background-color: #6d6d6d5a; border-radius: 8px;
-        margin: 12px;
-}
-}
-section:data-setbg{
-    -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
-.primary-btn{
-    margin: 2px;
-}
-.testimonial__item:hover{
-    background-color: #ffa2006e  !important;
-}
-.choose__item:hover{
-        background-color: #ffa2006e  !important;
-}
-.services__item__text:hover{
-     background-color: #ffa2006e;
-}
-.services__item:hover{
-    background-color: #ffa2006e  !important;
-}
 
+    .primary-btn {
+        margin: 2px;
+    }
 
+    .testimonial__item:hover {
+        background-color: #ffa2006e !important;
+    }
+
+    .choose__item:hover {
+        background-color: #ffa2006e !important;
+    }
+
+    .services__item__text:hover {
+        background-color: #ffa2006e;
+    }
+
+    .services__item:hover {
+        background-color: #ffa2006e !important;
+    }
 </style>
-<script>
-    const select = document.querySelector('#select');
-    const opciones = document.querySelector('#opciones');
-    const contenidoSelect = document.querySelector('#select .contenido-select');
-    const hiddenInput = document.querySelector('#inputSelect');
-
-    document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
-        opcion.addEventListener('click', (e) => {
-            e.preventDefault();
-            contenidoSelect.innerHTML = e.currentTarget.innerHTML;
-            select.classList.toggle('active');
-            opciones.classList.toggle('active');
-            hiddenInput.value = e.currentTarget.querySelector('.titulo').innerText;
-        });
-    });
-
-    select.addEventListener('click', () => {
-        select.classList.toggle('active');
-        opciones.classList.toggle('active');
-    });
-</script>
-
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -280,10 +275,10 @@ section:data-setbg{
         <nav class="offcanvas__menu mobile-menu">
             <ul>
                 <li class="active"><a href="./index.html" style="color: white;">Inicio</a></li>
-                <li><a href="./about.html"  style="color: white;">¿Quines Somos?</a></li>
+                <li><a href="./about.html" style="color: white;">¿Quines Somos?</a></li>
                 <li><a href="./services.html" style="color: white;">Servicios</a></li>
                 <li><a href="./contact.html" style="color: white;">Contacto</a></li>
-                <li ><a href="./Terms.html" style="color: white;">Terminos</a>
+                <li><a href="./Terms.html" style="color: white;">Terminos</a>
                 </li>
             </ul>
         </nav>
@@ -309,29 +304,35 @@ section:data-setbg{
 
     <!-- Header Section Begin -->
     <header class="header" style=" width:100% ;">
-        <div class="container"  style=" background: transparent; width:100% ;">
+        <div class="container" style=" background: transparent; width:100% ;">
             <div class="row" style="width:100% ;">
                 <div class="col-lg-1">
                     <div class="header__logo" style=" width: 100px; height: 100px;">
                         <a href="./index.html" style="margin-bottom: 15px;"><img
-                                style="width: 50px; height: 50px; background-color: transparent;" src="img/Logoprincipal.png"
-                                alt="JustiCambios"></a>
+                                style="width: 50px; height: 50px; background-color: transparent;"
+                                src="img/Logoprincipal.png" alt="JustiCambios"></a>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
                         <a href="./index.html">
-                            <h3 style="color: white; background-color: #2525255a; border-radius: 8px; background-size: 150px auto;"><b>JustiCambios</b></h3></a>
+                            <h3
+                                style="color: white; background-color: #2525255a; border-radius: 8px; background-size: 150px auto;">
+                                <b>JustiCambios</b>
+                            </h3>
+                        </a>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <div class="header__nav" style="margin-left: 15px;">
-                        <nav class="header__menu" style="margin-left: 15px; background-color: #2525255a; border-radius: 8px; background-size: 150px auto;">
+                        <nav class="header__menu"
+                            style="margin-left: 15px; background-color: #2525255a; border-radius: 8px; background-size: 150px auto;">
                             <ul style="margin-left: 15px;">
                                 <li class="active" style="color: white;"><a href="./index.html"
                                         style="color: white;">Inicio</a></li>
-                                <li style="color: white;"><a href="./about.html" style="color: white; ">¿Quienes Somos?</a></li>
+                                <li style="color: white;"><a href="./about.html" style="color: white; ">¿Quienes
+                                        Somos?</a></li>
                                 <li style="color: white;"><a href="./services.html" style="color: white;">Servicios</a>
                                 </li>
                                 <li style="color: white;"><a href="./contact.html" style="color: white;">Contacto</a>
@@ -351,15 +352,16 @@ section:data-setbg{
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero set-bg" data-setbg="img/happy-woman-holding-debit-credit-card-using-pc-2022-02-15-18-49-33-utc.jpg" >
+    <section class="hero set-bg"
+        data-setbg="img/happy-woman-holding-debit-credit-card-using-pc-2022-02-15-18-49-33-utc.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5" style="color: #ffffff; ">
                     <div class="hero__text">
                         <h2 style="color: #ffffff; "><b>Envía dinero de la mejor manera</b></h2>
                         <p style="color: #ffffff;"><b>Regístrate para acceder a nuestros servicios</b></p>
-                        <a href="https://wa.me/message/VLHTLIVCPAPEJ1" style="background-color: #b28405; border-radius: 8px;"
-                            class="primary-btn">Empezar</a>
+                        <a href="https://wa.me/message/VLHTLIVCPAPEJ1"
+                            style="background-color: #b28405; border-radius: 8px;" class="primary-btn">Empezar</a>
                         <a href="/Terms.html" style="background-color: #031d5e; border-radius: 8px;"
                             class="primary-btn howit-btn">¿Cómo funciona?</a>
                     </div>
@@ -367,134 +369,162 @@ section:data-setbg{
                 <div class="col-lg-6 offset-lg-1 col-md-6">
                     <div class="card" style=" background-color: #0c0c0c5a; border-radius: 8px;">
                         <div class="card-body">
-                        <form action="#" class="form-group">
-                            <div class="form-row">
-                                <div class="col-lg-6" style="border-radius: 5px;">
-                                    <select style="border-radius: 5px; width: 100%;" class="desde" id="desde" name="desde">
-                                        <option value="" style="border-radius: 5px;">Elige el país de ubicación actual</option>
-                                        <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
-                                        <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
-                                        <option value="ARS" style="border-radius: 5px;" onchange="cambio(this.value);">Argentina</option>
-                                        <option value="MXN" style="border-radius: 5px;" onchange="cambio(this.value);">México</option>
-                                        <option value="USD" style="border-radius: 5px;" onchange="cambio(this.value);">EEUU</option>
-                                        <option value="PEN" style="border-radius: 5px;" onchange="cambio(this.value);">Peru</option>
-                                        <option value="CLP" style="border-radius: 5px;" onchange="cambio(this.value);">Chile</option>
-                                        <option value="EUR" style="border-radius: 5px;" onchange="cambio(this.value);">España</option>
-                                        <option value="PAB" style="border-radius: 5px;" onchange="cambio(this.value);">Panama</option>
-                                        <option value="DOP" style="border-radius: 5px;" onchange="cambio(this.value);">Rep. Dominicana</option>
-                                    </select>
+                            <form action="#" class="form-group">
+                                <div class="form-row">
+                                    <div class="mb-3" style="border-radius: 5px;">
+                                        <select style="border-radius: 5px; width: 100%;" id="desde" class="form-control"
+                                            onchange="selecOp(event.target.value)">
+                                            <option value="" style="border-radius: 5px;">Elige el país de ubicación
+                                                actual</option>
+                                            <option value="COP" style="border-radius: 5px;">Colombia</option>
+                                            <option value="VEF" style="border-radius: 5px;">Venezuela</option>
+                                            <option value="ARS" style="border-radius: 5px;">Argentina</option>
+                                            <option value="MXN" style="border-radius: 5px;">México</option>
+                                            <option value="USD" style="border-radius: 5px;">EEUU</option>
+                                            <option value="PEN" style="border-radius: 5px;">Peru</option>
+                                            <option value="CLP" style="border-radius: 5px;">Chile</option>
+                                            <option value="EUR" style="border-radius: 5px;">España</option>
+                                            <option value="PAB" style="border-radius: 5px;">Panama</option>
+                                            <option value="DOP" style="border-radius: 5px;">Rep. Dominicana</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div class="mb-3" style="border-radius: 5px;">
+                                        <select style="border-radius: 5px;" id="donde" class="form-control"
+                                            onchange="selecOp2(event.target.value)">
+                                            <option value="" style="border-radius: 5px;">Elige el país destino</option>
+                                            <option value="COP" style="border-radius: 5px;">Colombia</option>
+                                            <option value="VEF" style="border-radius: 5px;">Venezuela</option>
+                                            <option value="ARS" style="border-radius: 5px;">Argentina</option>
+                                            <option value="MXN" style="border-radius: 5px;">México</option>
+                                            <option value="USD" style="border-radius: 5px;">EEUU</option>
+                                            <option value="PEN" style="border-radius: 5px;">Peru</option>
+                                            <option value="CLP" style="border-radius: 5px;">Chile</option>
+                                            <option value="EUR" style="border-radius: 5px;">España</option>
+                                            <option value="PAB" style="border-radius: 5px;">Panama</option>
+                                            <option value="DOP" style="border-radius: 5px;">Rep. Dominicana</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-lg-6" style="border-radius: 5px;">
-                                    <select style="border-radius: 5px;"  class="donde" id="donde" name="donde">
-                                        <option value="" style="border-radius: 5px;">Elige el país destino</option>
-                                        <option value="COP" style="border-radius: 5px;" onchange="cambio(this.value);">Colombia</option>
-                                        <option value="VEF" style="border-radius: 5px;"onchange="cambio(this.value);">Venezuela</option>
-                                        <option value="ARS" style="border-radius: 5px;" onchange="cambio(this.value);">Argentina</option>
-                                        <option value="MXN" style="border-radius: 5px;" onchange="cambio(this.value);">México</option>
-                                        <option value="USD" style="border-radius: 5px;" onchange="cambio(this.value);">EEUU</option>
-                                        <option value="PEN" style="border-radius: 5px;" onchange="cambio(this.value);">Peru</option>
-                                        <option value="CLP" style="border-radius: 5px;" onchange="cambio(this.value);">Chile</option>
-                                        <option value="EUR" style="border-radius: 5px;" onchange="cambio(this.value);">España</option>
-                                        <option value="PAB" style="border-radius: 5px;" onchange="cambio(this.value);">Panama</option>
-                                        <option value="DOP" style="border-radius: 5px;" onchange="cambio(this.value);">Rep. Dominicana</option>
-                                    </select>
-                                </div>
-                            </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto dinero deseas enviar</b></label>
-                                    <input  class="form-control" type="number" placeholder="Cuánto deseas enviar:" style="border-radius: 5px;"
-                                        id="dinero">
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto
+                                            dinero deseas enviar</b></label>
+                                    <input class="form-control" type="number" placeholder="Cuánto deseas enviar:"
+                                        style="border-radius: 5px;" id="dinero" onchange="selecOp3(event.target.value)">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto dinero recibe en esta moneda
+                                    <button type="button" class="site-btn"
+                                        style="background-color: #031d5e; border-radius: 8px; text-align: center; width: auto; height: 45px;"
+                                        onclick="calculate()"> calcular</button>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto
+                                            dinero recibe en esta moneda
                                         </b></label>
-                                    <input  class="form-control" type="number" disabled placeholder="Recibe:" style="border-radius: 5px; background-color: white;" id="cuanto"></input>
+                                    <span class="form-control" type="number" disabled
+                                        style="border-radius: 5px; background-color: white;" id="cuanto"></span>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Nombre:</b></label>
-                                    <input  class="form-control" type="text" placeholder="Nombre:" style="border-radius: 5px;">
+                                    <label for="exampleInputEmail1" class="form-label"
+                                        style="color:white"><b>Nombre:</b></label>
+                                    <input class="form-control" type="text" placeholder="Nombre:"
+                                        style="border-radius: 5px;">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Correo Elecctronico</b></label>
-                                    <input type="email" class="form-control"  placeholder="Correo:"  id="exampleInputEmail1" style="border-radius: 5px;">
-                                  </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Telefono:</b></label>
-                                    <input  class="form-control" type="tel" placeholder="Teléfono:" style="border-radius: 5px;">
+                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Correo
+                                            Elecctronico</b></label>
+                                    <input type="email" class="form-control" placeholder="Correo:"
+                                        id="exampleInputEmail1" style="border-radius: 5px;">
                                 </div>
-                            </div>
-                            <a type="submit" class="site-btn" href="https://wa.me/message/VLHTLIVCPAPEJ1"
-                                style="background-color: #031d5e; border-radius: 8px; text-align: center;">Hacer Solicitud</a>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label"
+                                        style="color:white"><b>Telefono:</b></label>
+                                    <input class="form-control" type="tel" placeholder="Teléfono:"
+                                        style="border-radius: 5px;">
+                                </div>
+                        </div>
+                        <a type="submit" class="site-btn" href="https://wa.me/message/VLHTLIVCPAPEJ1"
+                            style="background-color: #031d5e; border-radius: 8px; text-align: center;">Hacer
+                            Solicitud</a>
                         </form>
-                    </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
     <!-- Hero Section End -->
-    
+
     <!--API Divisas-->
     <script>
-        
-        var Valor1 = document.querySelector('#desde');
-        var Valor2 = document.querySelector('#donde');
-        var Valor3 = document.querySelector("#dinero");
-        Valor3.addEventListener('change',cambio)
-        Valor1.addEventListener('change',cambio)
-        Valor2.addEventListener('change',cambio)
-        function cambio(Valor1,Valor2,Valor3){
-        var Master= Valor1
-        var Resive = Valor2
-        var envio = parseInt(Valor3)
-        var myHeaders = new Headers();
-        myHeaders.append("apikey", "4yx1rg8uQ11mhqJcncB2L1vaaair40oY");
 
-        var requestOptions = {
-            method: 'GET',
-            redirect: 'follow',
-            headers: myHeaders
-        };
 
-        fetch(`https://api.apilayer.com/fixer/convert?to=${Resive}&from=${Master}&amount=${envio}`, requestOptions)
-            .then(response => response.text())
-            .then(result => document.getElementById("cuanto").innerHTML)
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
-    }
+        var from1 = "";
+        var to1 = "";
+        var amount1 = "";
+        const [valor3, setvalor3] =  [[],[]];
+
+        function selecOp(valor) {
+            console.log(valor);
+            from1 = valor;
+        }
+
+        function selecOp2(valor2) {
+            console.log(valor2);
+            to1 = valor2;
+        }
+
+        function selecOp3(valor3) {
+            console.log(valor3);
+            amount1 = valor3;
+        }
+
+        function calculate(from, to, amount) {
+            from = from1
+            to = to1
+            amount = amount1
+
+            const options = { method: 'GET', headers: { accept: 'application/json' } };
+                 fetch(`https://api.fastforex.io/convert?from=${from}&to=${to}&amount=${amount}&api_key=fbc2a96113-2e137a629f-rlltyu`, options)
+                .then(response => response.json())
+                .then(response => document.getElementById('cuanto').innerHTML = JSON.stringify(response.result))
+                .catch(console.error());
+        }
     </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/productos-servicio.js"></script>
-    <script src="js/lista-productos-controlador.js"></script>
     <!--API Divisas-->
 
     <!-- Home About Begin -->
     <section class="services spad" style="background-color: #031d5e; color: white;">
         <div class="container">
             <div class="testimonial__slider owl-carousel">
-                <div class="col-lg-4 col-md-4 col-sm-6" >
-                    <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="services__item" style="border-radius: 8px; background-color: #0c0c0c5a;">
                         <div class="services__item__img">
                             <img src="img/Mesa-de-trabajo-1-copia.png" alt="">
                         </div>
                         <div class="services__item__text">
-                            <h4  style="color:white"><span style="color: orange;">01.</span>Envía dinero desde cualquier lugar del mundo</h4>
-                            <p  style="color:white; text-align: justify;margin: 10px;">JustiCambios ofrece el mejor servicio de envío de dinero, sin
+                            <h4 style="color:white"><span style="color: orange;">01.</span>Envía dinero desde cualquier
+                                lugar del mundo</h4>
+                            <p style="color:white; text-align: justify;margin: 10px;">JustiCambios ofrece el mejor
+                                servicio de envío de dinero, sin
                                 importar en que parte del mundo te encuentres, a su vez
                                 puedes realizar el trámite desde cualquier dispositivo móvil</p>
-                                <a href="#" style="color:white">Descrubre más</a>
+                            <a href="#" style="color:white">Descrubre más</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                    <div class="services__item" style="border-radius: 8px; background-color: #0c0c0c5a;">
                         <div class="services__item__img">
                             <img src="img/Mesa-de-trabajo-3.png" alt="">
                         </div>
-                        <div class="services__item__text" >
-                            <h4 style="color:white"><span style="color: orange;">01.</span>Valores y Principios Corporativos:</h4>
-                            <p style="color:white; text-align: justify;margin: 10px;">En JustiCambios empresa de transferencia de dinero a otros países;
-                                 nos caracterizamos por ofrecer a nuestros clientes cuatro pilares fundamentales:<br>
+                        <div class="services__item__text">
+                            <h4 style="color:white"><span style="color: orange;">01.</span>Valores y Principios
+                                Corporativos:</h4>
+                            <p style="color:white; text-align: justify;margin: 10px;">En JustiCambios empresa de
+                                transferencia de dinero a otros países;
+                                nos caracterizamos por ofrecer a nuestros clientes cuatro pilares fundamentales:<br>
                                 1. Disponibilidad<br>
                                 2. Accesibilidad<br>
                                 3. Confianza<br>
@@ -504,56 +534,63 @@ section:data-setbg{
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                    <div class="services__item" style="border-radius: 8px; background-color: #0c0c0c5a;">
                         <div class="services__item__img">
                             <img src="img/Mesa-de-trabajo-3.png" alt="">
                         </div>
-                        <div class="services__item__text" >
-                            <h4 style="color:white"><span style="color: orange;">02.</span>Valores y Principios Corporativos:</h4>
-                                <p  style="color:white; text-align: justify;margin: 10px;">Realiza envío de dinero a otros países del continente Americano y Europeo. 
-                                    Con presencia en más de 10 países, como son Argentina, Colombia, 
-                                    Chile, España, Estados Unidos, México, Panamá, Perú y República Dominicana.</p><br>
+                        <div class="services__item__text">
+                            <h4 style="color:white"><span style="color: orange;">02.</span>Valores y Principios
+                                Corporativos:</h4>
+                            <p style="color:white; text-align: justify;margin: 10px;">Realiza envío de dinero a otros
+                                países del continente Americano y Europeo.
+                                Con presencia en más de 10 países, como son Argentina, Colombia,
+                                Chile, España, Estados Unidos, México, Panamá, Perú y República Dominicana.</p><br>
                             <a href="#" style="color:white">Descrubre más</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                    <div class="services__item" style="border-radius: 8px; background-color: #0c0c0c5a;">
                         <div class="services__item__img">
                             <img src="img/Mesa-de-trabajo-3.png" alt="">
                         </div>
-                        <div class="services__item__text" >
-                            <h4 style="color:white"><span style="color: orange;">03.</span>Valores y Principios Corporativos:</h4>
-                                    <p style="color:white; text-align: justify;margin: 10px;">Contamos con las tasas y 
-                                        comisiones más bajas dentro del mercado, que ofrece un tiempo de envío oportuno. </p>
-                                    <h5 style="color:white;"><b>¡Se reciben envíos desde $10 USD!</b></h5><br>
+                        <div class="services__item__text">
+                            <h4 style="color:white"><span style="color: orange;">03.</span>Valores y Principios
+                                Corporativos:</h4>
+                            <p style="color:white; text-align: justify;margin: 10px;">Contamos con las tasas y
+                                comisiones más bajas dentro del mercado, que ofrece un tiempo de envío oportuno. </p>
+                            <h5 style="color:white;"><b>¡Se reciben envíos desde $10 USD!</b></h5><br>
                             <a href="#" style="color:white">Descrubre más</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6" >
-                    <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="services__item" style="border-radius: 8px; background-color: #0c0c0c5a;">
                         <div class="services__item__img">
                             <img src="img/Mesa-de-trabajo-3-copia.png" alt="">
                         </div>
-                        <div class="services__item__text" >
-                            <h4  style="color:white"><span style="color: orange;">04.</span>Nuestra Misión:</h4>
-                            <p  style="color:white; text-align: justify;margin: 10px;">Ofrecer a nuestros clientes una experiencia satisfactoria al momento de 
-                                hacer envíos a otros países, además de ofrecer gran accesibilidad al aceptar envíos desde $10 USD.</p>
-                                <a href="#" style="color:white">Descrubre más</a>
+                        <div class="services__item__text">
+                            <h4 style="color:white"><span style="color: orange;">04.</span>Nuestra Misión:</h4>
+                            <p style="color:white; text-align: justify;margin: 10px;">Ofrecer a nuestros clientes una
+                                experiencia satisfactoria al momento de
+                                hacer envíos a otros países, además de ofrecer gran accesibilidad al aceptar envíos
+                                desde $10 USD.</p>
+                            <a href="#" style="color:white">Descrubre más</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6" >
-                    <div class="services__item"  style="border-radius: 8px; background-color: #0c0c0c5a;">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="services__item" style="border-radius: 8px; background-color: #0c0c0c5a;">
                         <div class="services__item__img">
                             <img src="img/Mesa-de-trabajo-1-copia.png" alt="">
                         </div>
                         <div class="services__item__text">
-                            <h4  style="color:white"><span style="color: orange;">05.</span>Nuestra Visión:</h4>
-                            <p  style="color:white; text-align: justify;margin: 10px;">Cambiar el modelo de transacciones habitual para la compra venta de divisas, 
-                                con el fin de llegar a todo tipo de público, ofreciendo la mayor seguridad del mercado.</p>
-                                <a href="#" style="color:white">Descrubre más</a>
+                            <h4 style="color:white"><span style="color: orange;">05.</span>Nuestra Visión:</h4>
+                            <p style="color:white; text-align: justify;margin: 10px;">Cambiar el modelo de transacciones
+                                habitual para la compra venta de divisas,
+                                con el fin de llegar a todo tipo de público, ofreciendo la mayor seguridad del mercado.
+                            </p>
+                            <a href="#" style="color:white">Descrubre más</a>
                         </div>
                     </div>
                 </div>
@@ -562,63 +599,60 @@ section:data-setbg{
     </section>
     <!-- Home About End -->
 
-        <!-- Loan Services Section Begin -->
-        <section class="loan-services spad" style="background-color: #031d5e; color: white;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title">
-                            <h2 style="color :white;">Descrube todo lo que te ofrecemos</h2>
-                            <p style="color:white"> Descubre todo lo que tenemos para ti y los beneficios que puedes obtener
-                            </p>
-                        </div>
+    <!-- Loan Services Section Begin -->
+    <section class="loan-services spad" style="background-color: #031d5e; color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 style="color :white;">Descrube todo lo que te ofrecemos</h2>
+                        <p style="color:white"> Descubre todo lo que tenemos para ti y los beneficios que puedes obtener
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
-                <div class="loan__services__list">
-                    <div class="loan__services__item set-bg"
-                        data-setbg="img/Mesadetrabajo1.png">
-                        <div class="loan__services__item__text">
-                            <h4 style="color: #ffffff;"><span style="color: #ffffff;">01.</span>Interés</h4>
-                            <p style="color: #ffffff;"><b>Baja tasa de costo de envió sólo lo justo</b></p>
-                            <a style="color: #ffffff;" href="#">Descubre Más</a>
-                        </div>
+        </div>
+        <div class="container-fluid">
+            <div class="loan__services__list">
+                <div class="loan__services__item set-bg" data-setbg="img/Mesadetrabajo1.png">
+                    <div class="loan__services__item__text">
+                        <h4 style="color: #ffffff;"><span style="color: #ffffff;">01.</span>Interés</h4>
+                        <p style="color: #ffffff;"><b>Baja tasa de costo de envió sólo lo justo</b></p>
+                        <a style="color: #ffffff;" href="#">Descubre Más</a>
                     </div>
-                    <div class="loan__services__item set-bg" data-setbg="img/Mesadetrabajo1copia2.png">
-                        <div class="loan__services__item__text">
-                            <h4 style="color: #ffffff;"><span style="color: #ffffff;">02.</span>Necesitas Sólo</h4>
-                            <p style="color: #ffffff;"> <b>50.000 COP para enviar dinero a quién quieres</b></p>
-                            <a style="color: #ffffff;" href="#">Descubre Más</a>
-                        </div>
+                </div>
+                <div class="loan__services__item set-bg" data-setbg="img/Mesadetrabajo1copia2.png">
+                    <div class="loan__services__item__text">
+                        <h4 style="color: #ffffff;"><span style="color: #ffffff;">02.</span>Necesitas Sólo</h4>
+                        <p style="color: #ffffff;"> <b>50.000 COP para enviar dinero a quién quieres</b></p>
+                        <a style="color: #ffffff;" href="#">Descubre Más</a>
                     </div>
-                    <div class="loan__services__item set-bg" data-setbg="img/Mesadetrabajo1copia4.png">
-                        <div class="loan__services__item__text">
-                            <h4 style="color: #ffffff;"><span style="color: white;">03.</span>Misión </h4>
-                            <p style="color: #ffffff;"><b>Que las personas puedan ayudar a sus familias</b></p>
-                            <a style="color: #ffffff;" href="#">Descubre Más</a>
-                        </div>
+                </div>
+                <div class="loan__services__item set-bg" data-setbg="img/Mesadetrabajo1copia4.png">
+                    <div class="loan__services__item__text">
+                        <h4 style="color: #ffffff;"><span style="color: white;">03.</span>Misión </h4>
+                        <p style="color: #ffffff;"><b>Que las personas puedan ayudar a sus familias</b></p>
+                        <a style="color: #ffffff;" href="#">Descubre Más</a>
                     </div>
-                    <div class="loan__services__item set-bg"
-                        data-setbg="img/Mesadetrabajo1copia3.png">
-                        <div class="loan__services__item__text">
-                            <h4 style="color: #ffffff;"><span style="color: white;">04.</span>Beneficio</h4>
-                            <p style="color: #ffffff;"><b>Enviar dinero en menos de 5 minutos</b></p>
-                            <a style="color: #ffffff;" href="#">Descubre Más</a>
-                        </div>
+                </div>
+                <div class="loan__services__item set-bg" data-setbg="img/Mesadetrabajo1copia3.png">
+                    <div class="loan__services__item__text">
+                        <h4 style="color: #ffffff;"><span style="color: white;">04.</span>Beneficio</h4>
+                        <p style="color: #ffffff;"><b>Enviar dinero en menos de 5 minutos</b></p>
+                        <a style="color: #ffffff;" href="#">Descubre Más</a>
                     </div>
-                    <div class="loan__services__item set-bg"
-                        data-setbg="img/Mesadetrabajo1copia.png">
-                        <div class="loan__services__item__text">
-                            <h4 style="color: #ffffff;"><span style="color: #ffffff;">05.</span> Servicios</h4>
-                            <p style="color: #ffffff;"><b>Envío de dinero desde donde quieras a quien quieres</b></p>
-                            <a style="color: #ffffff;" href="#">Descubre Más</a>
-                        </div>
+                </div>
+                <div class="loan__services__item set-bg" data-setbg="img/Mesadetrabajo1copia.png">
+                    <div class="loan__services__item__text">
+                        <h4 style="color: #ffffff;"><span style="color: #ffffff;">05.</span> Servicios</h4>
+                        <p style="color: #ffffff;"><b>Envío de dinero desde donde quieras a quien quieres</b></p>
+                        <a style="color: #ffffff;" href="#">Descubre Más</a>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Loan Services Section End -->
+        </div>
+    </section>
+    <!-- Loan Services Section End -->
 
     <!-- Choose Section Begin -->
     <section class="choose spad" style="background-color: #031d5e; color: white;">
@@ -642,9 +676,9 @@ section:data-setbg{
                     <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-1.png" alt="">
                         <h5 style="color:white">Disponibilidad</h5>
-                        <p style="color:white">Lunes a Sábado de 9:00 am - 6:00 pm, y 
-                            Domingos de 12:00 pm a 5:00 pm hora Colombia. 
-                            </p>
+                        <p style="color:white">Lunes a Sábado de 9:00 am - 6:00 pm, y
+                            Domingos de 12:00 pm a 5:00 pm hora Colombia.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -658,7 +692,7 @@ section:data-setbg{
                     <div class="choose__item" style="border-radius: 8px;  background-color: #0c0c0c5a;">
                         <img src="img/choose/choose-4.png" alt="">
                         <h5 style="color:white">Oportunidad</h5>
-                        <p style="color:white">En 2 horas tienes el dinero en 
+                        <p style="color:white">En 2 horas tienes el dinero en
                             tus manos</p>
                     </div>
                 </div>
@@ -813,7 +847,7 @@ section:data-setbg{
     </div>
     <!-- Counter End -->
 
-  
+
     <!--Whastapp Button Begin-->
     <a class="btn-wsp" href="https://wa.me/message/VLHTLIVCPAPEJ1" target="_blank">
         <i class="fa fa-whatsapp"></i>
@@ -835,122 +869,131 @@ section:data-setbg{
     </style>
     <!--Whastapp Button End-->
 
-<!-- Call Section Begin -->
-<section class="call spad set-bg" data-setbg="img/call-bg.jpg">
-    <div class="container" style="align-items:center;">
-        <div class="row">
-            <div class="col-lg-5 col-md-6">
-                <div class="call__text">
-                    <div class="section-title">
-                        <h2>Contáctanos</h2>
-                        <p>Queremos conocerte y saber cómo te podemos ayudarte, 
-                            contáctanos a través de este formulario y nuestro asesores se 
-                            comunicarán contigo en un instante.
-                            </p>
-                    </div>
-                    <a href="https://wa.me/message/VLHTLIVCPAPEJ1">Contáctanos</a>
-                </div>
-            </div>
-            <div class="col-lg-6 offset-lg-1 col-md-6">
-                <form action="#" class="form-group">
-                    <div class="row">
-                        <div class="mb-2">
-                            <input  style="width: 310px" class="form-control" type="text" placeholder="Nombre" style="border-radius: 5px;">
-                        </div>
-                        <div class="mb-2">
-                            <input  style="width: 310px" class="form-control" type="email" placeholder="Email" style="border-radius: 5px;">
-                        </div>
-                        <div class="mb-2">
-                            <input style="width: 310px" class="form-control" type="tel" placeholder="Telefono" style="border-radius: 5px;">
-                        </div>
-                        <div class="mb-2" style="border-radius: 5px;" >
-                            <select style="border-radius: 5px;">
-                                <option value="">Elige el servicio con el que presentas dudas</option>
-                                <option value="">Tiempo de envió</option>
-                                <option value="">Envió de dinero</option>
-                                <option value="">Tasas de envió</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="site-btn" style="background-color: orange; border-radius: 8px;">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Call Section End -->
-
-
- <!-- Footer Section Begin -->
- <footer class="footer" style="background-color: #031d5e;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer__about">
-                    <div class="footer__logo">
-                        <p> Carrera 80 # 13 A 26<br>
-                            Cali - Colombia <br>
-                            ¡Contáctanos Ahora!<br>
-                            <a href="https://wa.me/message/VLHTLIVCPAPEJ1"> +(57) 310 655 2292</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
-                <div class="footer__widget">
-                    <h5>Servicios</h5>
-                    <div class="footer__widget">
-                        <ul>
-                            <li><a href="/services.html">Economía</a></li>
-                            <li><a href="/services.html">Disponibilidad</a></li>
-                            <li><a href="/services.html">Cobertura</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-6">
-                <div class="footer__widget">
-                    <h5>Redes Sociales</h5>
-                    <div class="footer__widget footer__widget--social">
-                        <ul>
-                            <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1"><i class="fa fa-whatsapp"></i> WhatsApp</a></li>
-                            <li><a href="https://instagram.com/justicambios?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram"></i> Instagram</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
-                <div class="footer__widget footer__widget--address">
-                    <h5>Horarios de atención</h5>
-                    <p>Trabajamos todos los días de la semana, por favor contáctenos para cualquier consulta.</p>
-                    <ul>
-                        <li>Lunes - Sábado: 9:00 am - 6:00 pm</li>
-                        <li>Domingos: 12:00 pm - 5:00 pm</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer__copyright">
+    <!-- Call Section Begin -->
+    <section class="call spad set-bg" data-setbg="img/call-bg.jpg">
+        <div class="container" style="align-items:center;">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <ul class="footer__copyright__links">
-                        <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1">Terminos de uso</a></li>
-                        <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1">Politica de Privacidad</a></li>
-                        <li><a href="https://instagram.com/justicambios?igshid=YmMyMTA2M2Y=">Comunidad</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    <div class="footer__copyright__text">
-                        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> by
-                             <a href="/index.html" target="_blank">Justicambios</a></p>
+                <div class="col-lg-5 col-md-6">
+                    <div class="call__text">
+                        <div class="section-title">
+                            <h2>Contáctanos</h2>
+                            <p>Queremos conocerte y saber cómo te podemos ayudarte,
+                                contáctanos a través de este formulario y nuestro asesores se
+                                comunicarán contigo en un instante.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/message/VLHTLIVCPAPEJ1">Contáctanos</a>
                     </div>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </div>
+                <div class="col-lg-6 offset-lg-1 col-md-6">
+                    <form action="#" class="form-group">
+                        <div class="row">
+                            <div class="mb-2">
+                                <input style="width: 310px" class="form-control" type="text" placeholder="Nombre"
+                                    style="border-radius: 5px;">
+                            </div>
+                            <div class="mb-2">
+                                <input style="width: 310px" class="form-control" type="email" placeholder="Email"
+                                    style="border-radius: 5px;">
+                            </div>
+                            <div class="mb-2">
+                                <input style="width: 310px" class="form-control" type="tel" placeholder="Telefono"
+                                    style="border-radius: 5px;">
+                            </div>
+                            <div class="mb-2" style="border-radius: 5px;">
+                                <select style="border-radius: 5px;">
+                                    <option value="">Elige el servicio con el que presentas dudas</option>
+                                    <option value="">Tiempo de envió</option>
+                                    <option value="">Envió de dinero</option>
+                                    <option value="">Tasas de envió</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="site-btn"
+                            style="background-color: orange; border-radius: 8px;">Enviar</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- Footer Section End -->
+    </section>
+    <!-- Call Section End -->
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer" style="background-color: #031d5e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <p> Carrera 80 # 13 A 26<br>
+                                Cali - Colombia <br>
+                                ¡Contáctanos Ahora!<br>
+                                <a href="https://wa.me/message/VLHTLIVCPAPEJ1"> +(57) 310 655 2292</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Servicios</h5>
+                        <div class="footer__widget">
+                            <ul>
+                                <li><a href="/services.html">Economía</a></li>
+                                <li><a href="/services.html">Disponibilidad</a></li>
+                                <li><a href="/services.html">Cobertura</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Redes Sociales</h5>
+                        <div class="footer__widget footer__widget--social">
+                            <ul>
+                                <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1"><i class="fa fa-whatsapp"></i>
+                                        WhatsApp</a></li>
+                                <li><a href="https://instagram.com/justicambios?igshid=YmMyMTA2M2Y="><i
+                                            class="fa fa-instagram"></i> Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget footer__widget--address">
+                        <h5>Horarios de atención</h5>
+                        <p>Trabajamos todos los días de la semana, por favor contáctenos para cualquier consulta.</p>
+                        <ul>
+                            <li>Lunes - Sábado: 9:00 am - 6:00 pm</li>
+                            <li>Domingos: 12:00 pm - 5:00 pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <ul class="footer__copyright__links">
+                            <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1">Terminos de uso</a></li>
+                            <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1">Politica de Privacidad</a></li>
+                            <li><a href="https://instagram.com/justicambios?igshid=YmMyMTA2M2Y=">Comunidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <div class="footer__copyright__text">
+                            <p>Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> by
+                                <a href="/index.html" target="_blank">Justicambios</a>
+                            </p>
+                        </div>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
 
     <!-- Search Begin -->
     <div class="search-model">
