@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Loanday Template">
+    <meta name="keywords" content="Loanday, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/Logoprincipal.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Resgistro administrador</title>
+</head>
+<body>
+    <section>
+    <div style="margin: 15px;">
+        <div class="card">
+            <div class="card-header">
+                 <h2>Administrador de rates </h2>
+            </div>
+            <div class="card-body">
+    <form class="row g-3 needs-validation" novalidate >
+      <div class="col-md-6">
+        <label for="validationCustom02" class="form-label">Divisa a Actualizar </label>
+        <select style="border-radius: 5px; width: 100%;" id="desde" class="form-control"
+            onchange="selecOp(event.target.value)">
+            <option value="" style="border-radius: 5px;">Selecciona rete a registrar</option>
+            <option value="COP" style="border-radius: 5px;">COP</option>
+            <option value="VEF" style="border-radius: 5px;">VEF</option>
+            <option value="BRL" style="border-radius: 5px;">BRL</option>
+            <option value="EC" style="border-radius: 5px;">EC</option>
+            <option value="ARS" style="border-radius: 5px;">ARS</option>
+            <option value="MXN" style="border-radius: 5px;">MXN</option>
+            <option value="USD" style="border-radius: 5px;">USD</option>
+            <option value="PEN" style="border-radius: 5px;">PEN</option>
+            <option value="CLP" style="border-radius: 5px;">CLP</option>
+            <option value="EUR" style="border-radius: 5px;">EUR</option>
+            <option value="PAB" style="border-radius: 5px;">PAB</option>
+            <option value="DOP" style="border-radius: 5px;">DOP</option>
+        </select>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6">
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom07" class="form-label">Estableca valor para Dolar</label>
+        <input type="number" class="form-control" id="validationCustom04" placeholder="00.00" required onchange="selecOp(event.target.value)">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+    </div>
+
+  <div class="col-md-6">
+    <label for="validationCustom09" class="form-label">Estableca valor para Peso Colombiano</label>
+    <input type="number" class="form-control" id="validationCustom04" placeholder="00.00" required onchange="selecOp(event.target.value)">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+</div>
+
+<div class="col-md-6">
+  <label for="validationCustom06" class="form-label">Estableca valor para Peso Chileno</label>
+  <input type="number" class="form-control" id="validationCustom04" placeholder="00.00" required onchange="selecOp(event.target.value)">
+  <div class="valid-feedback">
+    Looks good!
+  </div>
+</div>
+
+  
+
+
+
+
+ 
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit" onclick="Register()">Registrar</button>
+      </div>
+    </form>
+</div>
+</div>
+</div>
+</section>
+<script>
+    function Register(){
+       alert("Informacion Guardada correctamente")   
+    }
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

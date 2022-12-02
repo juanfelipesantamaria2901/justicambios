@@ -267,7 +267,7 @@
     <div class="offcanvas-menu-wrapper" style="background-color: #031d5e; color: white;">
         <div class="offcanvas__logo">
             <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
-                <a href="./index.html">
+                <a href="./login.html">
                     <h3 style="color: #eb9d0d;"><b>JustiCambios</b></h3>
                 </a>
             </div>
@@ -315,7 +315,7 @@
                 </div>
                 <div class="col-lg-2">
                     <div class="header__logo" style="margin :0%; width: 100px; height: 100px;">
-                        <a href="./index.html">
+                        <a href="./login.html">
                             <h3
                                 style="color: white; background-color: #2525255a; border-radius: 8px; background-size: 150px auto;">
                                 <b>JustiCambios</b>
@@ -328,7 +328,7 @@
                     <div class="header__nav" style="margin-left: 15px;">
                         <nav class="header__menu"
                             style="margin-left: 15px; background-color: #2525255a; border-radius: 8px; background-size: 150px auto;">
-                            <ul style="margin-left: 15px;">
+                            <ul >
                                 <li class="active" style="color: white;"><a href="./index.html"
                                         style="color: white;">Inicio</a></li>
                                 <li style="color: white;"><a href="./about.html" style="color: white; ">¿Quienes
@@ -359,95 +359,18 @@
                 <div class="col-lg-5" style="color: #ffffff; ">
                     <div class="hero__text">
                         <h2 style="color: #ffffff; "><b>Envía dinero de la mejor manera</b></h2>
-                        <p style="color: #ffffff;"><b>Regístrate para acceder a nuestros servicios</b></p>
+                        <p style="color: #ffffff;"><b>Contactanos para acceder a nuestros servicios</b></p>
                         <a href="https://wa.me/message/VLHTLIVCPAPEJ1"
-                            style="background-color: #b28405; border-radius: 8px;" class="primary-btn">Empezar</a>
+                            style="background-color: #b28405; border-radius: 8px;" class="primary-btn">Contactarnos</a>
                         <a href="/Terms.html" style="background-color: #031d5e; border-radius: 8px;"
                             class="primary-btn howit-btn">¿Cómo funciona?</a>
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 col-md-6">
-                    <div class="card" style=" background-color: #0c0c0c5a; border-radius: 8px;">
-                        <div class="card-body">
-                            <form action="#" class="form-group">
-                                <div class="form-row">
-                                    <div class="mb-3" style="border-radius: 5px;">
-                                        <select style="border-radius: 5px; width: 100%;" id="desde" class="form-control"
-                                            onchange="selecOp(event.target.value)">
-                                            <option value="" style="border-radius: 5px;">Elige el país de ubicación
-                                                actual</option>
-                                            <option value="COP" style="border-radius: 5px;">Colombia</option>
-                                            <option value="VEF" style="border-radius: 5px;">Venezuela</option>
-                                            <option value="ARS" style="border-radius: 5px;">Argentina</option>
-                                            <option value="MXN" style="border-radius: 5px;">México</option>
-                                            <option value="USD" style="border-radius: 5px;">EEUU</option>
-                                            <option value="PEN" style="border-radius: 5px;">Peru</option>
-                                            <option value="CLP" style="border-radius: 5px;">Chile</option>
-                                            <option value="EUR" style="border-radius: 5px;">España</option>
-                                            <option value="PAB" style="border-radius: 5px;">Panama</option>
-                                            <option value="DOP" style="border-radius: 5px;">Rep. Dominicana</option>
-                                        </select>
-                                    </div>
-                                    <br>
-                                    <div class="mb-3" style="border-radius: 5px;">
-                                        <select style="border-radius: 5px;" id="donde" class="form-control"
-                                            onchange="selecOp2(event.target.value)">
-                                            <option value="" style="border-radius: 5px;">Elige el país destino</option>
-                                            <option value="COP" style="border-radius: 5px;">Colombia</option>
-                                            <option value="VEF" style="border-radius: 5px;">Venezuela</option>
-                                            <option value="ARS" style="border-radius: 5px;">Argentina</option>
-                                            <option value="MXN" style="border-radius: 5px;">México</option>
-                                            <option value="USD" style="border-radius: 5px;">EEUU</option>
-                                            <option value="PEN" style="border-radius: 5px;">Peru</option>
-                                            <option value="CLP" style="border-radius: 5px;">Chile</option>
-                                            <option value="EUR" style="border-radius: 5px;">España</option>
-                                            <option value="PAB" style="border-radius: 5px;">Panama</option>
-                                            <option value="DOP" style="border-radius: 5px;">Rep. Dominicana</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto
-                                            dinero deseas enviar</b></label>
-                                    <input class="form-control" type="number" placeholder="Cuánto deseas enviar:"
-                                        style="border-radius: 5px;" id="dinero" onchange="selecOp3(event.target.value)">
-                                </div>
-                                <div class="mb-3">
-                                    <button type="button" class="site-btn"
-                                        style="background-color: #031d5e; border-radius: 8px; text-align: center; width: auto; height: 45px;"
-                                        onclick="calculate()"> calcular</button>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Cuanto
-                                            dinero recibe en esta moneda
-                                        </b></label>
-                                    <span class="form-control" type="number" disabled
-                                        style="border-radius: 5px; background-color: white;" id="cuanto"></span>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label"
-                                        style="color:white"><b>Nombre:</b></label>
-                                    <input class="form-control" type="text" placeholder="Nombre:"
-                                        style="border-radius: 5px;">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label" style="color:white"><b>Correo
-                                            Elecctronico</b></label>
-                                    <input type="email" class="form-control" placeholder="Correo:"
-                                        id="exampleInputEmail1" style="border-radius: 5px;">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label"
-                                        style="color:white"><b>Telefono:</b></label>
-                                    <input class="form-control" type="tel" placeholder="Teléfono:"
-                                        style="border-radius: 5px;">
-                                </div>
-                        </div>
-                        <a type="submit" class="site-btn" href="https://wa.me/message/VLHTLIVCPAPEJ1"
-                            style="background-color: #031d5e; border-radius: 8px; text-align: center;">Hacer
-                            Solicitud</a>
-                        </form>
-                    </div>
+                    <object type="text/html"
+                    data="/guia.html"
+                    width="550" height="600" style="border-radius: 8px;">
+                </object>
                 </div>
             </div>
         </div>
@@ -462,7 +385,6 @@
         var from1 = "";
         var to1 = "";
         var amount1 = "";
-        const [valor3, setvalor3] =  [[],[]];
 
         function selecOp(valor) {
             console.log(valor);
@@ -929,7 +851,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <p> Carrera 80 # 13 A 26<br>
+                            <p> 
                                 Cali - Colombia <br>
                                 ¡Contáctanos Ahora!<br>
                                 <a href="https://wa.me/message/VLHTLIVCPAPEJ1"> +(57) 310 655 2292</a>
@@ -977,8 +899,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <ul class="footer__copyright__links">
-                            <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1">Terminos de uso</a></li>
-                            <li><a href="https://wa.me/message/VLHTLIVCPAPEJ1">Politica de Privacidad</a></li>
+                            <li><a href="/Terms.html">Terminos de uso</a></li>
+                            <li><a href="/Terms.html">Politica de Privacidad</a></li>
                             <li><a href="https://instagram.com/justicambios?igshid=YmMyMTA2M2Y=">Comunidad</a></li>
                         </ul>
                     </div>

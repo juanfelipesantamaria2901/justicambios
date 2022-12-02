@@ -1,0 +1,4513 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <link rel="profile" href="https://gmpg.org/xfn/11" />
+ <link rel="pingback" href="https://vitawallet.io/xmlrpc.php" />
+ <title>Justicambios &#8211; cotizador</title>
+ <meta name='robots' content='max-image-preview:large' />
+ <link rel="alternate" type="application/rss+xml" title="Vita Wallet &raquo; Feed" href="https://vitawallet.io/feed/" />
+ <link rel="alternate" type="application/rss+xml" title="Vita Wallet &raquo; Comments Feed"
+  href="https://vitawallet.io/comments/feed/" />
+ <script type="text/javascript">
+  window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/vitawallet.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1" } };
+  /*! This file is auto-generated */
+  !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode, e = (p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0), i.toDataURL()); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (p && p.fillText) switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([129777, 127995, 8205, 129778, 127999], [129777, 127995, 8203, 129778, 127999]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji))) }(window, document, window._wpemojiSettings);
+ </script>
+ <style type="text/css">
+  img.wp-smiley,
+  img.emoji {
+   display: inline !important;
+   border: none !important;
+   box-shadow: none !important;
+   height: 1em !important;
+   width: 1em !important;
+   margin: 0 0.07em !important;
+   vertical-align: -0.1em !important;
+   background: none !important;
+   padding: 0 !important;
+  }
+ </style>
+ <link rel='stylesheet' id='wp-block-library-css'
+  href='https://vitawallet.io/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1' type='text/css' media='all' />
+ <link rel='stylesheet' id='classic-theme-styles-css'
+  href='https://vitawallet.io/wp-includes/css/classic-themes.min.css?ver=1' type='text/css' media='all' />
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ <style id='global-styles-inline-css' type='text/css'>
+  body {
+   --wp--preset--color--black: #000000;
+   --wp--preset--color--cyan-bluish-gray: #abb8c3;
+   --wp--preset--color--white: #ffffff;
+   --wp--preset--color--pale-pink: #f78da7;
+   --wp--preset--color--vivid-red: #cf2e2e;
+   --wp--preset--color--luminous-vivid-orange: #ff6900;
+   --wp--preset--color--luminous-vivid-amber: #fcb900;
+   --wp--preset--color--light-green-cyan: #7bdcb5;
+   --wp--preset--color--vivid-green-cyan: #00d084;
+   --wp--preset--color--pale-cyan-blue: #8ed1fc;
+   --wp--preset--color--vivid-cyan-blue: #0693e3;
+   --wp--preset--color--vivid-purple: #9b51e0;
+   --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+   --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+   --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+   --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+   --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+   --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+   --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+   --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+   --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+   --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+   --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+   --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+   --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+   --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+   --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+   --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+   --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+   --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+   --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+   --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+   --wp--preset--font-size--small: 13px;
+   --wp--preset--font-size--medium: 20px;
+   --wp--preset--font-size--large: 36px;
+   --wp--preset--font-size--x-large: 42px;
+   --wp--preset--spacing--20: 0.44rem;
+   --wp--preset--spacing--30: 0.67rem;
+   --wp--preset--spacing--40: 1rem;
+   --wp--preset--spacing--50: 1.5rem;
+   --wp--preset--spacing--60: 2.25rem;
+   --wp--preset--spacing--70: 3.38rem;
+   --wp--preset--spacing--80: 5.06rem;
+  }
+
+  :where(.is-layout-flex) {
+   gap: 0.5em;
+  }
+
+  body .is-layout-flow>.alignleft {
+   float: left;
+   margin-inline-start: 0;
+   margin-inline-end: 2em;
+  }
+
+  body .is-layout-flow>.alignright {
+   float: right;
+   margin-inline-start: 2em;
+   margin-inline-end: 0;
+  }
+
+  body .is-layout-flow>.aligncenter {
+   margin-left: auto !important;
+   margin-right: auto !important;
+  }
+
+  body .is-layout-constrained>.alignleft {
+   float: left;
+   margin-inline-start: 0;
+   margin-inline-end: 2em;
+  }
+
+  body .is-layout-constrained>.alignright {
+   float: right;
+   margin-inline-start: 2em;
+   margin-inline-end: 0;
+  }
+
+  body .is-layout-constrained>.aligncenter {
+   margin-left: auto !important;
+   margin-right: auto !important;
+  }
+
+  body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+   max-width: var(--wp--style--global--content-size);
+   margin-left: auto !important;
+   margin-right: auto !important;
+  }
+
+  body .is-layout-constrained>.alignwide {
+   max-width: var(--wp--style--global--wide-size);
+  }
+
+  body .is-layout-flex {
+   display: flex;
+  }
+
+  body .is-layout-flex {
+   flex-wrap: wrap;
+   align-items: center;
+  }
+
+  body .is-layout-flex>* {
+   margin: 0;
+  }
+
+  :where(.wp-block-columns.is-layout-flex) {
+   gap: 2em;
+  }
+
+  .has-black-color {
+   color: var(--wp--preset--color--black) !important;
+  }
+
+  .has-cyan-bluish-gray-color {
+   color: var(--wp--preset--color--cyan-bluish-gray) !important;
+  }
+
+  .has-white-color {
+   color: var(--wp--preset--color--white) !important;
+  }
+
+  .has-pale-pink-color {
+   color: var(--wp--preset--color--pale-pink) !important;
+  }
+
+  .has-vivid-red-color {
+   color: var(--wp--preset--color--vivid-red) !important;
+  }
+
+  .has-luminous-vivid-orange-color {
+   color: var(--wp--preset--color--luminous-vivid-orange) !important;
+  }
+
+  .has-luminous-vivid-amber-color {
+   color: var(--wp--preset--color--luminous-vivid-amber) !important;
+  }
+
+  .has-light-green-cyan-color {
+   color: var(--wp--preset--color--light-green-cyan) !important;
+  }
+
+  .has-vivid-green-cyan-color {
+   color: var(--wp--preset--color--vivid-green-cyan) !important;
+  }
+
+  .has-pale-cyan-blue-color {
+   color: var(--wp--preset--color--pale-cyan-blue) !important;
+  }
+
+  .has-vivid-cyan-blue-color {
+   color: var(--wp--preset--color--vivid-cyan-blue) !important;
+  }
+
+  .has-vivid-purple-color {
+   color: var(--wp--preset--color--vivid-purple) !important;
+  }
+
+  .has-black-background-color {
+   background-color: var(--wp--preset--color--black) !important;
+  }
+
+  .has-cyan-bluish-gray-background-color {
+   background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+  }
+
+  .has-white-background-color {
+   background-color: var(--wp--preset--color--white) !important;
+  }
+
+  .has-pale-pink-background-color {
+   background-color: var(--wp--preset--color--pale-pink) !important;
+  }
+
+  .has-vivid-red-background-color {
+   background-color: var(--wp--preset--color--vivid-red) !important;
+  }
+
+  .has-luminous-vivid-orange-background-color {
+   background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+  }
+
+  .has-luminous-vivid-amber-background-color {
+   background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+  }
+
+  .has-light-green-cyan-background-color {
+   background-color: var(--wp--preset--color--light-green-cyan) !important;
+  }
+
+  .has-vivid-green-cyan-background-color {
+   background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+  }
+
+  .has-pale-cyan-blue-background-color {
+   background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+  }
+
+  .has-vivid-cyan-blue-background-color {
+   background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+  }
+
+  .has-vivid-purple-background-color {
+   background-color: var(--wp--preset--color--vivid-purple) !important;
+  }
+
+  .has-black-border-color {
+   border-color: var(--wp--preset--color--black) !important;
+  }
+
+  .has-cyan-bluish-gray-border-color {
+   border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+  }
+
+  .has-white-border-color {
+   border-color: var(--wp--preset--color--white) !important;
+  }
+
+  .has-pale-pink-border-color {
+   border-color: var(--wp--preset--color--pale-pink) !important;
+  }
+
+  .has-vivid-red-border-color {
+   border-color: var(--wp--preset--color--vivid-red) !important;
+  }
+
+  .has-luminous-vivid-orange-border-color {
+   border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+  }
+
+  .has-luminous-vivid-amber-border-color {
+   border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+  }
+
+  .has-light-green-cyan-border-color {
+   border-color: var(--wp--preset--color--light-green-cyan) !important;
+  }
+
+  .has-vivid-green-cyan-border-color {
+   border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+  }
+
+  .has-pale-cyan-blue-border-color {
+   border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+  }
+
+  .has-vivid-cyan-blue-border-color {
+   border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+  }
+
+  .has-vivid-purple-border-color {
+   border-color: var(--wp--preset--color--vivid-purple) !important;
+  }
+
+  .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+   background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+  }
+
+  .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+   background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+  }
+
+  .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+   background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+  }
+
+  .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+   background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+  }
+
+  .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+   background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+  }
+
+  .has-cool-to-warm-spectrum-gradient-background {
+   background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+  }
+
+  .has-blush-light-purple-gradient-background {
+   background: var(--wp--preset--gradient--blush-light-purple) !important;
+  }
+
+  .has-blush-bordeaux-gradient-background {
+   background: var(--wp--preset--gradient--blush-bordeaux) !important;
+  }
+
+  .has-luminous-dusk-gradient-background {
+   background: var(--wp--preset--gradient--luminous-dusk) !important;
+  }
+
+  .has-pale-ocean-gradient-background {
+   background: var(--wp--preset--gradient--pale-ocean) !important;
+  }
+
+  .has-electric-grass-gradient-background {
+   background: var(--wp--preset--gradient--electric-grass) !important;
+  }
+
+  .has-midnight-gradient-background {
+   background: var(--wp--preset--gradient--midnight) !important;
+  }
+
+  .has-small-font-size {
+   font-size: var(--wp--preset--font-size--small) !important;
+  }
+
+  .has-medium-font-size {
+   font-size: var(--wp--preset--font-size--medium) !important;
+  }
+
+  .has-large-font-size {
+   font-size: var(--wp--preset--font-size--large) !important;
+  }
+
+  .has-x-large-font-size {
+   font-size: var(--wp--preset--font-size--x-large) !important;
+  }
+
+  .wp-block-navigation a:where(:not(.wp-element-button)) {
+   color: inherit;
+  }
+
+  :where(.wp-block-columns.is-layout-flex) {
+   gap: 2em;
+  }
+
+  .wp-block-pullquote {
+   font-size: 1.5em;
+   line-height: 1.6;
+  }
+
+  input {
+   background: none !important;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5dced942 {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5dced942>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-11fb0f7d>.elementor-element-populated {
+   margin: 0px 0px 0px 0px;
+   --e-column-margin-right: 0px;
+   --e-column-margin-left: 0px;
+   padding: 60px 0px 0px 60px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-59c94787 .elementor-heading-title {
+   color: #4F4F4F;
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-558c442 .elementor-heading-title {
+   color: #4F4F4F;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-170ec8e3 .elementor-heading-title {
+   color: #4F4F4F;
+   font-family: "Lato", Sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   text-transform: none;
+   line-height: 18px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-170ec8e3>.elementor-widget-container {
+   margin: 20px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-33f069a4 .elementor-button {
+   font-family: "Lato", Sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 18px;
+   fill: var(--e-global-color-f9fda91);
+   color: var(--e-global-color-f9fda91);
+   background-color: var(--e-global-color-fa2ea4c);
+   border-radius: 4px 4px 4px 4px;
+   padding: 11px 11px 11px 11px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-33f069a4>.elementor-widget-container {
+   margin: 20px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-13c195b1 .elementor-button {
+   font-family: "Lato", Sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 18px;
+   fill: var(--e-global-color-f9fda91);
+   color: var(--e-global-color-f9fda91);
+   background-color: var(--e-global-color-fa2ea4c);
+   border-radius: 4px 4px 4px 4px;
+   padding: 3px 3px 3px 3px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-13c195b1>.elementor-widget-container {
+   margin: 20px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3302985 .elementor-button {
+   background-color: #005FEE;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3302985>.elementor-widget-container {
+   margin: 012px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-57d3b2c1 {
+   text-align: left;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-57d3b2c1 img {
+   width: 120px;
+   height: 52px;
+   object-fit: contain;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-57d3b2c1>.elementor-widget-container {
+   margin: 80px 0px 0px 0px;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-5e8900ff.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5e8900ff.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5e8900ff:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+  .elementor-8 .elementor-element.elementor-element-5e8900ff>.elementor-widget-wrap>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+   background-image: url("https://vitawallet.io/wp-content/uploads/2022/09/Group-969.svg");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: contain;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5e8900ff>.elementor-element-populated>.elementor-background-overlay {
+   filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5e8900ff>.elementor-element-populated {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5e8900ff>.elementor-element-populated>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-193e3175>.elementor-widget-container {
+   margin: 10px 0px 10px 180px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-11d3c4e2:not(.elementor-motion-effects-element-type-background),
+  .elementor-8 .elementor-element.elementor-element-11d3c4e2>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+   background-color: #FFFFFF;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-11d3c4e2 {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+   margin-top: 0px;
+   margin-bottom: 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-11d3c4e2>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-2f505f5b>.elementor-element-populated {
+   margin: 0px 0px 0px 60px;
+   --e-column-margin-right: 0px;
+   --e-column-margin-left: 60px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-600939aa .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-600939aa>.elementor-widget-container {
+   margin: 100px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+   padding-bottom: calc(24px/2);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+   margin-top: calc(24px/2);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+   margin-right: calc(24px/2);
+   margin-left: calc(24px/2);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-items.elementor-inline-items {
+   margin-right: calc(-24px/2);
+   margin-left: calc(-24px/2);
+  }
+
+  body.rtl .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+   left: calc(-24px/2);
+  }
+
+  body:not(.rtl) .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+   right: calc(-24px/2);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-icon i {
+   color: #1C396514;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-icon svg {
+   fill: #1C396514;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942 {
+   --e-icon-list-icon-size: 60px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-text {
+   color: var(--e-global-color-f9fda91);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-item>.elementor-icon-list-text,
+  .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-item>a {
+   font-family: "Lato", Sans-serif;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 26px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5a280942>.elementor-widget-container {
+   margin: 76px 0px 76px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-10595f28>.elementor-element-populated {
+   padding: 0px 60px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-a004a8d {
+   text-align: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-a004a8d .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-a004a8d>.elementor-widget-container {
+   margin: 40% 0% 0% 0%;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3cd1eac6 .htmega-animated-heading .cd-words-wrapper b {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3cd1eac6 .cd-headline.loading-bar .cd-words-wrapper::after {
+   background: var(--e-global-color-f9fda91);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-560524be .htmega-animated-heading .cd-words-wrapper b {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-560524be .cd-headline.loading-bar .cd-words-wrapper::after {
+   background: var(--e-global-color-f9fda91);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-b00c171:not(.elementor-motion-effects-element-type-background),
+  .elementor-8 .elementor-element.elementor-element-b00c171>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+   background-color: #FFFFFF;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-b00c171 {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+   padding: 0px 60px 0px 60px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-b00c171>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3477bd6 img {
+   width: 120px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3477bd6>.elementor-widget-container {
+   margin: 0120px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-f04b126 {
+   text-align: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-f04b126 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 26px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-b222020 {
+   text-align: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-b222020 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-b36cd1c:not(.elementor-motion-effects-element-type-background),
+  .elementor-8 .elementor-element.elementor-element-b36cd1c>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+   background-color: #FFFFFF;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-b36cd1c {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+   margin-top: 30px;
+   margin-bottom: 0px;
+   padding: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-b36cd1c>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-68c2336.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-68c2336.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-68c2336.elementor-column>.elementor-widget-wrap {
+   justify-content: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-68c2336:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+  .elementor-8 .elementor-element.elementor-element-68c2336>.elementor-widget-wrap>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+   background-image: url("https://vitawallet.io/wp-content/uploads/2022/09/Vector-49.png");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: contain;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-68c2336>.elementor-element-populated>.elementor-background-overlay {
+   filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-68c2336>.elementor-element-populated {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+   margin: 0px 20px 0px 20px;
+   --e-column-margin-right: 20px;
+   --e-column-margin-left: 20px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-68c2336>.elementor-element-populated>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-cd70305 .elementor-heading-title {
+   color: #4F4F4F;
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-edd81db .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Roboto", Sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 26px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-c4322d5 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 22px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-f9dfb34 {
+   --spacer-size: 50px;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-428f749.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-428f749.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-428f749.elementor-column>.elementor-widget-wrap {
+   justify-content: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-428f749:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+  .elementor-8 .elementor-element.elementor-element-428f749>.elementor-widget-wrap>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+   background-image: url("https://vitawallet.io/wp-content/uploads/2022/09/Vector-49.png");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: contain;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-428f749>.elementor-element-populated>.elementor-background-overlay {
+   filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-428f749>.elementor-element-populated {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+   margin: 0px 20px 0px 20px;
+   --e-column-margin-right: 20px;
+   --e-column-margin-left: 20px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-428f749>.elementor-element-populated>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5aa33cf .elementor-heading-title {
+   color: #4F4F4F;
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-8c882c8 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Roboto", Sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 26px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-8c882c8>.elementor-widget-container {
+   margin: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3f9c556 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 22px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3f9c556>.elementor-widget-container {
+   margin: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-262984f .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 17px;
+   font-weight: 500;
+   text-decoration: underline;
+   line-height: 18px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-262984f>.elementor-widget-container {
+   margin: 0px 0px 0px 30px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-942249f {
+   --spacer-size: 50px;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-07477fb.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-07477fb.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-07477fb.elementor-column>.elementor-widget-wrap {
+   justify-content: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-07477fb:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+  .elementor-8 .elementor-element.elementor-element-07477fb>.elementor-widget-wrap>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+   background-image: url("https://vitawallet.io/wp-content/uploads/2022/09/Vector-49.png");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: contain;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-07477fb>.elementor-element-populated>.elementor-background-overlay {
+   filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-07477fb>.elementor-element-populated {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+   margin: 0px 20px 0px 20px;
+   --e-column-margin-right: 20px;
+   --e-column-margin-left: 20px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-07477fb>.elementor-element-populated>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-d54a14d .elementor-heading-title {
+   color: #4F4F4F;
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-c082f0b .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Roboto", Sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 26px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-8483eb6 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 22px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-db572c1 {
+   --spacer-size: 50px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-9e59770 {
+   --spacer-size: 50px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3e6ec98e {
+   margin-top: 37px;
+   margin-bottom: 0px;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-1d626412.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-1d626412.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-1d626412>.elementor-widget-wrap>.elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+   margin-bottom: 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-2835f33d {
+   text-align: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-2835f33d img {
+   width: 500px;
+   height: 500px;
+   object-fit: contain;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-2835f33d>.elementor-widget-container {
+   margin: 0% 0% 0% 4%;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-8eb3c77>.elementor-element-populated {
+   margin: 40px 60px 0px 30px;
+   --e-column-margin-right: 60px;
+   --e-column-margin-left: 30px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5b3a30e {
+   text-align: left;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5b3a30e img {
+   width: 120px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5b3a30e>.elementor-widget-container {
+   margin: 40px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-8fad4c5 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 26px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-4cf8adc .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-be6cd00 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 22px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+   padding-bottom: calc(8px/2);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+   margin-top: calc(8px/2);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+   margin-right: calc(8px/2);
+   margin-left: calc(8px/2);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-items.elementor-inline-items {
+   margin-right: calc(-8px/2);
+   margin-left: calc(-8px/2);
+  }
+
+  body.rtl .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+   left: calc(-8px/2);
+  }
+
+  body:not(.rtl) .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+   right: calc(-8px/2);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-icon i {
+   color: var(--e-global-color-f9fda91);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-icon svg {
+   fill: var(--e-global-color-f9fda91);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-49908ae {
+   --e-icon-list-icon-size: 10px;
+   --e-icon-list-icon-align: left;
+   --e-icon-list-icon-margin: 0 calc(var(--e-icon-list-icon-size, 1em) * 0.25) 0 0;
+   width: auto;
+   max-width: auto;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-text {
+   padding-left: 16px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-item>.elementor-icon-list-text,
+  .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-item>a {
+   font-family: "Lato", Sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-62aaa8f {
+   --spacer-size: 80px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-6f1df032:not(.elementor-motion-effects-element-type-background),
+  .elementor-8 .elementor-element.elementor-element-6f1df032>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+   background-color: #F8FAFC;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-6f1df032 {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+   padding: 0px 60px 0px 60px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-6f1df032>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-1d2a5b3d>.elementor-element-populated {
+   margin: 0px 0px 0px 0px;
+   --e-column-margin-right: 0px;
+   --e-column-margin-left: 0px;
+   padding: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-4bb2d557 {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+   padding: 90px 60px 90px 60px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-4bb2d557>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-6153fb82>.elementor-element-populated {
+   margin: 0px 0px 0px 0px;
+   --e-column-margin-right: 0px;
+   --e-column-margin-left: 0px;
+   padding: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-30b5f3f9 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 34px;
+   font-weight: 700;
+   line-height: 36px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-30b5f3f9>.elementor-widget-container {
+   margin: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-787606f7 {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 22px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-787606f7>.elementor-widget-container {
+   margin: 10px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-7490c3c4 .elementor-button {
+   font-family: "Lato", Sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 18px;
+   background-color: var(--e-global-color-7db8c26);
+   border-radius: 4px 4px 4px 4px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-7490c3c4>.elementor-widget-container {
+   margin: 0px 0px 0px 0px;
+   padding: 3% 0% 0% 0%;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-9340169 {
+   --flex-direction: row;
+   --container-widget-width: initial;
+   --container-widget-height: 100%;
+   --container-widget-flex-grow: 1;
+   --gap: 0px;
+   --margin-top: 5%;
+   --margin-right: 0%;
+   --margin-bottom: 0%;
+   --margin-left: 0%;
+   --padding-top: 0px;
+   --padding-right: 0px;
+   --padding-bottom: 0px;
+   --padding-left: 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-1a95e77 {
+   --align-items: flex-start;
+   --margin-top: 0px;
+   --margin-right: 10px;
+   --margin-bottom: 0px;
+   --margin-left: 0px;
+   --padding-top: 0px;
+   --padding-right: 0px;
+   --padding-bottom: 0px;
+   --padding-left: 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-4f42d88 img {
+   width: 100%;
+   height: 6vh;
+   object-fit: contain;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-4f42d88>.elementor-widget-container {
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-dd9d41e {
+   --margin-top: 0px;
+   --margin-right: 0px;
+   --margin-bottom: 0px;
+   --margin-left: 0px;
+   --padding-top: 0px;
+   --padding-right: 0px;
+   --padding-bottom: 0px;
+   --padding-left: 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-cf7889d img {
+   width: 100%;
+   height: 6vh;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-cf7889d>.elementor-widget-container {
+   margin: 0px 0px 0px 10px;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-967c2d7.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-967c2d7.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-967c2d7.elementor-column>.elementor-widget-wrap {
+   justify-content: flex-end;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-967c2d7>.elementor-element-populated {
+   padding: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-bf44377 {
+   text-align: right;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-bf44377 img {
+   width: 80%;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-bf44377>.elementor-widget-container {
+   margin: 0px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-65c30b9f>.elementor-container {
+   max-width: 1440px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-65c30b9f:not(.elementor-motion-effects-element-type-background),
+  .elementor-8 .elementor-element.elementor-element-65c30b9f>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+   background-color: var(--e-global-color-c498eec);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-65c30b9f {
+   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-65c30b9f>.elementor-background-overlay {
+   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-53455230>.elementor-element-populated {
+   margin: 0px 60px 0px 60px;
+   --e-column-margin-right: 60px;
+   --e-column-margin-left: 60px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-6333a757 .elementor-heading-title {
+   color: var(--e-global-color-f9fda91);
+   font-family: "Lato", Sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 26px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-6333a757>.elementor-widget-container {
+   margin: 60px 0px 0px 0px;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-56d189c8 {
+   margin-top: 40px;
+   margin-bottom: 0px;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-129af696.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-129af696.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3e0e3957 img {
+   width: 55%;
+   opacity: 1;
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3e0e3957.elementor-element {
+   --align-self: center;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-4544ace6.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-4544ace6.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-2b454712 img {
+   width: 55%;
+   opacity: 1;
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-2b454712.elementor-element {
+   --align-self: center;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-3c22ec5.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-3c22ec5.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-bef115d img {
+   width: 55%;
+   opacity: 1;
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-bef115d.elementor-element {
+   --align-self: center;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-44d4770.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-44d4770.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5f73727 img {
+   width: 55%;
+   opacity: 1;
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5f73727.elementor-element {
+   --align-self: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-73d466ec {
+   margin-top: 0px;
+   margin-bottom: 87px;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-191f6c8d.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-191f6c8d.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-a0d1110 img {
+   width: 55%;
+   opacity: 1;
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-a0d1110.elementor-element {
+   --align-self: center;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-5b963de5.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5b963de5.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-62d728be img {
+   width: 55%;
+   opacity: 1;
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-62d728be.elementor-element {
+   --align-self: center;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-704d278c.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-704d278c.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-7f81da91 img {
+   width: 55%;
+   opacity: 1;
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-7f81da91.elementor-element {
+   --align-self: center;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-191985ed.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-191985ed.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-23b24dc3 img {
+   width: 55%;
+   opacity: 1;
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-element-23b24dc3.elementor-element {
+   --align-self: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-4f60e130 {
+   margin-top: 40px;
+   margin-bottom: 87px;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-24fc08e1.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-24fc08e1.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-25d8d08.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-25d8d08.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-11381fd8 img {
+   width: 207px;
+   height: 81px;
+   object-fit: contain;
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-2f5a1c8c.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-2f5a1c8c.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-5e2f56c1 img {
+   width: 164px;
+   height: 46px;
+   object-fit: contain;
+   filter: brightness(184%) contrast(36%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-272132a7.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-272132a7.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-72f17647 img {
+   width: 164px;
+   height: 46px;
+   object-fit: contain;
+   filter: brightness(184%) contrast(36%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-348f62f7.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-348f62f7.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-4b197b9c img {
+   width: 164px;
+   height: 46px;
+   object-fit: contain;
+   filter: brightness(184%) contrast(36%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-47b912e7.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-47b912e7.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-7e45038 img {
+   width: 164px;
+   height: 46px;
+   object-fit: contain;
+   filter: brightness(184%) contrast(36%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-34583c03.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-34583c03.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-29a34a09 img {
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-bc-flex-widget .elementor-8 .elementor-element.elementor-element-8382b9f.elementor-column .elementor-widget-wrap {
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-8382b9f.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+   align-content: center;
+   align-items: center;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-8a1b155 img {
+   filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+  }
+
+  .elementor-8 .elementor-element.elementor-global-6808 .elementor-button .elementor-align-icon-right {
+   margin-left: 12px;
+  }
+
+  .elementor-8 .elementor-element.elementor-global-6808 .elementor-button .elementor-align-icon-left {
+   margin-right: 12px;
+  }
+
+  .elementor-8 .elementor-element.elementor-global-6808 .elementor-button {
+   font-family: "Lato", Sans-serif;
+   font-size: 14px;
+   font-weight: 600;
+   fill: #303030;
+   color: #303030;
+   background-color: #FCFDFF;
+   border-radius: 5px 5px 5px 5px;
+   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.12);
+   padding: 15px 25px 15px 25px;
+  }
+
+  .elementor-8 .elementor-element.elementor-global-6808 .elementor-button:hover,
+  .elementor-8 .elementor-element.elementor-global-6808 .elementor-button:focus {
+   color: #FFFFFF;
+   background-color: var(--e-global-color-5f82c16);
+  }
+
+  .elementor-8 .elementor-element.elementor-global-6808 .elementor-button:hover svg,
+  .elementor-8 .elementor-element.elementor-global-6808 .elementor-button:focus svg {
+   fill: #FFFFFF;
+  }
+
+  .elementor-8 .elementor-element.elementor-global-6808 {
+   width: auto;
+   max-width: auto;
+   bottom: 14px;
+  }
+
+  body:not(.rtl) .elementor-8 .elementor-element.elementor-global-6808 {
+   right: 17px;
+  }
+
+  body.rtl .elementor-8 .elementor-element.elementor-global-6808 {
+   left: 17px;
+  }
+
+  :root {
+   --page-title-display: none;
+  }
+
+  @media(max-width:1024px) {
+   .elementor-8 .elementor-element.elementor-element-11fb0f7d>.elementor-element-populated {
+    margin: 8% 8% 8% 8%;
+    --e-column-margin-right: 8%;
+    --e-column-margin-left: 8%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-57d3b2c1>.elementor-widget-container {
+    margin: 10px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5e8900ff>.elementor-element-populated {
+    margin: 0% 0% 0% 0%;
+    --e-column-margin-right: 0%;
+    --e-column-margin-left: 0%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-2f505f5b>.elementor-element-populated {
+    margin: 6% 6% 6% 6%;
+    --e-column-margin-right: 6%;
+    --e-column-margin-left: 6%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-600939aa>.elementor-widget-container {
+    margin: 20px 20px 20px 20px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5a280942>.elementor-widget-container {
+    margin: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-10595f28>.elementor-element-populated {
+    margin: 0px 0px 20px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-a004a8d>.elementor-widget-container {
+    margin: 10% 0% 0% 0%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-6153fb82>.elementor-element-populated {
+    margin: 6% 6% 6% 6%;
+    --e-column-margin-right: 6%;
+    --e-column-margin-left: 6%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-bf44377 img {
+    width: 60%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-53455230>.elementor-element-populated {
+    margin: 3% 3% 3% 3%;
+    --e-column-margin-right: 3%;
+    --e-column-margin-left: 3%;
+   }
+  }
+
+  @media(min-width:768px) {
+   .elementor-8 .elementor-element.elementor-element-11fb0f7d {
+    width: 40%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5e8900ff {
+    width: 60%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-2f505f5b {
+    width: 40%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-10595f28 {
+    width: 60%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-6153fb82 {
+    width: 44.761%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-967c2d7 {
+    width: 55.239%;
+   }
+  }
+
+  @media(max-width:1024px) and (min-width:768px) {
+   .elementor-8 .elementor-element.elementor-element-11fb0f7d {
+    width: 100%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5e8900ff {
+    width: 100%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-2f505f5b {
+    width: 100%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-10595f28 {
+    width: 100%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-6153fb82 {
+    width: 100%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-967c2d7 {
+    width: 100%;
+   }
+  }
+
+  @media(max-width:767px) {
+   .elementor-8 .elementor-element.elementor-element-5dced942 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-11fb0f7d>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 025px 0px 025px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-59c94787 .elementor-heading-title {
+    font-size: 24px;
+    line-height: 26px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-59c94787>.elementor-widget-container {
+    margin: 52px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-170ec8e3>.elementor-widget-container {
+    margin: 12px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-33f069a4 .elementor-button {
+    font-size: 14px;
+    line-height: 16px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-33f069a4>.elementor-widget-container {
+    margin: 32px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-13c195b1 .elementor-button {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 12px 12px 12px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-13c195b1>.elementor-widget-container {
+    margin: 25px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5e8900ff>.elementor-element-populated {
+    padding: 30px 0px 30px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-193e3175>.elementor-widget-container {
+    margin: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-11d3c4e2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-2f505f5b>.elementor-element-populated {
+    margin: 0px 25px 0px 25px;
+    --e-column-margin-right: 25px;
+    --e-column-margin-left: 25px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-600939aa .elementor-heading-title {
+    font-size: 29px;
+    line-height: 32px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-600939aa>.elementor-widget-container {
+    margin: 32px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5a280942 {
+    --e-icon-list-icon-size: 34px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-item>.elementor-icon-list-text,
+   .elementor-8 .elementor-element.elementor-element-5a280942 .elementor-icon-list-item>a {
+    font-size: 16px;
+    line-height: 18px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5a280942>.elementor-widget-container {
+    margin: 40px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-10595f28>.elementor-element-populated {
+    margin: 0px 0px 20px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 025px 0px 025px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-a004a8d .elementor-heading-title {
+    font-size: 21px;
+    line-height: 26px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-a004a8d>.elementor-widget-container {
+    margin: 24% 0% 0% 0%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-3cd1eac6 .htmega-animated-heading .cd-words-wrapper b {
+    font-size: 24px;
+    line-height: 26px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-3cd1eac6 {
+    width: 100%;
+    max-width: 100%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-560524be .htmega-animated-heading .cd-words-wrapper b {
+    font-size: 4.9vw;
+    line-height: 1px;
+    letter-spacing: -0.6px;
+    word-spacing: 0.1em;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-560524be>.elementor-widget-container {
+    margin: 0% 0% 15% 0%;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-560524be {
+    width: 100%;
+    max-width: 100%;
+    align-self: center;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-560524be.elementor-element {
+    --align-self: center;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-b00c171 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5d5a314>.elementor-element-populated {
+    padding: 0% 8% 0% 08%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-3477bd6 img {
+    width: 34%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-3477bd6>.elementor-widget-container {
+    margin: 49px 0px 14px 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-b222020 .elementor-heading-title {
+    font-size: 28px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-b36cd1c {
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-68c2336>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-cd70305 .elementor-heading-title {
+    font-size: 25px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-edd81db .elementor-heading-title {
+    font-size: 25px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-428f749>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5aa33cf .elementor-heading-title {
+    font-size: 25px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-8c882c8>.elementor-widget-container {
+    margin: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-3f9c556>.elementor-widget-container {
+    margin: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-07477fb>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-d54a14d .elementor-heading-title {
+    font-size: 25px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-9e59770 {
+    --spacer-size: 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-3e6ec98e {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0% 8% 0% 08%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-1d626412>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 8% 0% 8% 0%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-2835f33d img {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-2835f33d>.elementor-widget-container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-8eb3c77>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5b3a30e img {
+    width: 34%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-4cf8adc .elementor-heading-title {
+    font-size: 29px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-item>.elementor-icon-list-text,
+   .elementor-8 .elementor-element.elementor-element-49908ae .elementor-icon-list-item>a {
+    font-size: 18px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-62aaa8f {
+    --spacer-size: 10px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-6f1df032 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 40px 0px 40px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-1d2a5b3d>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-454ad7db>.elementor-widget-container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-4bb2d557 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 08% 0% 0% 0%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-6153fb82.elementor-column>.elementor-widget-wrap {
+    justify-content: center;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-6153fb82>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0% 8% 0% 08%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-30b5f3f9 {
+    text-align: left;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-30b5f3f9 .elementor-heading-title {
+    font-size: 23px;
+    line-height: 26px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-30b5f3f9>.elementor-widget-container {
+    margin: 08px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-787606f7 {
+    text-align: left;
+    font-size: 16px;
+    line-height: 16px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-787606f7>.elementor-widget-container {
+    margin: 10px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-7490c3c4 .elementor-button {
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-7490c3c4>.elementor-widget-container {
+    margin: 8px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-9340169 {
+    --margin-top: 4%;
+    --margin-right: 0%;
+    --margin-bottom: 4%;
+    --margin-left: 0%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-9340169.e-container {
+    --align-self: center;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-dd9d41e {
+    --margin-top: 0px;
+    --margin-right: 0px;
+    --margin-bottom: 0px;
+    --margin-left: 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-cf7889d>.elementor-widget-container {
+    margin: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-967c2d7 {
+    width: 100%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-967c2d7.elementor-column>.elementor-widget-wrap {
+    justify-content: center;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-967c2d7>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-bf44377 {
+    text-align: center;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-bf44377 img {
+    width: 94%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-bf44377>.elementor-widget-container {
+    margin: 7% 0% 7% 0%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-65c30b9f {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-53455230>.elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-6333a757 {
+    text-align: center;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-6333a757 .elementor-heading-title {
+    font-size: 19px;
+    line-height: 14px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-6333a757>.elementor-widget-container {
+    margin: 52px 0px 0px 0px;
+    padding: 0px 025px 0px 025px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-56d189c8 {
+    margin-top: 22px;
+    margin-bottom: 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-73d466ec {
+    margin-top: 22px;
+    margin-bottom: 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-191f6c8d {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5b963de5 {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-704d278c {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-4f60e130 {
+    margin-top: 22px;
+    margin-bottom: 0px;
+    padding: 0% 5% 0% 05%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-24fc08e1 {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-40aa715b img {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-25d8d08 {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-11381fd8 img {
+    width: 138.73px;
+    height: 54.52px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-2f5a1c8c {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5e2f56c1 img {
+    width: 66%;
+    height: 30.96px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-5e2f56c1>.elementor-widget-container {
+    margin: 70px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-272132a7 {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-72f17647 img {
+    width: 66%;
+    height: 30.96px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-72f17647>.elementor-widget-container {
+    margin: 70px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-348f62f7 {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-4b197b9c img {
+    width: 66%;
+    height: 30.96px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-4b197b9c>.elementor-widget-container {
+    margin: 70px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-47b912e7 {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-7e45038 img {
+    width: 66%;
+    height: 30.96px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-7e45038>.elementor-widget-container {
+    margin: 70px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-34583c03 {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-29a34a09 img {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-29a34a09>.elementor-widget-container {
+    margin: 40px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-8382b9f {
+    width: 50%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-8a1b155 img {
+    width: 68%;
+   }
+
+   .elementor-8 .elementor-element.elementor-element-8a1b155>.elementor-widget-container {
+    margin: 40px 0px 0px 0px;
+   }
+
+   .elementor-8 .elementor-element.elementor-global-6808 .elementor-button {
+    padding: 015% 015% 015% 015%;
+   }
+
+   body:not(.rtl) .elementor-8 .elementor-element.elementor-global-6808 {
+    right: 38.8px;
+   }
+
+   body.rtl .elementor-8 .elementor-element.elementor-global-6808 {
+    left: 38.8px;
+   }
+
+   .elementor-8 .elementor-element.elementor-global-6808 {
+    bottom: 14px;
+   }
+  }
+
+  /* Start custom CSS for html, class: .elementor-element-193e3175 */
+  /*Remover  el detalle del inout*/
+  .minimunmount {
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 18px;
+  }
+
+  .numberminimount {
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 18px;
+  }
+
+  .firstdolar {
+   position: absolute;
+   top: 185px;
+  }
+
+  .blockminimunmount {
+   position: relative;
+   bottom: 100px;
+   color: red;
+  }
+
+  * {
+   scrollbar-width: thin;
+  }
+
+  ::-webkit-scrollbar {
+   width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+   background: #F2F2F2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+   background: #FFFFFF;
+   border-radius: 24px;
+   border: 1px solid transparent;
+   -moz-border-image: linear-gradient(to bottom, #005FEE 0%, #00BB8D 100%) 1 1;
+   /* Old firefox */
+   -webkit-border-image: linear-gradient(to bottom, #005FEE 0%, #00BB8D 100%) 1 1;
+   /* Safari */
+   -o-border-image: linear-gradient(to bottom, #005FEE 0%, #00BB8D 100%) 1 1;
+   /* Opera */
+   border-image: linear-gradient(to bottom, #005FEE 0%, #00BB8D 100%) 1 1;
+  }
+
+
+  @media screen and (max-width:360px) {
+   .firstdolar {
+    position: absolute;
+    top: 162px;
+   }
+  }
+
+  .seconddolar {
+   position: absolute;
+   top: 316px;
+
+  }
+
+  @media screen and (max-width:360px) {
+   .seconddolar {
+    position: absolute;
+    top: 278px;
+   }
+  }
+
+  .caps span {
+   text-transform: capitalize !important;
+  }
+
+  input {
+   background: none !important;
+   background-color: #F2F2F2 !important;
+   border: none !important;
+   border-radius: 3px;
+   padding: 12px 52px 12px 37px !important;
+   -webkit-transition: all .3s;
+   -o-transition: all .3s;
+   transition: all .3s;
+   -moz-appearance: textfield;
+  }
+
+  #amount {
+   background: url('https://co.vitawallet.io/wp-content/uploads/2022/07/dollar.svg') no-repeat center left 10px / 24px !important;
+   background-color: #F2F2F2 !important;
+   border: none !important;
+   border-radius: 3px;
+   padding: 12px 52px 12px 37px !important;
+   -webkit-transition: all .3s;
+   -o-transition: all .3s;
+   transition: all .3s;
+   -moz-appearance: textfield;
+  }
+
+  #destinatario {
+   background: url('https://co.vitawallet.io/wp-content/uploads/2022/07/dollar.svg') no-repeat center left 10px / 24px !important;
+   background-color: #F2F2F2 !important;
+   border: none !important;
+   border-radius: 3px;
+   padding: 12px 52px 12px 37px !important;
+   -webkit-transition: all .3s;
+   -o-transition: all .3s;
+   transition: all .3s;
+   -moz-appearance: textfield;
+  }
+
+  .input-amount-sent,
+  .input-amount-receive {
+   --content-amount-sent: 'USD';
+   --content-amount-receive: 'ARS';
+   position: relative;
+  }
+
+  .input-amount-sent:after,
+  .input-amount-receive:after {
+   position: absolute;
+   right: 16px;
+   top: 50%;
+   font-family: 'Lato';
+   font-weight: 600;
+   transform: translate3d(0, calc(-50% - 2px), 0);
+  }
+
+  @media only screen and (max-width: 490px) {
+
+   .input-amount-sent:after,
+   .input-amount-receive:after {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    font-family: 'Lato';
+    font-weight: 600;
+    transform: translate3d(0, calc(-50% - 2px), 0);
+   }
+
+   .input-amount-receive {
+    margin-bottom: 15px;
+   }
+  }
+
+  @media only screen and (max-width: 350px) {
+
+   .input-amount-sent:after,
+   .input-amount-receive:after,
+   .input-amount-receive,
+   .input-amount-sent {
+    content: none;
+    --content-amount-sent: none;
+    --content-amount-receive: none;
+   }
+
+   #amount,
+   #destinatario {
+    padding: 12px 8px 12px 37px !important;
+   }
+  }
+
+  .input-amount-sent:after {
+   content: var(--content-amount-sent);
+  }
+
+  .input-amount-receive:after {
+   content: var(--content-amount-receive);
+  }
+
+  input[type=text]:focus {
+   border: 3px solid red !important;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+  }
+
+  /*Remover  el detalle del inout*/
+  /* dropdown .elementor-8 .elementor-element.elementor-element-193e3175 ico*/
+  .select2-selection__arrow {
+   margin-top: 10px;
+   margin-right: 4px;
+
+  }
+
+  /* dropdown .elementor-8 .elementor-element.elementor-element-193e3175 ico*/
+
+  .select2-container--open .select2-dropdown--above {
+   border: none;
+  }
+
+  .containercotizador {
+
+   margin-left: auto;
+   margin-right: auto;
+   background: #FFFFFF;
+   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.12);
+   border-radius: 16px;
+   padding: 2.2em;
+   width: 488px;
+   height: 572px;
+  }
+
+
+  @media only screen and (max-width: 490px) {
+   .containercotizador {
+
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    padding: 0.9em;
+    width: 90%;
+    height: fit-content;
+    padding-bottom: 20px !important;
+   }
+  }
+
+  .select2-results {
+   border: none;
+   margin-top: 14px;
+  }
+
+  .logocontainer {
+
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 0px;
+   width: 118px;
+   height: 29px;
+  }
+
+  .select2-container--open .select2-dropdown--below {
+   border: none;
+  }
+
+  .centerdiv {
+
+   /*justify-content: center;*/
+   margin-bottom: 10px;
+
+  }
+
+  .titlecotizadorcontainer {
+
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 18px;
+   text-align: center;
+   color: #333333;
+   margin-top: 34px;
+
+  }
+
+  @media only screen and (max-width: 490px) {
+
+   .titlecotizadorcontainer {
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    color: #333333;
+    margin-top: 34px;
+
+   }
+
+   #destinatary-label {
+    margin-top: 30px
+   }
+  }
+
+
+  .cotizadorform input,
+  select,
+  button {
+   border: solid 1px #fff;
+  }
+
+  .cotizadorform .block {
+   margin-top: .9em;
+  }
+
+  #destinatary-label {
+   margin-top: 40px
+  }
+
+  label {
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 18px;
+   color: #333333;
+   border-color: #fff;
+  }
+
+  .cotizadorform input {
+
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 18px;
+   color: #4F4F4F;
+   background: #F2F2F2;
+   border-radius: 4px;
+   margin-top: 10px;
+   width: 210px !important;
+   height: 52px;
+
+  }
+
+  @media only screen and (max-width: 490px) {
+   .cotizadorform input {
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #4F4F4F;
+    background: #F2F2F2;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 95% !important;
+    height: 52px;
+
+   }
+  }
+
+  .cotizadorform select {
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 18px;
+   letter-spacing: 0.04em;
+   color: #4F4F4F;
+   background: #FFFFFF;
+   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.12);
+   border-radius: 4px;
+   margin-top: 10px;
+   width: 190px !important;
+   height: 52px;
+   border: none;
+  }
+
+  @media only screen and (max-width: 490px) {
+   .cotizadorform select {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #4F4F4F;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin-top: 10px;
+    height: 52px;
+    margin-left: 8px;
+   }
+  }
+
+  .cotizadorform button {
+
+   padding: 16px 40px;
+   width: 182px;
+   height: 50px;
+   background-color: #005FEE;
+   border-radius: 4px;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 15px;
+   line-height: 18px;
+   text-align: center;
+   letter-spacing: 0.04em;
+   color: #FFFFFF;
+   margin-top: .5em;
+   margin-left: 114px;
+   border-color: #BDBDBD;
+
+  }
+
+  @media only screen and (max-width: 490px) {
+   .cotizadorform button {
+
+    width: 182px;
+    height: 47px;
+    border-radius: 4px;
+    margin: auto;
+
+   }
+  }
+
+  .cotizadorform button:hover {
+
+   background-color: #005FEE;
+   border-radius: 4px;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 18px;
+   text-align: center;
+   letter-spacing: 0.04em;
+   color: #FFFFFF;
+   border-color: #005FEE;
+
+  }
+
+  .inputs-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: auto;
+   width: 100%;
+   flex-wrap: nowrap;
+  }
+
+  .yellow-container {
+   margin: auto;
+   margin-top: .7em;
+   background: rgba(255, 190, 0, 0.15);
+   border-radius: 8px;
+   width: 100%;
+   height: 60px;
+   padding-top: 13px;
+   color: #4F4F4F;
+   font-family: 'Lato';
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 18px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   /* or 129% */
+  }
+
+  #line {
+   background-color: lightgray;
+   width: 0.5px;
+   height: 80%
+  }
+
+  .icono {
+   height: 25px !important;
+   width: 25px !important;
+  }
+
+  .fecha,
+  .tasa {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   padding-right: 10px;
+   width: 50%;
+   flex-wrap: nowrap;
+  }
+
+  @media only screen and (max-width: 490px) {
+
+   .tasa,
+   .fecha {
+    width: 160px;
+    border-color: #E3E3E3;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    padding-right: 10px;
+   }
+
+   .yellow-container {
+    margin-top: 0px;
+    height: fit-content;
+   }
+
+   .yellow-container p {
+    font-size: 11px;
+   }
+  }
+
+  @media only screen and (max-width: 490px) {
+   .arrival-date-content {
+    width: 160px;
+    border-right: 1px solid;
+    border-top-right-radius: 0px;
+    border-color: #E3E3E3;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+   }
+  }
+
+  .select2.select2-container {
+   border-radius: 4px;
+   margin-top: 9px;
+  }
+
+  @media only screen and (max-width: 490px) {
+   .select2.select2-container {
+    border-radius: 4px;
+    margin-top: 9px;
+   }
+
+   .select2-results__option {
+    padding: 5px;
+   }
+  }
+
+
+  .select2.select2-container .select2-selection {
+   margin-left: 10px;
+   border: 1px solid #F2F2F2;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   height: 34px;
+   margin-bottom: 15px;
+   outline: none !important;
+   transition: all .15s ease-in-out;
+   background: #FFFFFF;
+   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.12);
+   border-radius: 4px;
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 18px;
+   letter-spacing: 0.04em;
+   color: #4F4F4F;
+   height: 52px;
+   padding-top: 12px;
+  }
+
+  .select2.select2-container .select2-selection img {
+   width: 24px;
+  }
+
+  /* elemento internos del .elementor-8 .elementor-element.elementor-element-193e3175*/
+  .select2-container .select2-dropdown .select2-results ul {
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 18px;
+   letter-spacing: 0.04em;
+   color: #4F4F4F;
+   background: #F2f2f2;
+   width: 100%;
+   border-radius: 3px;
+   border: 1px solid #eee;
+  }
+
+  .select2-container .select2-dropdown .select2-results img {
+   width: 24px;
+  }
+
+  /* buscador*/
+
+  .select2-container .select2-dropdown .select2-search {
+   padding: 0;
+   background-color: #000000;
+   display: none;
+  }
+
+  /* select interno on hover*/
+  .select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected] {
+   font-family: 'Lato';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 18px;
+   letter-spacing: 0.04em;
+   color: #4F4F4F;
+   background: #FFFFFF;
+   width: 100%;
+   overflow-x: hidden;
+   border-radius: 3px;
+   border: 1px solid #eee;
+  }
+
+  .select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected] img {
+   width: 24px;
+  }
+
+  .select2-container--default .select2-results>.select2-results__options {
+   overflow-x: hidden;
+  }
+
+  .select2.select2-container .select2-selection {
+   margin-left: 0px;
+  }
+
+  @media only screen and (max-width: 490px) {
+
+   .select2-container--below,
+   div.inputs-container:nth-child(2)>span:nth-child(3),
+   .select2.select2-container {
+    width: 45% !important;
+   }
+
+   .input-amount-sent,
+   .input-amount-receive {
+    width: 55% !important;
+   }
+
+   #amount_.elementor-8 .elementor-element.elementor-element-193e3175_select2,
+   #dest_countries_select2 {
+    display: none;
+   }
+
+   .centerdiv {
+    display: flex;
+   }
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for htmega-animatedheading-addons, class: .elementor-element-3cd1eac6 */
+  .cd-words-wrapper {
+   position: relative;
+   text-align: center !important;
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for htmega-animatedheading-addons, class: .elementor-element-560524be */
+  .cd-words-wrapper {
+   position: relative;
+   text-align: center !important;
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for column, class: .elementor-element-68c2336 */
+  .overflowbackground {
+
+   overflow: visible;
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for heading, class: .elementor-element-262984f */
+  #ver-limites:hover a {
+   color: blue;
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for column, class: .elementor-element-428f749 */
+  .overflowbackground {
+
+   overflow: visible;
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for column, class: .elementor-element-07477fb */
+  .overflowbackground {
+
+   overflow: visible;
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for icon-list, class: .elementor-element-49908ae */
+  #country-list svg {
+   height: 8px;
+   width: 8px;
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for section, class: .elementor-element-3e6ec98e */
+  @media screen and (max-width: 600px) {
+
+   .elementor-element-15bb784>div:nth-child(1),
+   .elementor-element-15bb784 {
+    height: fit-content !important;
+   }
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for html, class: .elementor-element-454ad7db */
+  #dynamic-banks-container {
+   display: flex;
+   flex-direction: row;
+   height: 600px;
+   font-family: lato;
+   color: #878787;
+   font-weight: bold;
+  }
+
+  #right-panel {
+   width: 55%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-left: 30px;
+  }
+
+  #left-panel {
+   width: 45%;
+   display: flex;
+   flex-direction: column;
+   padding-top: 100px;
+   padding: 100px 25px 100px 0px;
+  }
+
+  #left-panel select {
+   width: 240px;
+  }
+
+  #left-panel p {
+   margin-bottom: 37px;
+  }
+
+  #separator {
+   width: 120px;
+   height: auto;
+   margin-bottom: 20px;
+  }
+
+  #dynamic-banks-container h2 {
+   color: #4f4f4f;
+   font-weight: bold;
+   margin-bottom: 20px;
+  }
+
+  #dynamic-banks-container h3 {
+   font-size: 23px;
+   font-weight: bold;
+  }
+
+  #right-panel img {
+   display: none;
+   width: 100%;
+   margin-bottom: 30px;
+  }
+
+  @media screen and (max-width: 600px) {
+   #dynamic-banks-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 14px;
+    height: min-content;
+   }
+
+   #right-panel {
+    width: 100%;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
+   }
+
+   #right-panel img {
+    margin-bottom: 20px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+   }
+
+   #left-panel {
+    width: 100%;
+    justify-content: center;
+    text-align: left;
+    padding: 0px 25px 40px 25px;
+   }
+
+   #left-panel select {
+    margin-inline: auto;
+    margin-top: 20px;
+   }
+
+   #separator {
+    width: 100px;
+   }
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for button, class: .elementor-element-7490c3c4 */
+  .elementor-element-7490c3c4>div:nth-child(2)>div:nth-child(1)>a:nth-child(1),
+  .elementor-element-10c9dc03>div:nth-child(2)>div:nth-child(1)>a:nth-child(1),
+  .elementor-element-33f069a4>div:nth-child(2)>div:nth-child(1)>a:nth-child(1) {
+   text-decoration: none;
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for container, class: .elementor-element-1a95e77 */
+  .app-store-container {
+   width: fit-content;
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for image, class: .elementor-element-cf7889d */
+  @media screen and (max-width: 350px) {
+
+   #app-store img,
+   #google-play img {
+    max-width: 120px;
+    height: auto;
+   }
+  }
+
+  /* End custom CSS */
+  /* Start custom CSS for container, class: .elementor-element-9340169 */
+  #app-store-container {
+   width: fit-content
+  }
+
+  /* End custom CSS */
+ </style>
+ <link rel='stylesheet' id='hfe-style-css'
+  href='https://vitawallet.io/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.6.13'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='elementor-frontend-css'
+  href='https://vitawallet.io/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.7.8' type='text/css'
+  media='all' />
+ <link rel='stylesheet' id='elementor-post-5-css'
+  href='https://vitawallet.io/wp-content/uploads/elementor/css/post-5.css?ver=1667486799' type='text/css' media='all' />
+ <link rel='stylesheet' id='elementor-pro-css'
+  href='https://vitawallet.io/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.7.7'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='font-awesome-5-all-css'
+  href='https://vitawallet.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.7.8'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='font-awesome-4-shim-css'
+  href='https://vitawallet.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.7.8'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='elementor-global-css'
+  href='https://vitawallet.io/wp-content/uploads/elementor/css/global.css?ver=1667486804' type='text/css' media='all' />
+ <!-- <link rel='stylesheet' id='elementor-post-8-css'
+        href='https://vitawallet.io/wp-content/uploads/elementor/css/post-8.css?ver=1668530829' type='text/css'
+        media='all' /> -->
+ <link rel='stylesheet' id='hfe-widgets-style-css'
+  href='https://vitawallet.io/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.6.13'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='elementor-post-2268-css'
+  href='https://vitawallet.io/wp-content/uploads/elementor/css/post-2268.css?ver=1667486804' type='text/css'
+  media='all' />
+ <link rel='stylesheet' id='elementor-post-2257-css'
+  href='https://vitawallet.io/wp-content/uploads/elementor/css/post-2257.css?ver=1668695238' type='text/css'
+  media='all' />
+ <link rel='stylesheet' id='htbbootstrap-css'
+  href='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/css/htbbootstrap.css?ver=1.9.6'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='font-awesome-css'
+  href='https://vitawallet.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='htmega-animation-css'
+  href='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/css/animation.css?ver=1.9.6'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='htmega-keyframes-css'
+  href='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/css/htmega-keyframes.css?ver=1.9.6'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='hello-elementor-css'
+  href='https://vitawallet.io/wp-content/themes/hello-elementor/style.min.css?ver=2.5.0' type='text/css' media='all' />
+ <link rel='stylesheet' id='hello-elementor-theme-style-css'
+  href='https://vitawallet.io/wp-content/themes/hello-elementor/theme.min.css?ver=2.5.0' type='text/css' media='all' />
+ <link rel='stylesheet' id='elementor-post-6922-css'
+  href='https://vitawallet.io/wp-content/uploads/elementor/css/post-6922.css?ver=1668273533' type='text/css'
+  media='all' />
+ <link rel='stylesheet' id='elementor-icons-ekiticons-css'
+  href='https://vitawallet.io/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=2.7.3'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='chld_thm_cfg_child-css'
+  href='https://vitawallet.io/wp-content/themes/hello-elementor-child/style.css?ver=6.1.1' type='text/css'
+  media='all' />
+ <link rel='stylesheet' id='ekit-widget-styles-css'
+  href='https://vitawallet.io/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=2.7.3'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='ekit-responsive-css'
+  href='https://vitawallet.io/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=2.7.3'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='eael-general-css'
+  href='https://vitawallet.io/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css?ver=5.3.2'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='google-fonts-1-css'
+  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CLato%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.1.1'
+  type='text/css' media='all' />
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.7.8'
+  id='font-awesome-4-shim-js'></script>
+ <script type='text/javascript' src='https://vitawallet.io/wp-includes/js/jquery/jquery.min.js?ver=3.6.1'
+  id='jquery-core-js'></script>
+ <script type='text/javascript' src='https://vitawallet.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
+  id='jquery-migrate-js'></script>
+ <link rel="https://api.w.org/" href="https://vitawallet.io/wp-json/" />
+ <link rel="alternate" type="application/json" href="https://vitawallet.io/wp-json/wp/v2/pages/8" />
+ <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://vitawallet.io/xmlrpc.php?rsd" />
+ <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://vitawallet.io/wp-includes/wlwmanifest.xml" />
+ <meta name="generator" content="WordPress 6.1.1" />
+ <link rel="canonical" href="https://vitawallet.io/transferencias-internacionales/" />
+ <link rel='shortlink' href='https://vitawallet.io/?p=8' />
+ <link rel="alternate" type="application/json+oembed"
+  href="https://vitawallet.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvitawallet.io%2Ftransferencias-internacionales%2F" />
+ <link rel="alternate" type="text/xml+oembed"
+  href="https://vitawallet.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvitawallet.io%2Ftransferencias-internacionales%2F&#038;format=xml" />
+ <!-- HFCM by 99 Robots - Snippet # 1: Tag-Manager -->
+ <!-- Google Tag Manager -->
+ <script>(function (w, d, s, l, i) {
+   w[l] = w[l] || []; w[l].push({
+    'gtm.start':
+     new Date().getTime(), event: 'gtm.js'
+   }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-K5FPWNT');</script>
+ <!-- End Google Tag Manager -->
+ <!-- /end HFCM by 99 Robots -->
+ <!-- HFCM by 99 Robots - Snippet # 4: local_storage_worker -->
+ <script type="text/javascript">
+  var storage = function () {
+   const setStorage = function (KEY_PARAM, data) {
+    localStorage.setItem(KEY_PARAM, JSON.stringify(data));
+   }
+
+   const getStorage = function (KEY_PARAM) {
+    const value = localStorage.getItem(KEY_PARAM);
+    return JSON.parse(value ? value : null);
+   }
+
+   return {
+    setStorage,
+    getStorage,
+   }
+  }
+ </script>
+ <!-- /end HFCM by 99 Robots -->
+ <link rel="icon" href="img/Logoprincipal.png" />
+</head>
+
+<body data-rsssl=1
+ class="page-template-default page page-id-8 ehf-header ehf-footer ehf-template-hello-elementor ehf-stylesheet-hello-elementor-child elementor-default elementor-kit-5 elementor-page elementor-page-8">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+  style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+  <defs>
+   <filter id="wp-duotone-dark-grayscale">
+    <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+     values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+    <feComponentTransfer color-interpolation-filters="sRGB">
+     <feFuncR type="table" tableValues="0 0.49803921568627" />
+     <feFuncG type="table" tableValues="0 0.49803921568627" />
+     <feFuncB type="table" tableValues="0 0.49803921568627" />
+     <feFuncA type="table" tableValues="1 1" />
+    </feComponentTransfer>
+    <feComposite in2="SourceGraphic" operator="in" />
+   </filter>
+  </defs>
+ </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+  style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+  <defs>
+   <filter id="wp-duotone-grayscale">
+    <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+     values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+    <feComponentTransfer color-interpolation-filters="sRGB">
+     <feFuncR type="table" tableValues="0 1" />
+     <feFuncG type="table" tableValues="0 1" />
+     <feFuncB type="table" tableValues="0 1" />
+     <feFuncA type="table" tableValues="1 1" />
+    </feComponentTransfer>
+    <feComposite in2="SourceGraphic" operator="in" />
+   </filter>
+  </defs>
+ </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+  style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+  <defs>
+   <filter id="wp-duotone-purple-yellow">
+    <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+     values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+    <feComponentTransfer color-interpolation-filters="sRGB">
+     <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+     <feFuncG type="table" tableValues="0 1" />
+     <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+     <feFuncA type="table" tableValues="1 1" />
+    </feComponentTransfer>
+    <feComposite in2="SourceGraphic" operator="in" />
+   </filter>
+  </defs>
+ </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+  style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+  <defs>
+   <filter id="wp-duotone-blue-red">
+    <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+     values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+    <feComponentTransfer color-interpolation-filters="sRGB">
+     <feFuncR type="table" tableValues="0 1" />
+     <feFuncG type="table" tableValues="0 0.27843137254902" />
+     <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+     <feFuncA type="table" tableValues="1 1" />
+    </feComponentTransfer>
+    <feComposite in2="SourceGraphic" operator="in" />
+   </filter>
+  </defs>
+ </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+  style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+  <defs>
+   <filter id="wp-duotone-midnight">
+    <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+     values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+    <feComponentTransfer color-interpolation-filters="sRGB">
+     <feFuncR type="table" tableValues="0 0" />
+     <feFuncG type="table" tableValues="0 0.64705882352941" />
+     <feFuncB type="table" tableValues="0 1" />
+     <feFuncA type="table" tableValues="1 1" />
+    </feComponentTransfer>
+    <feComposite in2="SourceGraphic" operator="in" />
+   </filter>
+  </defs>
+ </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+  style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+  <defs>
+   <filter id="wp-duotone-magenta-yellow">
+    <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+     values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+    <feComponentTransfer color-interpolation-filters="sRGB">
+     <feFuncR type="table" tableValues="0.78039215686275 1" />
+     <feFuncG type="table" tableValues="0 0.94901960784314" />
+     <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+     <feFuncA type="table" tableValues="1 1" />
+    </feComponentTransfer>
+    <feComposite in2="SourceGraphic" operator="in" />
+   </filter>
+  </defs>
+ </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+  style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+  <defs>
+   <filter id="wp-duotone-purple-green">
+    <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+     values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+    <feComponentTransfer color-interpolation-filters="sRGB">
+     <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+     <feFuncG type="table" tableValues="0 1" />
+     <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+     <feFuncA type="table" tableValues="1 1" />
+    </feComponentTransfer>
+    <feComposite in2="SourceGraphic" operator="in" />
+   </filter>
+  </defs>
+ </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+  style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+  <defs>
+   <filter id="wp-duotone-blue-orange">
+    <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+     values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+    <feComponentTransfer color-interpolation-filters="sRGB">
+     <feFuncR type="table" tableValues="0.098039215686275 1" />
+     <feFuncG type="table" tableValues="0 0.66274509803922" />
+     <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+     <feFuncA type="table" tableValues="1 1" />
+    </feComponentTransfer>
+    <feComposite in2="SourceGraphic" operator="in" />
+   </filter>
+  </defs>
+ </svg>
+ <div id="page" class="hfeed site">
+
+  <header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+  </header>
+
+
+  <main id="content" class="site-main post-8 page type-page status-publish hentry" role="main">
+   <div class="page-content">
+    <div>
+     <section
+      class="elementor-section elementor-top-section elementor-element elementor-element-5dced942 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default">
+      <div class="elementor-container elementor-column-gap-no">
+       <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5e8900ff">
+        <div class="elementor-widget-wrap elementor-element-populated">
+         <div class="elementor-element elementor-element-193e3175 elementor-widget elementor-widget-html"
+          data-id="193e3175" data-element_type="widget" data-widget_type="html.default">
+          <div class="elementor-widget-container">
+           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+           <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+           <div class="containercotizador" style="margin: 25px;">
+            <p class="titlecotizadorcontainer">Cotiza tus envíos internacionales:
+            </p>
+            <form class="cotizador cotizadorform input cotizadorform select">
+             <label for="amount" class="block">Monto a enviar:</label>
+             <div class="inputs-container">
+              <div class="input-amount-sent">
+               <input class="form-control quote-event" id="amount" value=0 step="0.01">
+              </div>
+
+              <select class="form-select select2 caps" id="amount_selector_select2"></select>
+             </div>
+             <div class="minimunmount">
+              Monto mínimo <b class=".numberminimount" id="minimal_amount">$0
+               CLP</b>
+             </div>
+             <label for="destinatario" id='destinatary-label' class="block">Destinatario recibe:</label>
+             <div class="inputs-container">
+              <div class="input-amount-receive">
+               <input class="form-control inverse-quote-event" id="destinatario" value=0 step="0.01">
+              </div>
+              <select class="form-select select2 caps" id="dest_countries_select2">
+              </select>
+             </div>
+             <div class="yellow-container">
+              <div class="tasa">
+               <img decoding="async" class="icono"
+                src="https://co.vitawallet.io/wp-content/uploads/2022/05/moneymoneyico.png">
+               <div style="display: flex; flex-direction: column">
+                <span><strong>Tasa de cambio</strong></span>
+                <p id="exchange_rate">Calculando...</p>
+               </div>
+              </div>
+              <div id="line"></div>
+              <div class="fecha">
+               <img decoding="async" class="icono"
+                src="https://co.vitawallet.io/wp-content/uploads/2022/05/Iconsdateico.png">
+               <div style="display: flex; flex-direction: column">
+                <span><strong>Fecha maxima de llegada:</strong></span>
+                <p id="arrival_date">Calculando...</p>
+               </div>
+              </div>
+             </div>
+            </form>
+           </div>
+           <section>
+            <div class="containercotizador" style="height: 650px; margin: 25px;">
+             <form class="cotizador cotizadorform input cotizadorform select" onsubmit="openForm()">
+              <div class="mb-3">
+               <label for="validationCustom01" class="form-label">Nombre</label>
+               <input type="text" class="form-control" id="validationCustom01" style="width: 100% !important;"
+                placeholder="Cristian" required onchange="selecOp(event.target.value)">
+               <div class="valid-feedback">
+                ¡Se ve bien!
+               </div>
+              </div>
+              <div class="mb-3">
+               <label for="validationCustom02" class="form-label">Apellido</label>
+               <input type="text" class="form-control" id="validationCustom02" style="width: 100% !important;"
+                placeholder="Guerrero" required onchange="selecOp2(event.target.value)">
+               <div class="valid-feedback">
+                ¡Se ve bien!
+               </div>
+              </div>
+              <div class="mb-3">
+               <label for="validationCustomUsername" class="form-label">Email</label>
+               <div class="input-group">
+                <input type="email" class="form-control" id="validationCustomUsername" placeholder="example@example.com"
+                 aria-describedby="inputGroupPrepend" required onchange="selecOp3(event.target.value)">
+                <div class="invalid-feedback">
+                 Please choose a username.
+                </div>
+               </div>
+              </div>
+              <div class="mb-3">
+               <label for="validationCustom02" class="form-label">Monto a
+                solicitar</label>
+               <input type="text" class="form-control" id="validationCustom11" style="width: 100% !important;"
+                placeholder="Las solicitudes se haran en (Dolare/USD)" required onchange="selecOp4(event.target.value)">
+               <div class="valid-feedback">
+                ¡Se ve bien!
+               </div>
+              </div>
+              <div class="mb-3">
+               <label for="validationCustom02" class="form-label">País
+                Destino</label>
+               <input type="text" class="form-control" id="validationCustom12" style="width: 100% !important;"
+                placeholder="Colombia" required onchange="selecOp5(event.target.value)">
+               <div class="valid-feedback">
+                ¡Se ve bien!
+               </div>
+              </div>
+              <div class="block centerdiv" style="height: 60px;">
+               <button type="submit" id="submit-button">
+                Hacer Solicitud
+               </button>
+              </div>
+             </form>
+            </div>
+           </section>
+           <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+           <script>
+            var currencies_config = null;
+            let prices_quotes = null;
+            const currencies_time_valid = 1 * 60 * 60 * 1000;
+            const prices_time_valid = 120000;
+            var fromInputRawValue = 0;
+            var toInputRawValue = 0;
+
+            const hook = storage();
+
+            const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+             "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+            ];
+            const elements_that_trigger_quote = document.querySelectorAll('.quote-event');
+            const elements_that_trigger_inverse_quote = document.querySelectorAll('.inverse-quote-event');
+            const elements_that_trigger_minimal_amount = document.querySelectorAll('.amount-event');
+            const dest_countries_select = document.getElementById('dest_countries_select');
+            const from_currency_select = document.getElementById('amount_selector');
+
+            window.addEventListener('load', (event) => {
+             setCurrencies();
+             startPricesQuotesInterval();
+
+             $('.select2').select2({
+              templateResult: addFlag,
+              templateSelection: addFlag
+             });
+
+             $('#amount_selector_select2').on('select2:select', function (e) {
+              calculateQuote();
+              setMinimalAmount();
+              setArrivalDate();
+              setExchangeRate();
+              loadInputSentCurrency();
+              refreshDestSelect();
+             });
+
+             $('#dest_countries_select2').on('select2:select', function (e) {
+              calculateQuote(true);
+              setMinimalAmount();
+              setArrivalDate();
+              setExchangeRate();
+              loadInputReceiveCurrency();
+             });
+            });
+
+            elements_that_trigger_quote.forEach((item) => {
+             item.addEventListener('input', (event) => {
+              let decimals = getDecimals(null, $('#amount_selector_select2').val());
+              let inputValues = mask(item.value, decimals);
+              item.value = inputValues.maskedValue;
+              fromInputRawValue = inputValues.raw;
+              calculateQuote();
+             });
+            });
+
+            elements_that_trigger_inverse_quote.forEach((item) => {
+             item.addEventListener('input', (event) => {
+              let decimals = getDecimals($('#dest_countries_select2').val());
+              let inputValues = mask(item.value, decimals);
+              item.value = inputValues.maskedValue;
+              toInputRawValue = inputValues.raw;
+              calculateQuote(true);
+             });
+            });
+
+            elements_that_trigger_minimal_amount.forEach((item) => {
+             item.addEventListener('change', (event) => {
+              setMinimalAmount();
+              setArrivalDate();
+              setExchangeRate();
+             });
+            });
+
+            function getDecimals(iso_code, currency) {
+             iso_code = iso_code ? iso_code : findIsoCode(currency, currencies_config.countries);
+             decimals = currencies_config.countries[iso_code.toUpperCase()].decimals;
+             return decimals;
+            }
+
+            function startPricesQuotesInterval() {
+             setPricesQuotes();
+             setInterval(setPricesQuotes, prices_time_valid);
+            }
+
+            function setCurrencies() {
+             currencies_config = hook.getStorage('CURRENCIES_CONFIG');
+
+             if (!currencies_config || currencies_config.time_valid < Date.now()) {
+              const currencies_config_url = 'https://jusicambios-default-rtdb.firebaseio.com/Database.json';
+              getData(currencies_config_url)
+               .then(data => {
+                hook.setStorage('CURRENCIES_CONFIG', { ...data, time_valid: (Date.now() + currencies_time_valid) });
+                currencies_config = { ...data, time_valid: (Date.now() + currencies_time_valid) };
+
+                fillAmountCurrenciesSelect(data);
+                fillDestCurrenciesSelect(data);
+               });
+             } else {
+              fillAmountCurrenciesSelect(currencies_config);
+              fillDestCurrenciesSelect(currencies_config);
+             }
+            }
+
+            function setPricesQuotes() {
+             prices_quotes = hook.getStorage('PRICES_QUOTES');
+
+             if (!prices_quotes || prices_quotes.time_valid < Date.now()) {
+              const prices_quote_url = 'https://jusicambios-default-rtdb.firebaseio.com/Database2.json';
+              getData(prices_quote_url)
+               .then(data => {
+                hook.setStorage('PRICES_QUOTES', { ...data, time_valid: (Date.now() + prices_time_valid) });
+                setMinimalAmount();
+                setArrivalDate();
+                setExchangeRate();
+                loadInputSentCurrency();
+                loadInputReceiveCurrency();
+               }).catch(error => {
+                if (error == 429) setTimeout(setPricesQuotes, 15000);
+                else setTimeout(setPricesQuotes, 5000);
+               })
+             } else {
+              setMinimalAmount();
+              setArrivalDate();
+              setExchangeRate();
+              loadInputSentCurrency();
+              loadInputReceiveCurrency();
+             }
+            }
+
+            async function getData(url = '', data = {}) {
+             try {
+              const response = await fetch(url);
+              if (response.ok) {
+               return Promise.resolve(response.json());
+              } else {
+               return Promise.reject(response.status);
+              }
+             } catch (er) {
+              return Promise.reject(500);
+             }
+
+            }
+
+            function fillAmountCurrenciesSelect(data = {}) {
+             const keys = Object.keys(data.vita_currencies);
+
+             // Put cop currency in the first position
+             const fromIndex = keys.indexOf('cop');
+             const element = keys.splice(fromIndex, 1)[0];
+             keys.splice(0, 0, element);
+
+
+             keys.forEach(element => {
+              if (element === 'btc' || element === 'usdt') return;
+              currency_name = text = data.vita_currencies[element].currency_name.charAt(0).toUpperCase() + data
+               .vita_currencies[element].currency_name.slice(1);
+              option_value = data.vita_currencies[element].label;
+              iso_code = findIsoCode(option_value, data.countries);
+              $('<option>')
+               .val(option_value)
+               .text(currency_name)
+               .data('image', searchFlagUrl(iso_code, data.countries))
+               .appendTo('#amount_selector_select2');
+             });
+            }
+
+            function refreshDestSelect() {
+             let fromOptionSelected = findIsoCode($('#amount_selector_select2').val(), currencies_config.countries);
+             let toOptionSelected = $('#dest_countries_select2').val();
+
+             if (fromOptionSelected !== toOptionSelected) {
+              $('#dest_countries_select2').empty();
+              fillDestCurrenciesSelect(currencies_config);
+              $("#dest_countries_select2").val(toOptionSelected);
+             } else {
+              $('#dest_countries_select2').empty();
+              fillDestCurrenciesSelect(currencies_config);
+              calculateQuote();
+              loadInputReceiveCurrency();
+              setExchangeRate();
+             }
+            }
+
+            function findCurrencyByIso(iso_code) {
+             const currencies_storage = hook.getStorage('CURRENCIES_CONFIG');
+             const currency = currencies_storage.countries[iso_code].label;
+
+             return currency;
+            }
+
+            function findIsoCode(currency_label, countries) {
+             let iso_code;
+             const iso_codes_to_skip = ['EC', 'HT', 'PA', 'PEUSD'];
+
+             const keys = Object.keys(countries);
+
+             keys.some(key => {
+              iso_code = countries[key].iso_code;
+
+              return (countries[key].label === currency_label && !iso_codes_to_skip.includes(iso_code));
+             });
+
+             return iso_code;
+            }
+
+            function fillDestCurrenciesSelect(data = {}) {
+             const keys = Object.keys(data.countries);
+             const selected_country_currency = $('#amount_selector_select2').val();
+             const selected_country_iso = findIsoCode(selected_country_currency, data.countries)
+
+             keys.forEach(element => {
+              if (data.countries[element].iso_code === 'BTC' || data.countries[element].iso_code === 'USDT') return;
+              if (selected_country_iso == element) return;
+
+              let iso_code = data.countries[element].iso_code;
+              let currency_name = data.countries[element].currency_name;
+
+              $('<option>')
+               .val(iso_code)
+               .text(currency_name)
+               .data('image', searchFlagUrl(iso_code, data.countries))
+               .appendTo('#dest_countries_select2');
+
+             });
+            }
+
+            function searchFlagUrl(currency_iso_code, countries) {
+             let flag_url = '';
+
+             keys = Object.keys(countries);
+
+             keys.some(key => {
+              flag_url = countries[key].flag;
+
+              return (countries[key].iso_code === currency_iso_code);
+             });
+
+             return flag_url;
+            }
+
+            function addFlag(opt) {
+             if (!opt.id) {
+              return opt.text;
+             }
+
+             var opt_image = $(opt.element).data('image');
+
+             if (!opt_image) {
+              return opt.text.toUpperCase();
+             } else {
+              var $opt = $(
+               '<span><img decoding="async" class="select-flags" src="' + opt_image + '"width="60px" />' + '&nbsp&nbsp' + opt.text.charAt(0).toUpperCase() + opt
+                .text.slice(1).toLowerCase() + '</span>'
+              );
+              return $opt
+             }
+            }
+
+            function calculateQuote(inverse = false) {
+             const from_currency = $('#amount_selector_select2').val();
+             const to_currency = $('#dest_countries_select2').val();
+             const from_currency_input = document.getElementById('amount');
+             const to_currency_input = document.getElementById('destinatario');
+             const isApplyFixedCost = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_is_apply_fixed_cost_in_transfers`];
+             const fixedCost = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_fixed_cost_transfer`];
+             const decimals = getDecimals(to_currency);
+             let quote;
+
+             if (!inverse && fromInputRawValue === null) return;
+             if (inverse && toInputRawValue === null) return;
+             if (prices_quotes === undefined) return;
+             if (prices_quotes['message']) return;
+
+             const send_price = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_sell`];
+
+             if (inverse) {
+              let decimals = getDecimals(null, from_currency);
+              quote = (toInputRawValue / send_price) + (isApplyFixedCost ? fixedCost / send_price : 0);
+
+              // save raw value on aux var
+              let fromInputValues = mask(formatMoney(quote, decimals), decimals);
+              fromInputRawValue = fromInputValues.raw;
+
+              from_currency_input.value = fromInputValues.maskedValue;
+
+              return;
+             }
+
+             quote = (send_price * fromInputRawValue) - (isApplyFixedCost ? fixedCost : 0);
+
+             // save raw value on aux var
+             toInputValues = mask(formatMoney(quote, decimals), decimals);
+             toInputRawValue = toInputValues.raw;
+
+             to_currency_input.value = toInputValues.maskedValue;
+            }
+
+            function loadInputSentCurrency() {
+             const from_currency = $('#amount_selector_select2').val();
+             const inputSent = document.querySelector('.input-amount-sent');
+
+             if (inputSent) {
+
+              inputSent.style.setProperty('--content-amount-sent', "'" + from_currency.toUpperCase()) + "'";
+             }
+            };
+
+            function loadInputReceiveCurrency() {
+             const to_currency = $('#dest_countries_select2').val();
+             const inputReceive = document.querySelector('.input-amount-receive');
+             const currency = findCurrencyByIso(to_currency)
+
+             if (inputReceive) {
+
+              inputReceive.style.setProperty('--content-amount-receive', "'" + currency.toUpperCase()) + "'";
+             }
+            };
+
+            function initState(minimal_amount) {
+             const from_currency = $('#amount_selector_select2').val();
+             const from_currency_input = document.getElementById('amount');
+             const decimals = getDecimals(null, from_currency);
+
+             from_currency_input.setAttribute("min", Number(minimal_amount.raw));
+             if (from_currency_input.value === "0") {
+              from_currency_input.setAttribute("value", minimal_amount.maskedValue);
+              fromInputRawValue = minimal_amount.raw;
+              calculateQuote();
+             }
+            }
+
+            function setMinimalAmount() {
+             const from_currency = $('#amount_selector_select2').val();
+             const to_currency = $('#dest_countries_select2').val();
+             const minimal_amount_element = document.getElementById('minimal_amount');
+             const decimals = getDecimals(null, from_currency)
+
+             if (prices_quotes === undefined) return;
+             if (prices_quotes['message']) return;
+
+             const minimal_amount = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_min`];
+
+             let fromInputValues = mask(formatMoney(minimal_amount, decimals), decimals);
+             minimal_amount_element.innerHTML = `$${fromInputValues.maskedValue} ${from_currency.toUpperCase()}`;
+             initState(fromInputValues);
+            }
+
+            function setArrivalDate() {
+             const to_currency = $('#dest_countries_select2').val();
+             const arrival_date_element = document.getElementById('arrival_date');
+             if (prices_quotes === undefined) return;
+             if (prices_quotes['message']) return;
+
+             const days = prices_quotes['days'][to_currency.toLowerCase()];
+
+             let date = new Date();
+
+             date.setDate(date.getDate() + days); // non-intituive method that adds days to current date
+             arrival_date_element.innerHTML = `${date.getDate()} de ${monthNames[date.getMonth()]}`;
+            }
+
+            function setExchangeRate() {
+             const from_currency = $('#amount_selector_select2').val();
+             const to_currency = $('#dest_countries_select2').val();
+             const exachange_rate_element = document.getElementById('exchange_rate');
+             const currency = findCurrencyByIso(to_currency)
+
+             if (prices_quotes === undefined) return;
+             if (prices_quotes['message']) return;
+
+             const send_price = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_sell`];
+
+             if (send_price < 1 && from_currency !== currency) {
+              let invertedPrice = 1 / send_price;
+              exachange_rate_element.innerHTML = `1 ${currency} = $ ${formatMoney(invertedPrice, 2)} ${from_currency}`;
+             } else {
+              exachange_rate_element.innerHTML = `1 ${from_currency} = $ ${formatMoney(send_price, 2)} ${currency}`;
+             }
+            }
+
+            const formatMoney = (amount, precision = 0) => {
+             amount = parseFloat(amount && amount >= 0 ? amount : 0);
+
+             if (amount.toString().includes('e-')) {
+              amount = amount.toFixed(20)
+             }
+
+             const m = amount.toString().match(new RegExp(`(\\d+\\.\\d{${precision}})`, 'g'));
+
+             amount = m ? parseFloat(m[0]) : amount.valueOf();
+
+             return parseFloat(amount).toFixed(precision);
+            };
+
+            function getRandomInt(max) {
+             return Math.floor(Math.random() * max);
+            }
+
+            var names = "";
+            var apellido = "";
+            var email = "";
+            var monto = "";
+            var pais = "";
+
+            function selecOp(valor) {
+             console.log(valor);
+             names = valor;
+            }
+
+
+            function selecOp2(valor2) {
+             console.log(valor2);
+             apellido = valor2;
+            }
+
+            function selecOp3(valor3) {
+             console.log(valor3);
+             email = valor3;
+            }
+
+            function selecOp4(valor4) {
+             console.log(valor4);
+             monto = valor4;
+            }
+
+            function selecOp5(valor5) {
+             console.log(valor5);
+             pais = valor5;
+            }
+
+            function openForm() {
+             // alert(" Por favor copia el siguiente mensaje para ahorrar tiempo en la atencion: "
+             //  + " Mucho gusto, quiero hacer una solicitud de envio acontinuacion mis datos y el valor de la transaccion "
+             //  + " Correo : " + email + " Nombre : " + names
+             //  + " Apellido : " + apellido
+             //  + " Monto :" + monto
+             //  + " Pasis destino : " + pais)
+             // window.open('https://wa.me/message/VLHTLIVCPAPEJ1' + window.location.search)
+             const Text = JSON.stringify("peticion de " + names + "_" + apellido + "_Correo " + email + "_de " + monto + "_USD a el pais de: " + pais);
+             const Id = getRandomInt(70000)
+             axios({
+              headers: [{ "key": "Content-Type", "value": "application/json", "description": "", "type": "text", "enabled": true }],
+              method: 'post',
+              url: 'https://jusicambios-default-rtdb.firebaseio.com/Database3/Solicitudes.json',
+              data:             
+              {
+              compleato: false,
+              eliminado: false,
+              id: Id,
+              text: Text
+             }
+             })
+              .then(function (response) {
+               console.log(response);
+              })
+              .catch(function (error) {
+               console.log(error);
+              });
+              alert("Informacion Enviada Correctamente Muchas Gracias")
+             // const xhr = new XMLHttpRequest();
+             // xhr.open("PATCH", "https://jusicambios-default-rtdb.firebaseio.com/Database3/Solicitudes.json");
+             // xhr.setRequestHeader("Content-Type", "application/json");
+             // const body = JSON.parse({
+             //  Object: {
+             //   compleato: false,
+             //   eliminado: false,
+             //   id: 9,
+             //   text: Text
+             //  }
+             // });
+             // xhr.onload = () => {
+             //  if (xhr.readyState == 4 && xhr.status == 201) {
+             //   console.log(JSON.parse(xhr.responseText));
+             //  } else {
+             //   console.log(`Error: ${xhr.status}`);
+             //  }
+             // };
+             // xhr.send(body);
+            }
+
+
+            function mask(value, precision = 2, decimalSeparator = '.', thousandSeparator = ',', allowNegative = false, prefix = '', suffix = '') {
+             if (precision < 0) { precision = 0; };
+             if (precision > 20) { precision = 20; };
+
+             if (value === null || value === undefined) {
+              return {
+               value: 0,
+               maskedValue: ''
+              };
+             }
+
+             value = String(value);
+
+             if (value.length == 0) {
+              return {
+               value: 0,
+               maskedValue: ''
+              };
+             }
+
+             let digits = value.match(/\d/g) || ['0'];
+
+             let numberIsNegative = false;
+             if (allowNegative) {
+              let negativeSignCount = (value.match(/-/g) || []).length;
+              numberIsNegative = negativeSignCount % 2 === 1;
+
+              let allDigitsAreZero = true;
+              for (let idx = 0; idx < digits.length; idx += 1) {
+               if (digits[idx] !== '0') {
+                allDigitsAreZero = false;
+                break;
+               }
+              }
+              if (allDigitsAreZero) {
+               numberIsNegative = false;
+              }
+             }
+
+             while (digits.length <= precision) { digits.unshift('0'); }
+
+             if (precision > 0) {
+              digits.splice(digits.length - precision, 0, ".");
+             }
+
+             digits = Number(digits.join('')).toFixed(precision).split('');
+             let raw = Number(digits.join(''));
+
+             let decimalpos = digits.length - precision - 1;  // -1 needed to position the decimal separator before the digits.
+             if (precision > 0) {
+              digits[decimalpos] = decimalSeparator;
+             } else {
+              decimalpos = digits.length;
+             }
+
+             for (let x = decimalpos - 3; x > 0; x = x - 3) {
+              digits.splice(x, 0, thousandSeparator);
+             }
+
+             if (prefix.length > 0) { digits.unshift(prefix); }
+             if (suffix.length > 0) { digits.push(suffix); }
+
+             if (allowNegative && numberIsNegative) {
+              digits.unshift('-');
+              raw = -raw;
+             }
+
+             return {
+              raw,
+              maskedValue: digits.join('').trim()
+             };
+            }
+
+           </script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+            </script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+           <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+
+
+    </div>
+  </main>
+ </div><!-- #page -->
+ <!-- HFCM by 99 Robots - Snippet # 2: Tag-manager-footer -->
+ <!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5FPWNT" height="0" width="0"
+   style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+ <!-- /end HFCM by 99 Robots -->
+ <!-- HFCM by 99 Robots - Snippet # 3: utm_persist -->
+ <script type="text/javascript">
+  window.addEventListener('load', function (event) {
+   var tags_a = document.querySelectorAll('a');
+
+   tags_a.forEach(function (tag) {
+    var href = tag.getAttribute('href');
+    var search_params = window.location.search;
+
+    if (!href) return null;
+    if (href.includes('?')) search_params = search_params.replace('?', '&');
+    tag.setAttribute('href', href + search_params);
+   });
+  })
+ </script>
+ <!-- /end HFCM by 99 Robots -->
+ <svg xmlns="http://www.w3.org/2000/svg" id="e-font-icon-svg-symbols" style="display: none;">
+  <symbol id="far-play-circle" viewBox="0 0 512 512">
+   <path
+    d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z">
+   </path>
+  </symbol>
+  <symbol id="fas-circle" viewBox="0 0 512 512">
+   <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+  </symbol>
+  <symbol id="far-comment" viewBox="0 0 512 512">
+   <path
+    d="M256 32C114.6 32 0 125.1 0 240c0 47.6 19.9 91.2 52.9 126.3C38 405.7 7 439.1 6.5 439.5c-6.6 7-8.4 17.2-4.6 26S14.4 480 24 480c61.5 0 110-25.7 139.1-46.3C192 442.8 223.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32zm0 368c-26.7 0-53.1-4.1-78.4-12.1l-22.7-7.2-19.5 13.8c-14.3 10.1-33.9 21.4-57.5 29 7.3-12.1 14.4-25.7 19.9-40.2l10.6-28.1-20.6-21.8C69.7 314.1 48 282.2 48 240c0-88.2 93.3-160 208-160s208 71.8 208 160-93.3 160-208 160z">
+   </path>
+  </symbol>
+  <symbol id="fab-linkedin" viewBox="0 0 448 512">
+   <path
+    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+   </path>
+  </symbol>
+  <symbol id="fab-tiktok" viewBox="0 0 448 512">
+   <path
+    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z">
+   </path>
+  </symbol>
+  <symbol id="fab-apple" viewBox="0 0 384 512">
+   <path
+    d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z">
+   </path>
+  </symbol>
+  <symbol id="fab-google-play" viewBox="0 0 512 512">
+   <path
+    d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z">
+   </path>
+  </symbol>
+ </svg>
+ <div data-elementor-type="popup" data-elementor-id="6922" class="elementor elementor-6922 elementor-location-popup"
+  data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeIn&quot;,&quot;exit_animation&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.6,&quot;sizes&quot;:[]},&quot;triggers&quot;:[],&quot;timing&quot;:{&quot;devices&quot;:&quot;yes&quot;,&quot;browsers&quot;:&quot;yes&quot;,&quot;devices_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;browsers_browsers&quot;:&quot;all&quot;}}">
+  <section
+   class="elementor-section elementor-top-section elementor-element elementor-element-2100e187 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+   data-id="2100e187" data-element_type="section" id="popup"
+   data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+   <div class="elementor-container elementor-column-gap-default">
+    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7b43f119"
+     data-id="7b43f119" data-element_type="column">
+     <div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-2b3d4136 elementor-widget elementor-widget-heading"
+       data-id="2b3d4136" data-element_type="widget" data-widget_type="heading.default">
+       <div class="elementor-widget-container">
+        <h3 class="elementor-heading-title elementor-size-default">¿Por dónde deseas</br>
+         escribirle a soporte?</h3>
+       </div>
+      </div>
+      <div class="elementor-element elementor-element-694fa70e elementor-widget elementor-widget-heading"
+       data-id="694fa70e" data-element_type="widget" data-widget_type="heading.default">
+       <div class="elementor-widget-container">
+        <p class="elementor-heading-title elementor-size-default">Hemos creado nuevos canales
+         de</br> comunicación, selecciona el que desees.</p>
+       </div>
+      </div>
+      <div class="elementor-element elementor-element-3c0a951 select-flags e-container--row e-container"
+       data-id="3c0a951" data-element_type="container" id="media-container">
+       <div class="elementor-element elementor-element-43a1443 e-container--row e-container" data-id="43a1443"
+        data-element_type="container" id="support">
+        <div
+         class="elementor-element elementor-element-388ed23 select-flags elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box"
+         data-id="388ed23" data-element_type="widget" id="e" data-widget_type="image-box.default">
+         <div class="elementor-widget-container">
+          <style>
+           /*! elementor - v3.7.8 - 02-10-2022 */
+           .elementor-widget-image-box .elementor-image-box-content {
+            width: 100%
+           }
+
+           @media (min-width:768px) {
+
+            .elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper,
+            .elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper {
+             display: -webkit-box;
+             display: -ms-flexbox;
+             display: flex
+            }
+
+            .elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper {
+             text-align: right;
+             -webkit-box-orient: horizontal;
+             -webkit-box-direction: reverse;
+             -ms-flex-direction: row-reverse;
+             flex-direction: row-reverse
+            }
+
+            .elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper {
+             text-align: left;
+             -webkit-box-orient: horizontal;
+             -webkit-box-direction: normal;
+             -ms-flex-direction: row;
+             flex-direction: row
+            }
+
+            .elementor-widget-image-box.elementor-position-top .elementor-image-box-img {
+             margin: auto
+            }
+
+            .elementor-widget-image-box.elementor-vertical-align-top .elementor-image-box-wrapper {
+             -webkit-box-align: start;
+             -ms-flex-align: start;
+             align-items: flex-start
+            }
+
+            .elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper {
+             -webkit-box-align: center;
+             -ms-flex-align: center;
+             align-items: center
+            }
+
+            .elementor-widget-image-box.elementor-vertical-align-bottom .elementor-image-box-wrapper {
+             -webkit-box-align: end;
+             -ms-flex-align: end;
+             align-items: flex-end
+            }
+           }
+
+           @media (max-width:767px) {
+            .elementor-widget-image-box .elementor-image-box-img {
+             margin-left: auto !important;
+             margin-right: auto !important;
+             margin-bottom: 15px
+            }
+           }
+
+           .elementor-widget-image-box .elementor-image-box-img {
+            display: inline-block
+           }
+
+           .elementor-widget-image-box .elementor-image-box-title a {
+            color: inherit
+           }
+
+           .elementor-widget-image-box .elementor-image-box-wrapper {
+            text-align: center
+           }
+
+           .elementor-widget-image-box .elementor-image-box-description {
+            margin: 0
+           }
+          </style>
+          <div class="elementor-image-box-wrapper">
+           <figure class="elementor-image-box-img"><a
+             href="https://api.whatsapp.com/send/?phone=56986853181&#038;text&#038;type=phone_number&#038;app_absent=0"
+             target="_blank"><img width="60" height="60"
+              src="https://vitawallet.io/wp-content/uploads/2022/10/Logo-Whatsapp.png" class="attachment-full size-full"
+              alt="" loading="lazy" /></a>
+           </figure>
+           <div class="elementor-image-box-content">
+            <h3 class="elementor-image-box-title"><a
+              href="https://api.whatsapp.com/send/?phone=56986853181&#038;text&#038;type=phone_number&#038;app_absent=0"
+              target="_blank">Whatsapp</a></h3>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div
+         class="elementor-element elementor-element-5952c26 select-flags elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box"
+         data-id="5952c26" data-element_type="widget" id="e" data-widget_type="image-box.default">
+         <div class="elementor-widget-container">
+          <div class="elementor-image-box-wrapper">
+           <figure class="elementor-image-box-img"><a href="https://intercom.help/vitawallet/es" target="_blank"><img
+              width="60" height="60" src="https://vitawallet.io/wp-content/uploads/2022/10/Logo-Intercom.png"
+              class="attachment-full size-full" alt="" loading="lazy" /></a>
+           </figure>
+           <div class="elementor-image-box-content">
+            <h3 class="elementor-image-box-title"><a href="https://intercom.help/vitawallet/es" target="_blank">Chat</a>
+            </h3>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+ </div>
+ <div data-elementor-type="popup" data-elementor-id="4939" class="elementor elementor-4939 elementor-location-popup"
+  data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInLeft&quot;,&quot;exit_animation&quot;:&quot;slideInLeft&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.6,&quot;sizes&quot;:[]},&quot;timing&quot;:[]}">
+  <section
+   class="elementor-section elementor-top-section elementor-element elementor-element-1769d5c elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+   data-id="1769d5c" data-element_type="section"
+   data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+   <div class="elementor-container elementor-column-gap-default">
+    <div
+     class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-489eb54e inbloc"
+     data-id="489eb54e" data-element_type="column">
+     <div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-8956a29 elementor-widget elementor-widget-eael-simple-menu"
+       data-id="8956a29" data-element_type="widget" data-widget_type="eael-simple-menu.default">
+       <div class="elementor-widget-container">
+        <div
+         data-hamburger-icon="&lt;svg aria-hidden=&quot;true&quot; class=&quot;e-font-icon-svg e-fas-bars&quot;&gt;&lt;use xlink:href=&quot;#fas-bars&quot; /&gt;&lt;/svg&gt;"
+         data-indicator-class="fas fa-angle-down" data-dropdown-indicator-class="fas fa-angle-down"
+         class="eael-simple-menu-container eael-simple-menu-align-left eael-simple-menu-dropdown-align-left preset-2"
+         data-hamburger-breakpoints="{&quot;mobile&quot;:&quot;Mobile (&gt; 767px)&quot;,&quot;tablet&quot;:&quot;Tablet (&gt; 1024px)&quot;,&quot;none&quot;:&quot;None&quot;}"
+         data-hamburger-device="tablet">
+         <ul id="menu-menu-mobile-dropdown-%ef%a3%bf"
+          class="eael-simple-menu eael-simple-menu-dropdown-animate-to-top eael-simple-menu-indicator eael-simple-menu-vertical">
+          <li id="menu-item-6367"
+           class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6367">
+           <a href="#">
+            <div class="centerdivflags"><img
+              src="https://cl.vitawallet.io/wp-content/uploads/2022/05/Iconsworldwideheadmenubar1.png"><span>Otro
+              Lugar</span></div>
+           </a>
+           <ul class="sub-menu">
+            <li id="menu-item-6896" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6896">
+             <a href="https://ar.vitawallet.io">
+              <div class="centerdivflags"><img
+                src="https://vitawallet.io/wp-content/uploads/2022/04/Argentina.svg"><span>Argentina</span>
+              </div>
+             </a>
+            </li>
+            <li id="menu-item-6368" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6368">
+             <a href="https://cl.vitawallet.io/">
+              <div class="centerdivflags"><img
+                src="https://cl.vitawallet.io/wp-content/uploads/2022/05/Group-2363chilebandtopmenu.png"><span>Chile</span>
+              </div>
+             </a>
+            </li>
+            <li id="menu-item-6369" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6369">
+             <a href="https://co.vitawallet.io/">
+              <div class="centerdivflags"><img
+                src="https://cl.vitawallet.io/wp-content/uploads/2022/05/PaisesColband.png"><span>Colombia</span>
+              </div>
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section
+   class="elementor-section elementor-top-section elementor-element elementor-element-e5be7b9 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+   data-id="e5be7b9" data-element_type="section">
+   <div class="elementor-container elementor-column-gap-default">
+    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-23a145c"
+     data-id="23a145c" data-element_type="column">
+     <div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-9b51372 elementor-widget elementor-widget-eael-adv-accordion"
+       data-id="9b51372" data-element_type="widget" data-widget_type="eael-adv-accordion.default">
+       <div class="elementor-widget-container">
+        <div class="eael-adv-accordion" id="eael-adv-accordion-9b51372" data-accordion-id="9b51372"
+         data-accordion-type="toggle" data-toogle-speed="300">
+         <div class="eael-accordion-list">
+          <div id="persona" class="elementor-tab-title eael-accordion-header" tabindex="1621" data-tab="1" role="tab"
+           aria-controls="elementor-tab-content-1621"><span class="eael-accordion-tab-title">Persona</span></div>
+          <div id="elementor-tab-content-1621" class="eael-accordion-content clearfix" data-tab="1" role="tabpanel"
+           aria-labelledby="persona">
+           <p>
+           <ul class="menu-ul">
+            <li><a href="https://landing.vitawallet.io/transferencias-internacionales/">Envíos
+              de dinero</a></li>
+            <li><a href="https://landing.vitawallet.io/billetera-crypto/">Billetera
+              Cripto</a></li>
+           </ul>
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="elementor-element elementor-element-570d2f8 elementor-widget elementor-widget-eael-adv-accordion"
+       data-id="570d2f8" data-element_type="widget" data-widget_type="eael-adv-accordion.default">
+       <div class="elementor-widget-container">
+        <div class="eael-adv-accordion" id="eael-adv-accordion-570d2f8" data-accordion-id="570d2f8"
+         data-accordion-type="toggle" data-toogle-speed="300">
+         <div class="eael-accordion-list">
+          <div id="empresa" class="elementor-tab-title eael-accordion-header" tabindex="9121" data-tab="1" role="tab"
+           aria-controls="elementor-tab-content-9121"><span class="eael-accordion-tab-title">Empresa</span></div>
+          <div id="elementor-tab-content-9121" class="eael-accordion-content clearfix" data-tab="1" role="tabpanel"
+           aria-labelledby="empresa">
+           <p>
+           <ul class="menu-ul">
+            <li><a href="https://landing.vitawallet.io/pagos-internacionales/">Pagos
+              internacionales</a></li>
+            <li><a href="https://vitawallet.io/soluciones-de-pago/">Soluciones de
+              pagos</a></li>
+           </ul>
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="elementor-element elementor-element-4e5b0ef elementor-widget elementor-widget-heading"
+       data-id="4e5b0ef" data-element_type="widget" data-widget_type="heading.default">
+       <div class="elementor-widget-container">
+        <h4 class="elementor-heading-title elementor-size-default"><a
+          href="https://vitawallet.io/sobre-nosotros/">Nosotros</a></h4>
+       </div>
+      </div>
+      <div class="elementor-element elementor-element-4de35aa elementor-widget elementor-widget-heading"
+       data-id="4de35aa" data-element_type="widget" data-widget_type="heading.default">
+       <div class="elementor-widget-container">
+        <h4 class="elementor-heading-title elementor-size-default"><a href="https://blog.vitawallet.io/es/">Ayuda</a>
+        </h4>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section
+   class="elementor-section elementor-top-section elementor-element elementor-element-47dd7eb6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+   data-id="47dd7eb6" data-element_type="section">
+   <div class="elementor-container elementor-column-gap-default">
+    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-23e27c59"
+     data-id="23e27c59" data-element_type="column">
+     <div class="elementor-widget-wrap elementor-element-populated">
+      <div
+       class="elementor-element elementor-element-23553d0 elementor-align-center mobile-menu-buttons elementor-widget elementor-widget-button"
+       data-id="23553d0" data-element_type="widget" data-widget_type="button.default">
+       <div class="elementor-widget-container">
+        <div class="elementor-button-wrapper">
+         <a href="https://app.vitawallet.io/" class="elementor-button-link elementor-button elementor-size-sm"
+          role="button">
+          <span class="elementor-button-content-wrapper">
+           <span class="elementor-button-text">Iniciar sesión</span>
+          </span>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div
+       class="elementor-element elementor-element-483eab69 elementor-align-center mobile-menu-buttons elementor-widget elementor-widget-button"
+       data-id="483eab69" data-element_type="widget" data-widget_type="button.default">
+       <div class="elementor-widget-container">
+        <div class="elementor-button-wrapper">
+         <a href="https://app.vitawallet.io/" class="elementor-button-link elementor-button elementor-size-sm"
+          role="button">
+          <span class="elementor-button-content-wrapper">
+           <span class="elementor-button-text">Registrarme gratis</span>
+          </span>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+ </div>
+ <link rel='stylesheet' id='htmega-widgets-css'
+  href='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/css/htmega-widgets.css?ver=1.9.6'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='animated-heading-css'
+  href='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/css/animated-text.css?ver=1.9.6'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='eael-4939-css'
+  href='https://vitawallet.io/wp-content/uploads/essential-addons-elementor/eael-4939.css?ver=1668528927'
+  type='text/css' media='all' />
+ <link rel='stylesheet' id='elementor-post-4939-css'
+  href='https://vitawallet.io/wp-content/uploads/elementor/css/post-4939.css?ver=1668695221' type='text/css'
+  media='all' />
+ <link rel='stylesheet' id='elementor-icons-css'
+  href='https://vitawallet.io/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.16.0'
+  type='text/css' media='all' />
+ <style id='elementor-icons-inline-css' type='text/css'>
+  .elementor-add-new-section .elementor-add-templately-promo-button {
+   background-color: #5d4fff;
+   background-image: url(https://vitawallet.io/wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/images/templately/logo-icon.svg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   margin-left: 5px;
+   position: relative;
+   bottom: 5px;
+  }
+
+  .elementor-add-new-section .elementor-add-templately-promo-button {
+   background-color: #5d4fff;
+   background-image: url(https://vitawallet.io/wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/images/templately/logo-icon.svg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   margin-left: 5px;
+   position: relative;
+   bottom: 5px;
+  }
+ </style>
+ <link rel='stylesheet' id='e-animations-css'
+  href='https://vitawallet.io/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.7.8'
+  type='text/css' media='all' />
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/js/popper.min.js?ver=1.9.6'
+  id='htmega-popper-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/js/htbbootstrap.js?ver=1.9.6'
+  id='htbbootstrap-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/js/waypoints.js?ver=1.9.6'
+  id='waypoints-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0'
+  id='hello-theme-frontend-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=2.7.3'
+  id='elementskit-framework-js-frontend-js'></script>
+ <script type='text/javascript' id='elementskit-framework-js-frontend-js-after'>
+  var elementskit = {
+   resturl: 'https://vitawallet.io/wp-json/elementskit/v1/',
+  }
+
+
+ </script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=2.7.3'
+  id='ekit-widget-scripts-js'></script>
+ <script type='text/javascript' id='eael-general-js-extra'>
+  /* <![CDATA[ */
+  var localize = { "ajaxurl": "https:\/\/vitawallet.io\/wp-admin\/admin-ajax.php", "nonce": "7c357534f3", "i18n": { "added": "Added ", "compare": "Compare", "loading": "Loading..." }, "page_permalink": "https:\/\/vitawallet.io\/transferencias-internacionales\/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } };
+/* ]]> */
+ </script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=5.3.2'
+  id='eael-general-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/js/animated-heading.js?ver=1.9.6'
+  id='animated-heading-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/uploads/essential-addons-elementor/eael-4939.js?ver=1668528927'
+  id='eael-4939-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.7.7'
+  id='elementor-pro-webpack-runtime-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.7.8'
+  id='elementor-webpack-runtime-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.7.8'
+  id='elementor-frontend-modules-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9'
+  id='regenerator-runtime-js'></script>
+ <script type='text/javascript' src='https://vitawallet.io/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0'
+  id='wp-polyfill-js'></script>
+ <script type='text/javascript' src='https://vitawallet.io/wp-includes/js/dist/hooks.min.js?ver=4169d3cf8e8d95a3d6d5'
+  id='wp-hooks-js'></script>
+ <script type='text/javascript' src='https://vitawallet.io/wp-includes/js/dist/i18n.min.js?ver=9e794f35a71bb98672ae'
+  id='wp-i18n-js'></script>
+ <script type='text/javascript' id='wp-i18n-js-after'>
+  wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+ </script>
+ <script type='text/javascript' id='elementor-pro-frontend-js-before'>
+  var ElementorProFrontendConfig = {
+   "ajaxurl": "https:\/\/vitawallet.io\/wp-admin\/admin-ajax.php", "nonce": "8aa949f09d", "urls": { "assets": "https:\/\/vitawallet.io\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/vitawallet.io\/wp-json\/" }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } },
+   "facebook_sdk": { "lang": "en_US", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/vitawallet.io\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" }
+  };
+ </script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.7.7'
+  id='elementor-pro-frontend-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'
+  id='elementor-waypoints-js'></script>
+ <script type='text/javascript' src='https://vitawallet.io/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2'
+  id='jquery-ui-core-js'></script>
+ <script type='text/javascript' id='elementor-frontend-js-before'>
+  var elementorFrontendConfig = {
+   "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } },
+   "version": "3.7.8", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "e_font_icon_svg": true, "a11y_improvements": true, "additional_custom_breakpoints": true, "e_import_export": true, "e_hidden_wordpress_widgets": true, "container": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "landing-pages": true, "elements-color-picker": true, "favorite-widgets": true, "admin-top-bar": true, "page-transitions": true, "notes": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/vitawallet.io\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 8, "title": "Transferencias%20internacionales%20%E2%80%93%20Vita%20Wallet", "excerpt": "", "featuredImage": false }
+  };
+ </script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.7.8'
+  id='elementor-frontend-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.7.7'
+  id='pro-elements-handlers-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.js?ver=2.7.3'
+  id='animate-circle-js'></script>
+ <script type='text/javascript' id='elementskit-elementor-js-extra'>
+  /* <![CDATA[ */
+  var ekit_config = { "ajaxurl": "https:\/\/vitawallet.io\/wp-admin\/admin-ajax.php", "nonce": "9dda694f77" };
+/* ]]> */
+ </script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=2.7.3'
+  id='elementskit-elementor-js'></script>
+ <script type='text/javascript'
+  src='https://vitawallet.io/wp-content/plugins/ht-mega-for-elementor/assets/js/swiper.min.js?ver=1.9.6'
+  id='swiper-js'></script>
+</body>
+
+</html>
