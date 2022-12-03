@@ -20,7 +20,7 @@ const iconoEditar = '<svg class="bi bi-pencil-square" width="1em" height="1em" v
 const iconoBorrar = '<svg class="bi bi-trash" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/><path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/></svg>';
 
 var db = firebase.database();
-var coleccionProductos = db.ref('Database3').child("Solicitudes");
+var coleccionProductos = db.ref('Database').child("countries");
 
 var dataSet = [];//array para guardar los valores de los campos inputs del form
 var table = $('#tablaProductos').DataTable({
@@ -29,8 +29,20 @@ var table = $('#tablaProductos').DataTable({
             data: dataSet,
             columnDefs: [
                 {
-                    targets: [0], 
-                    visible: false, //ocultamos la columna de ID que es la [0]                        
+                    targets: [2], 
+                    visible: false,                         
+                },
+                {
+                    targets: [3], 
+                    visible: false,                        
+                },
+                {
+                    targets: [5], 
+                    visible: false,                        
+                },
+                {
+                    targets: [6], 
+                    visible: false,                        
                 },
                 {
                     targets: -1,        
@@ -41,11 +53,11 @@ var table = $('#tablaProductos').DataTable({
 
 //Consturccion de la tabla
 coleccionProductos.on("child_added", datos => {        
-    dataSet = [datos.key, datos.child("text").val(), datos.child("completado").val(), datos.child("eliminado").val()];
+    dataSet = [datos.key, datos.child("currency_name").val(), datos.child("flag").val(), datos.child("iso_code").val(), datos.child("label").val()];
     table.rows.add([dataSet]).draw();
 });
 coleccionProductos.on('child_changed', datos => {           
-    dataSet = [datos.key, datos.child("text").val(), datos.child("completado").val(), datos.child("eliminado").val()];
+    dataSet = [datos.key, datos.child("currency_name").val(), datos.child("flag").val(), datos.child("iso_code").val(), datos.child("label").val()];
     table.row(filaEditada).data(dataSet).draw();
 });
 coleccionProductos.on("child_removed", function() {
@@ -56,14 +68,15 @@ coleccionProductos.on("child_removed", function() {
 $('form').submit(function(e){                         
     e.preventDefault();
     let id = $.trim($('#id').val());        
-    let text = $.trim($('#text').val());
-    let completado = $.trim($('#completado').val());         
-    let eliminado = $.trim($('#eliminado').val());                         
+    let currency_name = $.trim($('#currency_name').val());
+    let flag = $.trim($('#flag').val());         
+    let iso_code = $.trim($('#iso_code').val());     
+    let label = $('#label').val();                    
     let idFirebase = id;        
     if (idFirebase == ''){                      
         idFirebase = coleccionProductos.push().key;
     };                
-    data = {text:text, completado:completado, eliminado:eliminado};             
+    data = {currency_name:currency_name, decimals: 0, flag:flag, is_crypto: false, is_source: false, iso_code:iso_code, label:label};             
     actualizacionData = {};
     actualizacionData[`/${idFirebase}`] = data;
     coleccionProductos.update(actualizacionData);
@@ -75,9 +88,10 @@ $('form').submit(function(e){
 //Botones
 $('#btnNuevo').click(function() {
     $('#id').val('');        
-    $('#text').val('');
-    $('#completado').val('');         
-    $('#eliminar').val('');      
+    $('#currency_name').val('');
+    $('#flag').val('');         
+    $('#iso_code').val('');      
+    $('#label').val('');   
     $("form").trigger("reset");
     $('#modalAltaEdicion').modal('show');
 });        
@@ -88,13 +102,15 @@ $("#tablaProductos").on("click", ".btnEditar", function() {
     let fila = $('#tablaProductos').dataTable().fnGetData($(this).closest('tr'));               
     let id = fila[0];
     console.log(id);
-    let text = $(this).closest('tr').find('td:eq(0)').text(); 
-    let completado = $(this).closest('tr').find('td:eq(1)').text();        
-    let eliminado = ($(this).closest('tr').find('td:eq(2)').text());        
+    let currency_name = $(this).closest('tr').find('td:eq(0)').text(); 
+    let flag = $(this).closest('tr').find('td:eq(1)').text();        
+    let iso_code = ($(this).closest('tr').find('td:eq(2)').text());      
+    let label = ($(this).closest('tr').find('td:eq(3)').text());    
     $('#id').val(id);        
-    $('#text').val(text);
-    $('#completado').val(completado);                
-    $('#eliminado').val(eliminado);                
+    $('#currency_name').val(currency_name);
+    $('#flag').val(flag);                
+    $('#iso_code').val(iso_code);   
+    $('#label').val(label);              
     $('#modalAltaEdicion').modal('show');
 });  
 
@@ -115,36 +131,12 @@ $("#tablaProductos").on("click", ".btnBorrar", function() {
         let fila = $('#tablaProductos').dataTable().fnGetData($(this).closest('tr'));   
         console.log(fila);         
         let Id = fila[0];            
-        db.ref(`Database3/Solicitudes/${Id}`).remove()
+        db.ref(`Database/countries/${Id}`).remove()
         Swal.fire('¡Eliminado!', 'El producto ha sido eliminado.','success')
     }
     })        
 }); 
 
-
-axios({
-    method: 'GET',
-    url: 'https://jusicambios-default-rtdb.firebaseio.com/Database3/Solicitudes.json',
-   })
-    .then(function (response) {
-     var datas = Object.entries(response.data);
-     document.getElementById('numerosolicitudes').innerText =  `${datas.length}` 
-     var length = datas.length;
-     var porcentaje = (100/length);
-     document.getElementById('porcentaje').innerText = porcentaje + "%"
-     for (var i = 0; i <datas.length; i++) {
-        if (datas[i].completado === "true"){
-            let gestion = i++; 
-            console.log(gestion);
-            document.getElementById('gestionadas').innerHTML = "Total " + gestion
-        }else{
-            document.getElementById('gestionadas').innerHTML = "0"
-        }
-     }
-    })
-    .catch(function (error) {
-     console.log(error);
-    });
 
 });
 

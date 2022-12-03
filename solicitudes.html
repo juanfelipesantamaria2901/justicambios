@@ -30,136 +30,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
         integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
         crossorigin="anonymous"></script>
-    <!-- <style>
-        .container {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-
-        :root {
-            --white: #fafafb;
-            --purple: #9a67ea;
-            --blue-light: #04d4c3;
-            --blue-dark: #2a73c2;
-            --green: #2c7b90;
-
-        }
-
-        /* body {
-    background: linear-gradient(to bottom,var(--purple),var(--blue-light));
-    height: 100vh;   
-    font-family: 'Prompt', sans-serif;
-} */
-
-        .container {
-            max-width: 80%;
-            width: 400px;
-            height: 600px;
-            margin: 0 auto;
-        }
-
-        /*PERFIL*/
-
-
-
-        .perfil h1 {
-            color: black;
-        }
-
-        .perfil span {
-            color: black;
-            letter-spacing: 1px;
-        }
-
-        #fecha {
-            color: black;
-            padding: 50px 0 5px 0px;
-
-        }
-
-
-
-
-        /*AGREGAR TAREA*/
-
-        .agregar-tarea {
-            background-color: var(--white);
-            border-radius: 15px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            gap: 70px;
-            padding: 10px;
-            margin: 40px 0;
-        }
-
-        .agregar-tarea input {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            border: none;
-            background-color: var(--white);
-            padding-left: 10px;
-
-        }
-
-        .agregar-tarea input::placeholder {
-            font-size: 20px;
-            color: var(--purple);
-        }
-
-        .agregar-tarea i {
-            font-size: 20px;
-            color: var(--purple);
-
-        }
-
-        .agregar-tarea i:hover {
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-
-
-
-        /*SECCION DE TAREA */
-
-        .seccion-tarea h3 {
-            color: black;
-            margin-bottom: 12px;
-        }
-
-        .seccion-tarea li {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: linear-gradient(to bottom, var(--blue-dark), var(--green));
-            border-radius: 15px;
-            padding: 10px;
-            color: var(--white);
-            margin: 5px 0;
-
-        }
-
-        .seccion-tarea i {
-            font-size: 12px;
-        }
-
-        .seccion-tarea>ul p {
-            font-size: 12px;
-
-        }
-
-        .seccion-tarea i:hover {
-            color: var(--blue-light);
-            cursor: pointer;
-        }
-
-        .line-through {
-            text-decoration: line-through;
-            color: var(--blue-light);
-        }
-    </style> -->
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -286,7 +156,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Justicambios</a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
@@ -300,7 +169,6 @@
             </li>
         </ul>
     </nav>
-
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -341,7 +209,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.msn.com/es-co/dinero?ocid=msedgntp" target="_blank">
+                            <a class="nav-link" href="https://es.tradingview.com/markets/currencies/" target="_blank">
                                 <span data-feather="file-text"></span>
                                 Revisar mercados
                             </a>
@@ -349,7 +217,6 @@
                     </ul>
                 </div>
             </nav>
-
             <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -358,49 +225,151 @@
                         <div class="btn-group mr-2">
                             <a href="/newrate.html" type="button" class="btn btn-sm btn-outline-secondary">Registrar
                                 nuevo rate</a>
-                            <a href="/updaterate.html" type="button" class="btn btn-sm btn-outline-secondary">Actualizar un rate</a>
+                            <a href="/updaterate.html" type="button" class="btn btn-sm btn-outline-secondary">Actualizar
+                                un rate</a>
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="perfil">
-                        <div id="fecha"></div>
-                        <span>Solicitudes actuales</span>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                      <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style= "width: 250px;">
+                        <div class="card-header bg-primary">
+                            <h6 style="color: white;"><b>Numero de solicitudes:</b></h6>
+                        </div>
+                        <div class="card-body"
+                            style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
+                            <h6 style="text-align: center;" id="numerosolicitudes"></h6>
+                        </div>
+                      </div>
                     </div>
-                    <h5>Tus solicitudes Pendientes </h5><br>
-                    <div class="seccion-tarea" id="lista">
-                        <table class="table table-dark table-striped table-hover table-bordered table-sm table-responsive-sm">
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Solicitudes</th>
-                                    <th>Completadas</th>
-                                    <th>Eliminar</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tabla">
-                            </tbody>
-                        </table>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style= "width: 250px;">
+                          <div class="card-header bg-primary">
+                              <h6 style="color: white;"><b>Porcentaje de cumplimiento:</b></h6>
+                          </div>
+                          <div class="card-body"
+                              style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
+                              <h6 style="text-align: center;" id="porcentaje"></h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                        <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style= "width: 250px;">
+                          <div class="card-header bg-primary">
+                              <h6 style="color: white;"><b>Solicitudes Gestionadas:</b></h6>
+                          </div>
+                          <div class="card-body"
+                              style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
+                              <h6 style="text-align: center;" id="gestionadas"></h6>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+                <div class="container"
+                    style="background-color: #333131!important; color: white; border-radius:15px; margin: 15px;">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <button id="btnNuevo" class="btn btn-info" data-toggle="tooltip" title="Nuevo Producto"><svg
+                                    class="bi bi-plus-circle-fill" width="1em" height="1em" viewBox="0 0 16 16"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4a.5.5 0 0 0-1 0v3.5H4a.5.5 0 0 0 0 1h3.5V12a.5.5 0 0 0 1 0V8.5H12a.5.5 0 0 0 0-1H8.5V4z" />
+                                </svg></button>
+                            <!--Modal-->
+                            <div class="modal fade" id="modalAltaEdicion" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary text-light">
+                                            <h5 class="modal-title" id="exampleModalLabel">Alta / Edición</h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <form>
+                                            <div class="modal-body">
+                                                <input id="id" type="hidden">
+                                                <!-- ID que vamos a recibir de firebase -->
+                                                <div class="form-group">
+                                                    <label>Completar</label>
+                                                    <select id="completado" class="form-control" required>
+                                                        <option value="false" selected>false</option>
+                                                        <option value="true">true</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Solicitud</label>
+                                                    <input id="text" type="text" class="form-control" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Eliminar</label>
+                                                    <select id="eliminado" class="form-control" required>
+                                                        <option value="false" selected>false</option>
+                                                        <option value="true">true</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                                    tabindex="2">Cancelar</button>
+                                                <button type="submit" value="btnGuardar" class="btn btn-primary"
+                                                    translate="1">Guardar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <table id="tablaProductos"
+                                class="table table-dark table-striped table-bordered table-responsive"
+                                style="width:950px">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Solicitud</th>
+                                        <th>Completado</th>
+                                        <th>Eliminado</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </main>
-        </div>
-    </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <script src="/lista-productos-controlador.js"  type="module"></script>
-    <script src="/productos-servicio.js"></script> -->
-   <script src="./main.js" type="module">
-    </script>
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-DBjhmceckmzwrnMMrjI7BvG2FmRuxQVaTfFYHgfnrdfqMhxKt445b7j3KBQLolRl"
-        crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js"
-        integrity="sha384-EbSscX4STvYAC/DxHse8z5gEDaNiKAIGW+EpfzYTfQrgIlHywXXrM9SUIZ0BlyfF"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-        integrity="sha384-i+dHPTzZw7YVZOx9lbH5l6lP74sLRtMtwN2XjVqjf3uAGAREAF4LMIUDTWEVs4LI"
-        crossorigin="anonymous"></script>
+            <!-- sweetalert2 -->
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.14.2/dist/sweetalert2.all.min.js"></script>
+
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase.js"></script>
+            <!-- datatables -->
+            <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+            <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script type="text/javascript" src="./main.js">
+            </script>
+            <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-DBjhmceckmzwrnMMrjI7BvG2FmRuxQVaTfFYHgfnrdfqMhxKt445b7j3KBQLolRl"
+                crossorigin="anonymous"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js"
+                integrity="sha384-EbSscX4STvYAC/DxHse8z5gEDaNiKAIGW+EpfzYTfQrgIlHywXXrM9SUIZ0BlyfF"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+                integrity="sha384-i+dHPTzZw7YVZOx9lbH5l6lP74sLRtMtwN2XjVqjf3uAGAREAF4LMIUDTWEVs4LI"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,93 +1,253 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Loanday Template">
-    <meta name="keywords" content="Loanday, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="img/Logoprincipal.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Resgistro administrador</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Loanday Template">
+  <meta name="keywords" content="Loanday, unica, creative, html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="img/Logoprincipal.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <title>Resgistro administrador</title>
 </head>
+
 <body>
-    <section>
+  <section>
     <div style="margin: 15px;">
-        <div class="card">
-            <div class="card-header">
-                 <h2>Administrador de rates </h2>
+      <a class="btn btn-danger" style="margin: 15px; color: white;" href="/solicitudes.html">Regresar</a>
+      <div class="card">
+        <div class="card-header bg-dark" style="color: white;">
+          <h2>Administrador de rates </h2>
+        </div>
+        <div class="card-body">
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="validationCustom02" class="form-label">Divisa a Actualizar </label>
+              <select style="border-radius: 5px; width: 100%;" id="update" class="form-control"
+                onchange="selecOp(event.target.value)">
+                <option value="" style="border-radius: 5px;">Selecciona rete a registrar</option>
+                <option value="cocop" style="border-radius: 5px;">COP</option>
+                <option value="ve" style="border-radius: 5px;">VEF</option>
+                <option value="br" style="border-radius: 5px;">BRL</option>
+                <option value="ec" style="border-radius: 5px;">EC</option>
+                <option value="ar" style="border-radius: 5px;">ARS</option>
+                <option value="mx" style="border-radius: 5px;">MXN</option>
+                <option value="us" style="border-radius: 5px;">USD</option>
+                <option value="pe" style="border-radius: 5px;">PEN</option>
+                <option value="cl" style="border-radius: 5px;">CLP</option>
+                <option value="eu" style="border-radius: 5px;">EUR</option>
+                <option value="pa" style="border-radius: 5px;">PAB</option>
+                <option value="do" style="border-radius: 5px;">DOP</option>
+              </select>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
             </div>
-            <div class="card-body">
-    <form class="row g-3 needs-validation" novalidate >
-      <div class="col-md-6">
-        <label for="validationCustom02" class="form-label">Divisa a Actualizar </label>
-        <select style="border-radius: 5px; width: 100%;" id="desde" class="form-control"
-            onchange="selecOp(event.target.value)">
-            <option value="" style="border-radius: 5px;">Selecciona rete a registrar</option>
-            <option value="COP" style="border-radius: 5px;">COP</option>
-            <option value="VEF" style="border-radius: 5px;">VEF</option>
-            <option value="BRL" style="border-radius: 5px;">BRL</option>
-            <option value="EC" style="border-radius: 5px;">EC</option>
-            <option value="ARS" style="border-radius: 5px;">ARS</option>
-            <option value="MXN" style="border-radius: 5px;">MXN</option>
-            <option value="USD" style="border-radius: 5px;">USD</option>
-            <option value="PEN" style="border-radius: 5px;">PEN</option>
-            <option value="CLP" style="border-radius: 5px;">CLP</option>
-            <option value="EUR" style="border-radius: 5px;">EUR</option>
-            <option value="PAB" style="border-radius: 5px;">PAB</option>
-            <option value="DOP" style="border-radius: 5px;">DOP</option>
-        </select>
-        <div class="valid-feedback">
-          Looks good!
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom07" class="form-label">Estableca valor compra para Dolar</label>
+              <input type="number" class="form-control" id="validationCustom14" placeholder="00.00" required
+                onchange="selecOp2(event.target.value)">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom07" class="form-label">Estableca valor minimo de compra para Dolar</label>
+              <input type="number" class="form-control" id="validationCustom14" placeholder="00.00" required
+                onchange="selecOp5(event.target.value)">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom07" class="form-label">Estableca valor venta para Dolar</label>
+              <input type="number" class="form-control" id="validationCustom14" placeholder="00.00" required
+                onchange="selecOp8(event.target.value)">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="validationCustom09" class="form-label">Estableca valor de compra para Peso Colombiano</label>
+              <input type="number" class="form-control" id="validationCustom15" placeholder="00.00" required
+                onchange="selecOp3(event.target.value)">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom09" class="form-label">Estableca valor minimo de compra para Peso
+                Colombiano</label>
+              <input type="number" class="form-control" id="validationCustom15" placeholder="00.00" required
+                onchange="selecOp6(event.target.value)">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom09" class="form-label">Estableca valor de venta para Peso Colombiano</label>
+              <input type="number" class="form-control" id="validationCustom15" placeholder="00.00" required
+                onchange="selecOp9(event.target.value)">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="validationCustom06" class="form-label">Estableca valor para Peso Chileno</label>
+              <input type="number" class="form-control" id="validationCusto16" placeholder="00.00" required
+                onchange="selecOp4(event.target.value)">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom06" class="form-label">Estableca valor minimo de compra para Peso
+                Chileno</label>
+              <input type="number" class="form-control" id="validationCusto16" placeholder="00.00" required
+                onchange="selecOp7(event.target.value)">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom09" class="form-label">Estableca valor de venta para Peso Chileno</label>
+              <input type="number" class="form-control" id="validationCustom15" placeholder="00.00" required
+                onchange="selecOp10(event.target.value)">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit" onclick="Register()">Registrar</button>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="col-md-6">
-      </div>
-      <div class="col-md-6">
-        <label for="validationCustom07" class="form-label">Estableca valor para Dolar</label>
-        <input type="number" class="form-control" id="validationCustom04" placeholder="00.00" required onchange="selecOp(event.target.value)">
-        <div class="valid-feedback">
-          Looks good!
-        </div>
     </div>
+  </section>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    var id = "";
+    var cop = "";
+    var copbuy = parseInt(cop);
+    var mincop = "";
+    var copsell = 0;
+    var usd = "";
+    var usdbuy = parseInt(usd);
+    var minusd = "";
+    var usdsell = 0;
+    var clp = "";
+    var clpbuy = parseInt(clp);
+    var minclp = "";
+    var clpsell = 0;
 
-  <div class="col-md-6">
-    <label for="validationCustom09" class="form-label">Estableca valor para Peso Colombiano</label>
-    <input type="number" class="form-control" id="validationCustom04" placeholder="00.00" required onchange="selecOp(event.target.value)">
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-</div>
-
-<div class="col-md-6">
-  <label for="validationCustom06" class="form-label">Estableca valor para Peso Chileno</label>
-  <input type="number" class="form-control" id="validationCustom04" placeholder="00.00" required onchange="selecOp(event.target.value)">
-  <div class="valid-feedback">
-    Looks good!
-  </div>
-</div>
-
-  
-
-
-
-
- 
-
-      <div class="col-12">
-        <button class="btn btn-primary" type="submit" onclick="Register()">Registrar</button>
-      </div>
-    </form>
-</div>
-</div>
-</div>
-</section>
-<script>
-    function Register(){
-       alert("Informacion Guardada correctamente")   
+    function selecOp(valor) {
+      console.log(valor);
+      id = valor;
     }
-</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+    function selecOp2(valor2) {
+      console.log(valor2);
+      usd = valor2;
+    }
+
+    function selecOp3(valor3) {
+      console.log(valor3);
+      cop = valor3;
+    }
+
+    function selecOp4(valor4) {
+      console.log(valor4);
+      clp = valor4;
+    }
+
+    function selecOp5(valor5) {
+      console.log(valor5);
+      minusd = valor5;
+    }
+
+    function selecOp6(valor6) {
+      console.log(valor6);
+      mincop = valor6;
+    }
+
+    function selecOp7(valor7) {
+      console.log(valor7);
+      minclp = valor7;
+    }
+
+    function selecOp8(valor8) {
+      console.log(valor8);
+      usdsell = valor8;
+    }
+
+    function selecOp9(valor9) {
+      console.log(valor9);
+      copsell = valor9;
+    }
+
+    function selecOp10(valor10) {
+      console.log(valor10);
+      clpsell = valor10;
+    }
+
+    function Register() {
+      axios.patch(`https://jusicambios-default-rtdb.firebaseio.com/Database2/fiat/${id}.json`,         
+      {
+          clp: clp,
+          clp_buy: clpbuy,
+          clp_min: minclp,
+          clp_sell: clpsell,
+          cop: cop,
+          cop_buy: copbuy,
+          cop_min: mincop,
+          cop_sell: copsell,
+          usd: usd,
+          usd_buy: usdbuy,
+          usd_min: minusd,
+          usd_sell: usdsell
+        });
+      // axios({
+      //   headers: [{ "key": "Content-Type", "value": "application/json", "description": "", "type": "text", "enabled": true }],
+      //   method: 'PATCH',
+      //   url: `https://jusicambios-default-rtdb.firebaseio.com/Database2/fiat/${id}.json`,
+      //   data:
+      //   {
+      //     clp: clp,
+      //     clp_buy: clpbuy,
+      //     clp_min: minclp,
+      //     clp_sell: clpsell,
+      //     cop: cop,
+      //     cop_buy: copbuy,
+      //     cop_min: mincop,
+      //     cop_sell: copsell,
+      //     usd: usd,
+      //     usd_buy: usdbuy,
+      //     usd_min: minusd,
+      //     usd_sell: usdsell
+      //   }
+      // })
+      //   .then(function (response) {
+      //     console.log(response);
+      //   })
+      //   .catch(function (error) {
+      //     console.log(error);
+      //   });
+      alert("Informacion Guardada correctamente")
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
