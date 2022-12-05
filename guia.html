@@ -3813,9 +3813,6 @@
              return parseFloat(amount).toFixed(precision);
             };
 
-            function getRandomInt(max) {
-             return Math.floor(Math.random() * max);
-            }
 
             var names = "";
             var apellido = "";
@@ -3858,16 +3855,13 @@
              //  + " Pasis destino : " + pais)
              // window.open('https://wa.me/message/VLHTLIVCPAPEJ1' + window.location.search)
              const Text = JSON.stringify("peticion de " + names + "_" + apellido + "_Correo " + email + "_de " + monto + "_USD a el pais de: " + pais);
-             const Id = getRandomInt(70000)
              axios({
               headers: [{ "key": "Content-Type", "value": "application/json", "description": "", "type": "text", "enabled": true }],
               method: 'post',
               url: 'https://jusicambios-default-rtdb.firebaseio.com/Database3/Solicitudes.json',
               data:             
               {
-              completado: false,
-              eliminado: false,
-              id: Id,
+              completado: "pendiente",
               text: Text
              }
              })

@@ -232,39 +232,39 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
-                      <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style= "width: 250px;">
-                        <div class="card-header bg-primary">
-                            <h6 style="color: white;"><b>Numero de solicitudes:</b></h6>
+                        <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style="width: 250px;">
+                            <div class="card-header bg-primary">
+                                <h6 style="color: white;"><b>Numero de solicitudes:</b></h6>
+                            </div>
+                            <div class="card-body"
+                                style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
+                                <h6 style="text-align: center;" id="numerosolicitudes"></h6>
+                            </div>
                         </div>
-                        <div class="card-body"
-                            style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
-                            <h6 style="text-align: center;" id="numerosolicitudes"></h6>
-                        </div>
-                      </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                        <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style= "width: 250px;">
-                          <div class="card-header bg-primary">
-                              <h6 style="color: white;"><b>Porcentaje de cumplimiento:</b></h6>
-                          </div>
-                          <div class="card-body"
-                              style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
-                              <h6 style="text-align: center;" id="porcentaje"></h6>
-                          </div>
+                        <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style="width: 250px;">
+                            <div class="card-header bg-primary">
+                                <h6 style="color: white;"><b>Porcentaje de cumplimiento:</b></h6>
+                            </div>
+                            <div class="card-body"
+                                style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
+                                <h6 style="text-align: center;" id="porcentaje"></h6>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                        <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style= "width: 250px;">
-                          <div class="card-header bg-primary">
-                              <h6 style="color: white;"><b>Solicitudes Gestionadas:</b></h6>
-                          </div>
-                          <div class="card-body"
-                              style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
-                              <h6 style="text-align: center;" id="gestionadas"></h6>
-                          </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style="width: 250px;">
+                            <div class="card-header bg-primary">
+                                <h6 style="color: white;"><b>Solicitudes Gestionadas:</b></h6>
+                            </div>
+                            <div class="card-body"
+                                style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
+                                <h6 style="text-align: center;" id="gestionadas"></h6>
+                            </div>
                         </div>
-                      </div>
-                  </div>
+                    </div>
+                </div>
 
                 <div class="container"
                     style="background-color: #333131!important; color: white; border-radius:15px; margin: 15px;">
@@ -282,7 +282,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header bg-primary text-light">
-                                            <h5 class="modal-title" id="exampleModalLabel">Alta / Edición</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Gestion Solicitudes:</h5>
                                             <button type="button" class="close" data-dismiss="modal"
                                                 aria-label="Close"><span aria-hidden="true">&times;</span>
                                             </button>
@@ -294,20 +294,14 @@
                                                 <div class="form-group">
                                                     <label>Completar</label>
                                                     <select id="completado" class="form-control" required>
-                                                        <option value="false" selected>false</option>
-                                                        <option value="true">true</option>
+                                                        <option value="Pendiente" selected>Pendiente</option>
+                                                        <option value="En proceso">En proceso</option>
+                                                        <option value="Completada">Completada</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Solicitud</label>
                                                     <input id="text" type="text" class="form-control" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Eliminar</label>
-                                                    <select id="eliminado" class="form-control" required>
-                                                        <option value="false" selected>false</option>
-                                                        <option value="true">true</option>
-                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -328,7 +322,6 @@
                                         <th>Id</th>
                                         <th>Solicitud</th>
                                         <th>Completado</th>
-                                        <th>Eliminado</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>

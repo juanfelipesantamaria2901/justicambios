@@ -41,11 +41,11 @@ var table = $('#tablaProductos').DataTable({
 
 //Consturccion de la tabla
 coleccionProductos.on("child_added", datos => {        
-    dataSet = [datos.key, datos.child("text").val(), datos.child("completado").val(), datos.child("eliminado").val()];
+    dataSet = [datos.key, datos.child("text").val(), datos.child("completado").val()];
     table.rows.add([dataSet]).draw();
 });
 coleccionProductos.on('child_changed', datos => {           
-    dataSet = [datos.key, datos.child("text").val(), datos.child("completado").val(), datos.child("eliminado").val()];
+    dataSet = [datos.key, datos.child("text").val(), datos.child("completado").val()];
     table.row(filaEditada).data(dataSet).draw();
 });
 coleccionProductos.on("child_removed", function() {
@@ -57,27 +57,48 @@ $('form').submit(function(e){
     e.preventDefault();
     let id = $.trim($('#id').val());        
     let text = $.trim($('#text').val());
-    let completado = $.trim($('#completado').val());         
-    let eliminado = $.trim($('#eliminado').val());                         
+    let completado = $.trim($('#completado').val());                                 
     let idFirebase = id;        
     if (idFirebase == ''){                      
         idFirebase = coleccionProductos.push().key;
     };                
-    data = {text:text, completado:completado, eliminado:eliminado};             
+    data = {text:text, completado:completado};             
     actualizacionData = {};
     actualizacionData[`/${idFirebase}`] = data;
     coleccionProductos.update(actualizacionData);
     id = '';        
     $("form").trigger("reset");
     $('#modalAltaEdicion').modal('hide');
+    axios({
+        method: 'GET',
+        url: 'https://jusicambios-default-rtdb.firebaseio.com/Database3/Solicitudes.json',
+       })
+        .then(function (response) {
+         var datas = Object.entries(response.data);
+         document.getElementById('numerosolicitudes').innerText =  `${datas.length}` 
+         var length = datas.length;
+         var porcentaje = (100/length);
+         document.getElementById('porcentaje').innerText = porcentaje + "%"
+         for (var i = 0; i <datas.length; i++) {
+            if (datas[i].completado === "true"){
+                let gestion = i++; 
+                console.log(gestion);
+                document.getElementById('gestionadas').innerHTML = "Total " + gestion
+            }else{
+                document.getElementById('gestionadas').innerHTML = "0"
+            }
+         }
+        })
+        .catch(function (error) {
+         console.log(error);
+        });
 });
 
 //Botones
 $('#btnNuevo').click(function() {
     $('#id').val('');        
     $('#text').val('');
-    $('#completado').val('');         
-    $('#eliminar').val('');      
+    $('#completado').val('');             
     $("form").trigger("reset");
     $('#modalAltaEdicion').modal('show');
 });        
@@ -89,12 +110,10 @@ $("#tablaProductos").on("click", ".btnEditar", function() {
     let id = fila[0];
     console.log(id);
     let text = $(this).closest('tr').find('td:eq(0)').text(); 
-    let completado = $(this).closest('tr').find('td:eq(1)').text();        
-    let eliminado = ($(this).closest('tr').find('td:eq(2)').text());        
+    let completado = $(this).closest('tr').find('td:eq(1)').text();                
     $('#id').val(id);        
     $('#text').val(text);
-    $('#completado').val(completado);                
-    $('#eliminado').val(eliminado);                
+    $('#completado').val(completado);                              
     $('#modalAltaEdicion').modal('show');
 });  
 
@@ -118,7 +137,30 @@ $("#tablaProductos").on("click", ".btnBorrar", function() {
         db.ref(`Database3/Solicitudes/${Id}`).remove()
         Swal.fire('¡Eliminado!', 'El producto ha sido eliminado.','success')
     }
-    })        
+    })  
+    axios({
+        method: 'GET',
+        url: 'https://jusicambios-default-rtdb.firebaseio.com/Database3/Solicitudes.json',
+       })
+        .then(function (response) {
+         var datas = Object.entries(response.data);
+         document.getElementById('numerosolicitudes').innerText =  `${datas.length}` 
+         var length = datas.length;
+         var porcentaje = (100/length);
+         document.getElementById('porcentaje').innerText = porcentaje + "%"
+         for (var i = 0; i <datas.length; i++) {
+            if (datas[i].completado === "true"){
+                let gestion = i++; 
+                console.log(gestion);
+                document.getElementById('gestionadas').innerHTML = "Total " + gestion
+            }else{
+                document.getElementById('gestionadas').innerHTML = "0"
+            }
+         }
+        })
+        .catch(function (error) {
+         console.log(error);
+        });      
 }); 
 
 
