@@ -156,7 +156,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <nav class="navbar  navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" aria-labelledby="mainnavheading">
         <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Justicambios</a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
             data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -171,7 +171,7 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" aria-labelledby="mainnavheading">
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -234,7 +234,7 @@
                     <div class="col-md-4 col-sm-4">
                         <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style="width: 250px;">
                             <div class="card-header bg-primary">
-                                <h6 style="color: white;"><b>Numero de solicitudes:</b></h6>
+                                <h6 style="color: white;"><strong>Numero de solicitudes:</strong></h6>
                             </div>
                             <div class="card-body"
                                 style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
@@ -245,7 +245,7 @@
                     <div class="col-md-4 col-sm-4">
                         <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style="width: 250px;">
                             <div class="card-header bg-primary">
-                                <h6 style="color: white;"><b>Porcentaje de cumplimiento:</b></h6>
+                                <h6 style="color: white;"><strong>Porcentaje de cumplimiento:</strong></h6>
                             </div>
                             <div class="card-body"
                                 style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
@@ -256,7 +256,7 @@
                     <div class="col-md-4 col-sm-4">
                         <div class="card ml-5 text-center bg-transparent border-0 col-md-6" style="width: 250px;">
                             <div class="card-header bg-primary">
-                                <h6 style="color: white;"><b>Solicitudes Gestionadas:</b></h6>
+                                <h6 style="color: white;"><strong>Solicitudes Gestionadas:</strong></h6>
                             </div>
                             <div class="card-body"
                                 style="background-color: #333131; color: white; border-radius: 0 0px 5px 5px;">
@@ -316,7 +316,7 @@
                             </div>
                             <table id="tablaProductos"
                                 class="table table-dark table-striped table-bordered table-responsive"
-                                style="width:950px">
+                                style="width:950px" aria-describedby="Table for managment of peticionts">
                                 <thead class="text-center">
                                     <tr>
                                         <th>Id</th>
