@@ -3709,56 +3709,56 @@
                           send_price = prices_quotes["fiat"][to_currency.toLowerCase()][`venta`];
 
                           if (from_currency == "cop") {
-                            if (to_currency == "pen" || "ars" || "mnx" || "brl" || "clp") {
+                            if (to_currency == "pen" | "ars" | "mnx" | "brl" | "clp") {
                               result = send_price * fromInputRawValue
                             } else {
                               result = fromInputRawValue / send_price
                             }
                           }
                           if (from_currency == "clp") {
-                            if (to_currency == "cop" || "pen" || "ars" || "mnx" || "brl") {
+                            if (to_currency == "cop" | "pen" | "ars" | "mnx" | "brl") {
                               result = send_price * fromInputRawValue
                             } else {
                               result = fromInputRawValue / send_price
                             }
                           }
                           if (from_currency == "ves") {
-                            if (to_currency == "cop" || "pen" || "ars" || "mnx" || "brl" || "clp") {
+                            if (to_currency == "cop" | "pen" | "ars" | "mnx" | "brl" | "clp") {
                               result = send_price * fromInputRawValue
                             } else {
                               result = fromInputRawValue / send_price
                             }
                           }
                           if (from_currency == "pen") {
-                            if (to_currency == "cop" || "ves" || "ars" || "mnx" || "brl" || "clp") {
+                            if (to_currency == "cop" | "ves" | "ars" | "mnx" | "brl" | "clp") {
                               result = send_price * fromInputRawValue
                             } else {
                               result = fromInputRawValue / send_price
                             }
                           }
                           if (from_currency == "ars") {
-                            if (to_currency == "cop" || "ves" || "pen" || "mnx" || "brl" || "clp") {
+                            if (to_currency == "cop" | "ves" | "pen" | "mnx" | "brl" | "clp") {
                               result = send_price * fromInputRawValue
                             } else {
                               result = fromInputRawValue / send_price
                             }
                           }
                           if (from_currency == "eur") {
-                            if (to_currency == "cop" || "ves" || "ars" || "mnx" || "brl" || "clp" || "pen") {
+                            if (to_currency == "cop" | "ves" | "ars" | "mnx" | "brl" | "clp" | "pen") {
                               result = send_price * fromInputRawValue
                             } else {
                               result = fromInputRawValue / send_price
                             }
                           }
                           if (from_currency == "mnx") {
-                            if (to_currency == "cop" || "ves" || "ars" || "brl" || "clp" || "pen") {
+                            if (to_currency == "cop" | "ves" | "ars" | "brl" | "clp" | "pen") {
                               result = send_price * fromInputRawValue
                             } else {
                               result = fromInputRawValue / send_price
                             }
                           }
                           if (from_currency == "brl") {
-                            if (to_currency == "cop" || "ves" || "ars" || "mnx" || "clp" || "pen") {
+                            if (to_currency == "cop" | "ves" | "ars" | "mnx" | "clp" | "pen") {
                               result = send_price * fromInputRawValue
                             } else {
                               result = fromInputRawValue / send_price
