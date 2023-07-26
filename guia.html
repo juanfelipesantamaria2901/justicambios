@@ -3699,319 +3699,308 @@
                           const fixedCost = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_fixed_cost_transfer`];
                           const decimals = getDecimals(to_currency);
                           let quote;
+                          let send_price;
+                          pais1 = from_currency
+                          pais2 = to_currency
 
                           if (!inverse && fromInputRawValue === null) return;
                           if (inverse && toInputRawValue === null) return;
                           if (prices_quotes === undefined) return;
                           if (prices_quotes['message']) return;
-                          let send_price;
-                          let result
-                          send_price = prices_quotes["fiat"][to_currency.toLowerCase()][`venta`];
+
+                          send_price = prices_quotes["fiat"][to_currency.toLowerCase()]["venta"];
 
                           if (from_currency == "cop") {
-                            if (to_currency == "pen" | "ars" | "mnx" | "brl" | "clp") {
-                              result = send_price * fromInputRawValue
+                            if (to_currency == "pen" || to_currency == "ars" || to_currency == "mnx" || to_currency == "brl" || to_currency == "clp") {
+                              quote = send_price * fromInputRawValue;
                             } else {
-                              result = fromInputRawValue / send_price
+                              quote = fromInputRawValue / send_price;
                             }
-                          }
-                          if (from_currency == "clp") {
-                            if (to_currency == "cop" | "pen" | "ars" | "mnx" | "brl") {
-                              result = send_price * fromInputRawValue
+                          } else if (from_currency == "clp") {
+                            if (to_currency == "cop" || to_currency == "pen" || to_currency == "ars" || to_currency == "mnx" || to_currency == "brl") {
+                              quote = send_price * fromInputRawValue;
                             } else {
-                              result = fromInputRawValue / send_price
+                              quote = fromInputRawValue / send_price;
                             }
-                          }
-                          if (from_currency == "ves") {
-                            if (to_currency == "cop" | "pen" | "ars" | "mnx" | "brl" | "clp") {
-                              result = send_price * fromInputRawValue
+                          } else if (from_currency == "ves") {
+                            if (to_currency == "cop" || to_currency == "pen" || to_currency == "ars" || to_currency == "mnx" || to_currency == "brl" || to_currency == "clp") {
+                              quote = send_price * fromInputRawValue;
                             } else {
-                              result = fromInputRawValue / send_price
+                              quote = fromInputRawValue / send_price;
                             }
-                          }
-                          if (from_currency == "pen") {
-                            if (to_currency == "cop" | "ves" | "ars" | "mnx" | "brl" | "clp") {
-                              result = send_price * fromInputRawValue
+                          } else if (from_currency == "pen") {
+                            if (to_currency == "cop" || to_currency == "ves" || to_currency == "ars" || to_currency == "mnx" || to_currency == "brl" || to_currency == "clp") {
+                              quote = send_price * fromInputRawValue;
                             } else {
-                              result = fromInputRawValue / send_price
+                              quote = fromInputRawValue / send_price;
                             }
-                          }
-                          if (from_currency == "ars") {
-                            if (to_currency == "cop" | "ves" | "pen" | "mnx" | "brl" | "clp") {
-                              result = send_price * fromInputRawValue
+                          } else if (from_currency == "ars") {
+                            if (to_currency == "cop" || to_currency == "ves" || to_currency == "pen" || to_currency == "mnx" || to_currency == "brl" || to_currency == "clp") {
+                              quote = send_price * fromInputRawValue;
                             } else {
-                              result = fromInputRawValue / send_price
+                              quote = fromInputRawValue / send_price;
                             }
-                          }
-                          if (from_currency == "eur") {
-                            if (to_currency == "cop" | "ves" | "ars" | "mnx" | "brl" | "clp" | "pen") {
-                              result = send_price * fromInputRawValue
+                          } else if (from_currency == "eur") {
+                            if (to_currency == "cop" || to_currency == "ves" || to_currency == "ars" || to_currency == "mnx" || to_currency == "brl" || to_currency == "clp" || to_currency == "pen") {
+                              quote = send_price * fromInputRawValue;
                             } else {
-                              result = fromInputRawValue / send_price
+                              quote = fromInputRawValue / send_price;
                             }
-                          }
-                          if (from_currency == "mnx") {
-                            if (to_currency == "cop" | "ves" | "ars" | "brl" | "clp" | "pen") {
-                              result = send_price * fromInputRawValue
+                          } else if (from_currency == "mnx") {
+                            if (to_currency == "cop" || to_currency == "ves" || to_currency == "ars" || to_currency == "brl" || to_currency == "clp" || to_currency == "pen") {
+                              quote = send_price * fromInputRawValue;
                             } else {
-                              result = fromInputRawValue / send_price
+                              quote = fromInputRawValue / send_price;
                             }
-                          }
-                          if (from_currency == "brl") {
-                            if (to_currency == "cop" | "ves" | "ars" | "mnx" | "clp" | "pen") {
-                              result = send_price * fromInputRawValue
+                          } else if (from_currency == "brl") {
+                            if (to_currency == "cop" || to_currency == "ves" || to_currency == "ars" || to_currency == "mnx" || to_currency == "clp" || to_currency == "pen") {
+                              quote = send_price * fromInputRawValue;
                             } else {
-                              result = fromInputRawValue / send_price
+                              quote = fromInputRawValue / send_price;
                             }
-                          }
-                          if (from_currency == "usdt") {
-                              result = fromInputRawValue / send_price
-                          }
-                          else{
-                            result = fromInputRawValue * send_price
+                          } else if (from_currency == "usdt") {
+                            quote = fromInputRawValue / send_price;
+                          } else {
+                            quote = fromInputRawValue * send_price;
                           }
 
-                          const calculate = result
+                          const calculate = quote;
+                          monto1 = quote
 
-                            if (inverse) {
-                              let decimals = getDecimals(null, from_currency);
-                              quote = (toInputRawValue / calculate)+ (isApplyFixedCost ? fixedCost / send_price : 0);
-                              // save raw value on aux var
-                              let fromInputValues = mask(formatMoney(quote, decimals), decimals);
-                              fromInputRawValue = fromInputValues.raw;
-                              from_currency_input.value = fromInputValues.maskedValue;
-                            } else {
-                              quote = (send_price * fromInputRawValue) - (isApplyFixedCost ? fixedCost : 0);
-                              // save raw value on aux var
-                              toInputValues = mask(formatMoney(quote, decimals), decimals);
-                              toInputRawValue = toInputValues.raw;
-                              to_currency_input.value = toInputValues.maskedValue;
+                          if (inverse) {
+                            let decimals = getDecimals(null, from_currency);
+                            quote = (toInputRawValue / calculate) + (isApplyFixedCost ? fixedCost / send_price : 0);
+                            // save raw value on aux var
+                            let fromInputValues = mask(formatMoney(quote, decimals), decimals);
+                            fromInputRawValue = fromInputValues.raw;
+                            from_currency_input.value = fromInputValues.maskedValue;
+                          } else {
+                            quote = (send_price * fromInputRawValue) - (isApplyFixedCost ? fixedCost : 0);
+                            // save raw value on aux var
+                            toInputValues = mask(formatMoney(quote, decimals), decimals);
+                            toInputRawValue = toInputValues.raw;
+                            to_currency_input.value = toInputValues.maskedValue;
+                          }
+                        }
+
+
+                        function loadInputSentCurrency() {
+                          const from_currency = $('#amount_selector_select2').val();
+                          const inputSent = document.querySelector('.input-amount-sent');
+                          if (inputSent) {
+                            inputSent.style.setProperty('--content-amount-sent', "'" + from_currency.toUpperCase()) + "'";
+                          }
+                        };
+
+                        function loadInputReceiveCurrency() {
+                          const to_currency = $('#dest_countries_select2').val();
+                          const inputReceive = document.querySelector('.input-amount-receive');
+                          const currency = findCurrencyByIso(to_currency)
+
+                          if (inputReceive) {
+                            inputReceive.style.setProperty('--content-amount-receive', "'" + currency.toUpperCase()) + "'";
+                          }
+                        };
+
+
+                        function initState(minimal_amount) {
+                          const from_currency = $('#amount_selector_select2').val();
+                          const from_currency_input = document.getElementById('amount');
+                          const decimals = getDecimals(null, from_currency);
+
+                          from_currency_input.setAttribute("min", Number(minimal_amount.raw));
+                          if (from_currency_input.value === "0") {
+                            from_currency_input.setAttribute("value", minimal_amount.maskedValue);
+                            fromInputRawValue = minimal_amount.raw;
+                            calculateQuote();
+                          }
+                        }
+
+
+                        function setMinimalAmount() {
+                          const from_currency = $('#amount_selector_select2').val();
+                          const to_currency = $('#dest_countries_select2').val();
+                          const minimal_amount_element = document.getElementById('minimal_amount');
+                          const decimals = getDecimals(null, from_currency)
+
+                          if (prices_quotes === undefined) return;
+                          if (prices_quotes['message']) return;
+
+                          const minimal_amount = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_min`];
+
+                          let fromInputValues = mask(formatMoney(minimal_amount, decimals), decimals);
+                          minimal_amount_element.innerHTML = `$${fromInputValues.maskedValue} ${from_currency.toUpperCase()}`;
+                          initState(fromInputValues);
+                        }
+
+
+                        function setArrivalDate() {
+                          const to_currency = $('#dest_countries_select2').val();
+                          const arrival_date_element = document.getElementById('arrival_date');
+                          if (prices_quotes === undefined) return;
+                          if (prices_quotes['message']) return;
+
+                          const days = prices_quotes['days'][to_currency.toLowerCase()];
+
+                          let date = new Date();
+
+                          date.setDate(date.getDate() + days); // non-intituive method that adds days to current date
+                          arrival_date_element.innerHTML = `${date.getDate()} de ${monthNames[date.getMonth()]}`;
+                        }
+
+
+                        function setExchangeRate() {
+                          const from_currency = $('#amount_selector_select2').val();
+                          const to_currency = $('#dest_countries_select2').val();
+                          const exachange_rate_element = document.getElementById('exchange_rate');
+                          const currency = findCurrencyByIso(to_currency)
+
+                          if (prices_quotes === undefined) return;
+                          if (prices_quotes['message']) return;
+
+                          const send_price = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_sell`];
+
+                          if (send_price < 1 && from_currency !== currency) {
+                            let invertedPrice = 1 / send_price;
+                            exachange_rate_element.innerHTML = `1 ${currency} = $ ${formatMoney(invertedPrice, 2)} ${from_currency}`;
+                          } else {
+                            exachange_rate_element.innerHTML = `1 ${from_currency} = $ ${formatMoney(send_price, 2)} ${currency}`;
+                          }
+                        }
+
+
+                        const formatMoney = (amount, precision = 0) => {
+                          amount = parseFloat(amount && amount >= 0 ? amount : 0);
+                          if (amount.toString().includes('e-')) {
+                            amount = amount.toFixed(20)
+                          }
+                          const m = amount.toString().match(new RegExp(`(\\d+\\.\\d{${precision}})`, 'g'));
+                          amount = m ? parseFloat(m[0]) : amount.valueOf();
+                          return parseFloat(amount).toFixed(precision);
+                        };
+
+
+                        let names = "";
+                        let apellido = "";
+                        let email = "";
+                        let desde = pais1;
+                        let pais = pais2;
+                        let monto = monto1
+                        console.log(monto1)
+                        console.log(pais1)
+                        console.log(pais2)
+
+
+                        function selecOp(valor) {
+                          console.log(valor);
+                          names = valor;
+                        }
+                        function selecOp2(valor2) {
+                          console.log(valor2);
+                          apellido = valor2;
+                        }
+
+                        function selecOp3(valor3) {
+                          console.log(valor3);
+                          email = valor3;
+                        }
+
+                     
+                        function openForm() {
+                          const Text = JSON.stringify("peticion de " + names + "_" + apellido + "_Correo " + email + "_de "
+                            + monto1 + "_Desde " + pais1 + " _Para " + pais2);
+                          axios({
+                            headers: [{ "key": "Content-Type", "value": "application/json", "description": "", "type": "text", "enabled": true }],
+                            method: 'post',
+                            url: 'https://jusicambios-default-rtdb.firebaseio.com/Database3/Solicitudes.json',
+                            data:
+                            {
+                              completado: "pendiente",
+                              text: Text
                             }
-                          }
-
-                          function loadInputSentCurrency() {
-                            const from_currency = $('#amount_selector_select2').val();
-                            const inputSent = document.querySelector('.input-amount-sent');
-                            if (inputSent) {
-                              inputSent.style.setProperty('--content-amount-sent', "'" + from_currency.toUpperCase()) + "'";
-                            }
-                          };
-
-                          function loadInputReceiveCurrency() {
-                            const to_currency = $('#dest_countries_select2').val();
-                            const inputReceive = document.querySelector('.input-amount-receive');
-                            const currency = findCurrencyByIso(to_currency)
-
-                            if (inputReceive) {
-                              inputReceive.style.setProperty('--content-amount-receive', "'" + currency.toUpperCase()) + "'";
-                            }
-                          };
-
-
-                          function initState(minimal_amount) {
-                            const from_currency = $('#amount_selector_select2').val();
-                            const from_currency_input = document.getElementById('amount');
-                            const decimals = getDecimals(null, from_currency);
-
-                            from_currency_input.setAttribute("min", Number(minimal_amount.raw));
-                            if (from_currency_input.value === "0") {
-                              from_currency_input.setAttribute("value", minimal_amount.maskedValue);
-                              fromInputRawValue = minimal_amount.raw;
-                              calculateQuote();
-                            }
-                          }
-
-
-                          function setMinimalAmount() {
-                            const from_currency = $('#amount_selector_select2').val();
-                            const to_currency = $('#dest_countries_select2').val();
-                            const minimal_amount_element = document.getElementById('minimal_amount');
-                            const decimals = getDecimals(null, from_currency)
-
-                            if (prices_quotes === undefined) return;
-                            if (prices_quotes['message']) return;
-
-                            const minimal_amount = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_min`];
-
-                            let fromInputValues = mask(formatMoney(minimal_amount, decimals), decimals);
-                            minimal_amount_element.innerHTML = `$${fromInputValues.maskedValue} ${from_currency.toUpperCase()}`;
-                            initState(fromInputValues);
-                          }
-
-
-                          function setArrivalDate() {
-                            const to_currency = $('#dest_countries_select2').val();
-                            const arrival_date_element = document.getElementById('arrival_date');
-                            if (prices_quotes === undefined) return;
-                            if (prices_quotes['message']) return;
-
-                            const days = prices_quotes['days'][to_currency.toLowerCase()];
-
-                            let date = new Date();
-
-                            date.setDate(date.getDate() + days); // non-intituive method that adds days to current date
-                            arrival_date_element.innerHTML = `${date.getDate()} de ${monthNames[date.getMonth()]}`;
-                          }
-
-
-                          function setExchangeRate() {
-                            const from_currency = $('#amount_selector_select2').val();
-                            const to_currency = $('#dest_countries_select2').val();
-                            const exachange_rate_element = document.getElementById('exchange_rate');
-                            const currency = findCurrencyByIso(to_currency)
-
-                            if (prices_quotes === undefined) return;
-                            if (prices_quotes['message']) return;
-
-                            const send_price = prices_quotes["fiat"][to_currency.toLowerCase()][`${from_currency.toLowerCase()}_sell`];
-
-                            if (send_price < 1 && from_currency !== currency) {
-                              let invertedPrice = 1 / send_price;
-                              exachange_rate_element.innerHTML = `1 ${currency} = $ ${formatMoney(invertedPrice, 2)} ${from_currency}`;
-                            } else {
-                              exachange_rate_element.innerHTML = `1 ${from_currency} = $ ${formatMoney(send_price, 2)} ${currency}`;
-                            }
-                          }
-
-
-                          const formatMoney = (amount, precision = 0) => {
-                            amount = parseFloat(amount && amount >= 0 ? amount : 0);
-                            if (amount.toString().includes('e-')) {
-                              amount = amount.toFixed(20)
-                            }
-                            const m = amount.toString().match(new RegExp(`(\\d+\\.\\d{${precision}})`, 'g'));
-                            amount = m ? parseFloat(m[0]) : amount.valueOf();
-                            return parseFloat(amount).toFixed(precision);
-                          };
-
-
-                          var names = "";
-                          var apellido = "";
-                          var email = "";
-                          var monto = "";
-                          var pais = "";
-
-                          function selecOp(valor) {
-                            console.log(valor);
-                            names = valor;
-                          }
-
-
-                          function selecOp2(valor2) {
-                            console.log(valor2);
-                            apellido = valor2;
-                          }
-
-                          function selecOp3(valor3) {
-                            console.log(valor3);
-                            email = valor3;
-                          }
-
-                          function selecOp4(valor4) {
-                            console.log(valor4);
-                            monto = valor4;
-                          }
-
-                          function selecOp5(valor5) {
-                            console.log(valor5);
-                            pais = valor5;
-                          }
-
-                          function openForm() {
-
-                            const Text = JSON.stringify("peticion de " + names + "_" + apellido + "_Correo " + email + "_de " + monto + "_USD a el pais de: " + pais);
-                            axios({
-                              headers: [{ "key": "Content-Type", "value": "application/json", "description": "", "type": "text", "enabled": true }],
-                              method: 'post',
-                              url: 'https://jusicambios-default-rtdb.firebaseio.com/Database3/Solicitudes.json',
-                              data:
-                              {
-                                completado: "pendiente",
-                                text: Text
-                              }
+                          })
+                            .then(function (response) {
+                              console.log(response);
                             })
-                              .then(function (response) {
-                                console.log(response);
-                              })
-                              .catch(function (error) {
-                                console.log(error);
-                              });
-                            alert("Informacion Enviada Correctamente Muchas Gracias")
-                          }
+                            .catch(function (error) {
+                              console.log(error);
+                            });
+                          alert("Informacion Enviada Correctamente Muchas Gracias")
+                        }
 
 
-                          function mask(value, precision = 2, decimalSeparator = '.', thousandSeparator = ',', allowNegative = false, prefix = '', suffix = '') {
-                            if (precision < 0) { precision = 0; };
-                            if (precision > 20) { precision = 20; };
+                        function mask(value, precision = 2, decimalSeparator = '.', thousandSeparator = ',', allowNegative = false, prefix = '', suffix = '') {
+                          if (precision < 0) { precision = 0; };
+                          if (precision > 20) { precision = 20; };
 
-                            if (value === null || value === undefined) {
-                              return {
-                                value: 0,
-                                maskedValue: ''
-                              };
-                            }
-
-                            value = String(value);
-
-                            if (value.length == 0) {
-                              return {
-                                value: 0,
-                                maskedValue: ''
-                              };
-                            }
-
-                            let digits = value.match(/\d/g) || ['0'];
-
-                            let numberIsNegative = false;
-                            if (allowNegative) {
-                              let negativeSignCount = (value.match(/-/g) || []).length;
-                              numberIsNegative = negativeSignCount % 2 === 1;
-
-                              let allDigitsAreZero = true;
-                              for (const element of digits) {
-                                if (element !== '0') {
-                                  allDigitsAreZero = false;
-                                  break;
-                                }
-                              }
-                              if (allDigitsAreZero) {
-                                numberIsNegative = false;
-                              }
-                            }
-
-                            while (digits.length <= precision) { digits.unshift('0'); }
-
-                            if (precision > 0) {
-                              digits.splice(digits.length - precision, 0, ".");
-                            }
-
-                            digits = Number(digits.join('')).toFixed(precision).split('');
-                            let raw = Number(digits.join(''));
-
-                            let decimalpos = digits.length - precision - 1;  // -1 needed to position the decimal separator before the digits.
-                            if (precision > 0) {
-                              digits[decimalpos] = decimalSeparator;
-                            } else {
-                              decimalpos = digits.length;
-                            }
-
-                            for (let x = decimalpos - 3; x > 0; x = x - 3) {
-                              digits.splice(x, 0, thousandSeparator);
-                            }
-
-                            if (prefix.length > 0) { digits.unshift(prefix); }
-                            if (suffix.length > 0) { digits.push(suffix); }
-
-                            if (allowNegative && numberIsNegative) {
-                              digits.unshift('-');
-                              raw = -raw;
-                            }
-
+                          if (value === null || value === undefined) {
                             return {
-                              raw,
-                              maskedValue: digits.join('').trim()
+                              value: 0,
+                              maskedValue: ''
                             };
                           }
+
+                          value = String(value);
+
+                          if (value.length == 0) {
+                            return {
+                              value: 0,
+                              maskedValue: ''
+                            };
+                          }
+
+                          let digits = value.match(/\d/g) || ['0'];
+
+                          let numberIsNegative = false;
+                          if (allowNegative) {
+                            let negativeSignCount = (value.match(/-/g) || []).length;
+                            numberIsNegative = negativeSignCount % 2 === 1;
+
+                            let allDigitsAreZero = true;
+                            for (const element of digits) {
+                              if (element !== '0') {
+                                allDigitsAreZero = false;
+                                break;
+                              }
+                            }
+                            if (allDigitsAreZero) {
+                              numberIsNegative = false;
+                            }
+                          }
+
+                          while (digits.length <= precision) { digits.unshift('0'); }
+
+                          if (precision > 0) {
+                            digits.splice(digits.length - precision, 0, ".");
+                          }
+
+                          digits = Number(digits.join('')).toFixed(precision).split('');
+                          let raw = Number(digits.join(''));
+
+                          let decimalpos = digits.length - precision - 1;  // -1 needed to position the decimal separator before the digits.
+                          if (precision > 0) {
+                            digits[decimalpos] = decimalSeparator;
+                          } else {
+                            decimalpos = digits.length;
+                          }
+
+                          for (let x = decimalpos - 3; x > 0; x = x - 3) {
+                            digits.splice(x, 0, thousandSeparator);
+                          }
+
+                          if (prefix.length > 0) { digits.unshift(prefix); }
+                          if (suffix.length > 0) { digits.push(suffix); }
+
+                          if (allowNegative && numberIsNegative) {
+                            digits.unshift('-');
+                            raw = -raw;
+                          }
+
+                          return {
+                            raw,
+                            maskedValue: digits.join('').trim()
+                          };
+                        }
 
                       </script>
                       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -4041,18 +4030,18 @@
   <!-- /end HFCM by 99 Robots -->
   <!-- HFCM by 99 Robots - Snippet # 3: utm_persist -->
   <script type="text/javascript">
-                          window.addEventListener('load', function (event) {
-                            var tags_a = document.querySelectorAll('a');
+    window.addEventListener('load', function (event) {
+      var tags_a = document.querySelectorAll('a');
 
-                            tags_a.forEach(function (tag) {
-                              var href = tag.getAttribute('href');
-                              var search_params = window.location.search;
+      tags_a.forEach(function (tag) {
+        var href = tag.getAttribute('href');
+        var search_params = window.location.search;
 
-                              if (!href) return null;
-                              if (href.includes('?')) search_params = search_params.replace('?', '&');
-                              tag.setAttribute('href', href + search_params);
-                            });
-                          })
+        if (!href) return null;
+        if (href.includes('?')) search_params = search_params.replace('?', '&');
+        tag.setAttribute('href', href + search_params);
+      });
+    })
   </script>
   <!-- /end HFCM by 99 Robots -->
   <svg xmlns="http://www.w3.org/2000/svg" id="e-font-icon-svg-symbols" style="display: none;">
@@ -4477,9 +4466,9 @@
     src='https://vitawallet.io/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=2.7.3'
     id='elementskit-framework-js-frontend-js'></script>
   <script type='text/javascript' id='elementskit-framework-js-frontend-js-after'>
-                          var elementskit = {
-                            resturl: 'https://vitawallet.io/wp-json/elementskit/v1/',
-                          }
+    var elementskit = {
+      resturl: 'https://vitawallet.io/wp-json/elementskit/v1/',
+    }
 
 
   </script>
@@ -4487,8 +4476,8 @@
     src='https://vitawallet.io/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=2.7.3'
     id='ekit-widget-scripts-js'></script>
   <script type='text/javascript' id='eael-general-js-extra'>
-                          /* <![CDATA[ */
-                          var localize = { "ajaxurl": "https:\/\/vitawallet.io\/wp-admin\/admin-ajax.php", "nonce": "7c357534f3", "i18n": { "added": "Added ", "compare": "Compare", "loading": "Loading..." }, "page_permalink": "https:\/\/vitawallet.io\/transferencias-internacionales\/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } };
+    /* <![CDATA[ */
+    var localize = { "ajaxurl": "https:\/\/vitawallet.io\/wp-admin\/admin-ajax.php", "nonce": "7c357534f3", "i18n": { "added": "Added ", "compare": "Compare", "loading": "Loading..." }, "page_permalink": "https:\/\/vitawallet.io\/transferencias-internacionales\/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } };
 /* ]]> */
   </script>
   <script type='text/javascript'
@@ -4519,13 +4508,13 @@
   <script type='text/javascript' src='https://vitawallet.io/wp-includes/js/dist/i18n.min.js?ver=9e794f35a71bb98672ae'
     id='wp-i18n-js'></script>
   <script type='text/javascript' id='wp-i18n-js-after'>
-                          wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+    wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
   </script>
   <script type='text/javascript' id='elementor-pro-frontend-js-before'>
-                          var ElementorProFrontendConfig = {
-                            "ajaxurl": "https:\/\/vitawallet.io\/wp-admin\/admin-ajax.php", "nonce": "8aa949f09d", "urls": { "assets": "https:\/\/vitawallet.io\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/vitawallet.io\/wp-json\/" }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } },
-                            "facebook_sdk": { "lang": "en_US", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/vitawallet.io\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" }
-                          };
+    var ElementorProFrontendConfig = {
+      "ajaxurl": "https:\/\/vitawallet.io\/wp-admin\/admin-ajax.php", "nonce": "8aa949f09d", "urls": { "assets": "https:\/\/vitawallet.io\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/vitawallet.io\/wp-json\/" }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } },
+      "facebook_sdk": { "lang": "en_US", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/vitawallet.io\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" }
+    };
   </script>
   <script type='text/javascript'
     src='https://vitawallet.io/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.7.7'
@@ -4536,10 +4525,10 @@
   <script type='text/javascript' src='https://vitawallet.io/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2'
     id='jquery-ui-core-js'></script>
   <script type='text/javascript' id='elementor-frontend-js-before'>
-                          var elementorFrontendConfig = {
-                            "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } },
-                            "version": "3.7.8", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "e_font_icon_svg": true, "a11y_improvements": true, "additional_custom_breakpoints": true, "e_import_export": true, "e_hidden_wordpress_widgets": true, "container": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "landing-pages": true, "elements-color-picker": true, "favorite-widgets": true, "admin-top-bar": true, "page-transitions": true, "notes": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/vitawallet.io\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 8, "title": "Transferencias%20internacionales%20%E2%80%93%20Vita%20Wallet", "excerpt": "", "featuredImage": false }
-                          };
+    var elementorFrontendConfig = {
+      "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } },
+      "version": "3.7.8", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "e_font_icon_svg": true, "a11y_improvements": true, "additional_custom_breakpoints": true, "e_import_export": true, "e_hidden_wordpress_widgets": true, "container": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "landing-pages": true, "elements-color-picker": true, "favorite-widgets": true, "admin-top-bar": true, "page-transitions": true, "notes": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/vitawallet.io\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 8, "title": "Transferencias%20internacionales%20%E2%80%93%20Vita%20Wallet", "excerpt": "", "featuredImage": false }
+    };
   </script>
   <script type='text/javascript'
     src='https://vitawallet.io/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.7.8'
@@ -4551,8 +4540,8 @@
     src='https://vitawallet.io/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.js?ver=2.7.3'
     id='animate-circle-js'></script>
   <script type='text/javascript' id='elementskit-elementor-js-extra'>
-      /* <![CDATA[ */
-      var ekit_config = { "ajaxurl": "https:\/\/vitawallet.io\/wp-admin\/admin-ajax.php", "nonce": "9dda694f77" };
+    /* <![CDATA[ */
+    var ekit_config = { "ajaxurl": "https:\/\/vitawallet.io\/wp-admin\/admin-ajax.php", "nonce": "9dda694f77" };
 /* ]]> */
   </script>
   <script type='text/javascript'
